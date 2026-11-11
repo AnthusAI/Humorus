@@ -19,7 +19,9 @@ Updated 2026-11-11. Update this page when the state changes; the board has the d
 ## Not done, and why
 
 - **Papyrus pipeline bootstrap: deliberately not run.** `infra/pipeline/bootstrap.sh` trusts the Papyrus repository and sets that repository's `AWS_ACCOUNT_ID` variable. Run for this account it would redirect Papyrus's own releases. Its stacks also name another organisation's domain. Wait for `PPY-1a6aa6`.
-- No GitHub sign-in provider or deploy role in the account yet.
+- GitHub sign-in provider and deploy role: template ready in `infra/github-deploy/` (only starts and watches Amplify jobs on `main`); not applied, waiting for Ryan's go-ahead.
+- Newsroom text for TheHallucinator.ai: first draft in [the-hallucinator-newsroom-draft](the-hallucinator-newsroom-draft.md), waiting for Ryan's review and the legal conversation.
+- CLI sign-in without Prospectus: recommendation on HUM-539f78 (Google through the site's own Cognito; remote login for agents).
 - Domain delegation: the registrar still points at its own name servers until Ryan changes them.
 - No certificate or mail-sending identity yet; both wait on the delegation.
 - Mail sending is still in the sandbox.

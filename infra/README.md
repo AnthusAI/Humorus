@@ -32,13 +32,13 @@ aws sso login --sso-session dataparade
 aws cloudformation deploy --stack-name humorus-github-deploy \
   --template-file <papyrus checkout>/infra/account/baseline.yaml \
   --capabilities CAPABILITY_NAMED_IAM --no-execute-changeset \
-  --parameter-overrides Prefix=humorus GithubRepository=AnthusAI/Humorus ProductionBranch=main \
+  --parameter-overrides Prefix=humorus GithubRepository=AnthusAI/Humorus GithubSubjectPrefix=repo:AnthusAI@152415604/Humorus@1454269356 ProductionBranch=main \
     AmplifyAppId='*' CreateOidcProvider=true ApprovalEnvironment=pipeline-roles BudgetName=papyrus-production-monthly
 # Read it (the deploy role and provider must show as Modify, not Replace), then apply:
 aws cloudformation deploy --stack-name humorus-github-deploy \
   --template-file <papyrus checkout>/infra/account/baseline.yaml \
   --capabilities CAPABILITY_NAMED_IAM \
-  --parameter-overrides Prefix=humorus GithubRepository=AnthusAI/Humorus ProductionBranch=main \
+  --parameter-overrides Prefix=humorus GithubRepository=AnthusAI/Humorus GithubSubjectPrefix=repo:AnthusAI@152415604/Humorus@1454269356 ProductionBranch=main \
     AmplifyAppId='*' CreateOidcProvider=true ApprovalEnvironment=pipeline-roles BudgetName=papyrus-production-monthly
 ```
 
@@ -47,6 +47,8 @@ One-time GitHub and account setup, each waiting for Ryan's go-ahead (before the 
 1. Repository variable `AWS_ACCOUNT_ID` (the Humorus account id; a variable, not Git).
 2. GitHub environment `pipeline-roles` with a required reviewer and deployment branch `main`. It must exist before the first baseline change merges, or GitHub would auto-create it unprotected.
 3. SSM String parameter `/humorus/budget-alert-email` holding the current budget alert address (`aws ssm put-parameter --name /humorus/budget-alert-email --type String --value <the live subscriber>`). A person does this: the address stays out of Git and logs.
+
+Humorus's repository uses GitHub's immutable OIDC subject claims (`gh api repos/AnthusAI/Humorus/actions/oidc/customization/sub` reports the prefix above; the numbers are public GitHub ids, not AWS identifiers). Roles that trust the classic `repo:AnthusAI/Humorus` subject refuse every run, which is why `GithubSubjectPrefix` is set.
 
 ## What each role can do, in plain English
 

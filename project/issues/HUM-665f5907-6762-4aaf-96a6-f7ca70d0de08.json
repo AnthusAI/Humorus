@@ -3,7 +3,7 @@
   "title": "Tag releases and write the changelog with Semantic Release",
   "description": "`release.config.cjs` on `main`: version tag, GitHub release and changelog from `feat:` and `fix:` titles. Nothing is published to a package registry.",
   "type": "task",
-  "status": "open",
+  "status": "in_progress",
   "priority": 2,
   "assignee": null,
   "creator": null,
@@ -12,7 +12,7 @@
   "dependencies": [],
   "comments": [],
   "created_at": "2026-11-11T17:14:43.776016Z",
-  "updated_at": "2026-11-11T17:14:43.776038Z",
+  "updated_at": "2026-11-11T18:37:39.856771Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

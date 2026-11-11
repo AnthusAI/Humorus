@@ -3,7 +3,7 @@
   "title": "Run checks on pull requests with GitHub Actions",
   "description": "One workflow on pull requests to `develop` and `main`: LeftBlock scan, then per-site tests once a site exists. Use path filters so a change to one site tests only that site. The repository is public so the minutes are free.",
   "type": "task",
-  "status": "open",
+  "status": "in_progress",
   "priority": 1,
   "assignee": null,
   "creator": null,
@@ -12,7 +12,7 @@
   "dependencies": [],
   "comments": [],
   "created_at": "2026-11-11T17:14:43.766212Z",
-  "updated_at": "2026-11-11T17:45:53.006209Z",
+  "updated_at": "2026-11-11T18:37:39.804773Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

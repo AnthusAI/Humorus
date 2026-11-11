@@ -3,7 +3,7 @@
   "title": "A commit that contains an AWS identifier is refused",
   "description": "Humorus is public. Account IDs, app IDs, ARNs and bucket names must never reach it.\n\n```gherkin\nFeature: AWS identifiers stay out of Git\n\n  Scenario: The local hook refuses the commit\n    Given a staged file that contains an AWS account ID in a role ARN\n    When I commit\n    Then the commit is refused\n    And the message names the file, the line and the rule\n\n  Scenario: A pull request that contains an identifier fails its check\n    Given a pull request whose changes contain an AWS account ID\n    When the checks run\n    Then the LeftBlock check fails\n\n  Scenario: A clean change passes\n    Given a staged file with a placeholder such as <account-id>\n    When I commit\n    Then the commit succeeds\n```",
   "type": "story",
-  "status": "open",
+  "status": "in_progress",
   "priority": 2,
   "assignee": null,
   "creator": null,
@@ -25,7 +25,7 @@
     }
   ],
   "created_at": "2026-11-11T17:14:43.756245Z",
-  "updated_at": "2026-11-11T17:15:00.442166Z",
+  "updated_at": "2026-11-11T18:37:39.841936Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

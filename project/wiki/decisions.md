@@ -25,6 +25,7 @@ Decisions Ryan has made for Humorus. Add new ones at the bottom with the date. D
 | 17 | The first site is **TheHallucinator.ai** (site id `the-hallucinator`). The domain is registered elsewhere; Route 53 in the account serves its DNS. |
 | 18 | Reuse the Papyrus development OpenAI and TypeSafe keys in this account rather than new ones. |
 | 19 | Working model: Claude (Opus) is product owner and project manager; one Sonnet engineering lead runs Sonnet and Haiku workers, reviews their work, and reports only working code. |
+| 20 | Papyrus order: the guidelines epic PPY-2a2a8a lands first, then PPY-1a6aa6, then the Anthus-defaults items, then the neutral theme and scaffold. |
 
 ## Open questions for Ryan
 

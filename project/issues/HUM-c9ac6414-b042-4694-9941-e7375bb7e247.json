@@ -10,9 +10,17 @@
   "parent": "HUM-be87f464-b2c7-4d6e-8c29-405d4f223f51",
   "labels": [],
   "dependencies": [],
-  "comments": [],
+  "comments": [
+    {
+      "id": "82d17413-a0bc-4b43-8594-f62aef1d0dd2",
+      "author": "home",
+      "text": "Now delivered by Papyrus epic PPY-9bd776 (see HUM-be87f4). Humorus keeps only its stack settings and the one-time seed apply.",
+      "created_at": "2026-11-11T20:37:16.455037Z",
+      "comment_type": "default"
+    }
+  ],
   "created_at": "2026-11-11T20:15:58.440500Z",
-  "updated_at": "2026-11-11T20:15:58.440516Z",
+  "updated_at": "2026-11-11T20:37:16.455239Z",
   "closed_at": null,
   "right_now_summary": null,
   "right_now_updated_at": null,

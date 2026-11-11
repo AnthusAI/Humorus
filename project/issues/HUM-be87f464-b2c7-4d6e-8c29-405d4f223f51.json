@@ -24,10 +24,17 @@
       "text": "BUILD PAUSED by the product owner: this should improve Papyrus rather than add a Humorus-only pipeline. Unmerged branch infra/pipeline holds the work so far. No AWS changes were made.",
       "created_at": "2026-11-11T20:25:37.579460Z",
       "comment_type": "default"
+    },
+    {
+      "id": "0a4646a1-9737-4e0e-a7c4-91d5fd3aff1f",
+      "author": "home",
+      "text": "RESUMED as a Papyrus-wide effort (Ryan's decision). Filed on the Papyrus board: epic PPY-9bd776 'A Papyrus deployment needs no hand-made cloud resources', stories PPY-2a6d14, PPY-3c38b3, PPY-b5ddec, PPY-a73cd8, PPY-1f6e73, PPY-c320b0, PPY-a41df9; PPY-1a6aa6 linked. The generic build happens in Papyrus; this epic keeps only the Humorus-specific settings and the one-time seed apply (task PPY-7f564a on the Papyrus board tracks the Humorus consumption).",
+      "created_at": "2026-11-11T20:37:16.319478Z",
+      "comment_type": "default"
     }
   ],
   "created_at": "2026-11-11T20:15:41.033689Z",
-  "updated_at": "2026-11-11T20:25:37.579683Z",
+  "updated_at": "2026-11-11T20:37:16.319721Z",
   "closed_at": null,
   "right_now_summary": null,
   "right_now_updated_at": null,

@@ -3,17 +3,25 @@
   "title": "Protect main and develop",
   "description": "Require the checks on pull requests to `main`. Allow board-only pushes straight to `develop`.",
   "type": "task",
-  "status": "in_progress",
+  "status": "closed",
   "priority": 2,
   "assignee": null,
   "creator": null,
   "parent": "HUM-894b93cd-18e3-463e-8336-ede4a469f2ae",
   "labels": [],
   "dependencies": [],
-  "comments": [],
+  "comments": [
+    {
+      "id": "ada72b44-3457-4d08-9391-a16b406b8d17",
+      "author": "home",
+      "text": "Applied via gh api. main: PR required (0 approvals), required check 'ci', admins enforced, no force-push, no deletion. develop: no force-push, no deletion; no PR or check requirement, admins not enforced, so board commits push directly.",
+      "created_at": "2026-11-11T18:40:57.633343Z",
+      "comment_type": "default"
+    }
+  ],
   "created_at": "2026-11-11T17:14:43.785826Z",
-  "updated_at": "2026-11-11T18:37:39.870425Z",
-  "closed_at": null,
+  "updated_at": "2026-11-11T18:40:57.693154Z",
+  "closed_at": "2026-11-11T18:40:57.693134Z",
   "agent": {
     "platform": "claude_code",
     "model": "Claude Fable 5.2",

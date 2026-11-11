@@ -1,0 +1,20 @@
+{
+  "id": "HUM-f3bb3e08-fb34-4c04-a5cc-f1181729f015",
+  "title": "Tell Papyrus that bootstrap.sh should become a pipeline-applied template",
+  "description": "Comment on PPY-1a6aa6 per Ryan's rule; link here.",
+  "type": "task",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-be87f464-b2c7-4d6e-8c29-405d4f223f51",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T20:15:58.499383Z",
+  "updated_at": "2026-11-11T20:15:58.499404Z",
+  "closed_at": null,
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

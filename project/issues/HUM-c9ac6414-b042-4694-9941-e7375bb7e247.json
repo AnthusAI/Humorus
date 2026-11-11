@@ -1,0 +1,20 @@
+{
+  "id": "HUM-c9ac6414-b042-4694-9941-e7375bb7e247",
+  "title": "One-time apply of the wider deploy role (the bootstrap exception)",
+  "description": "The only manual apply: updates the existing humorus-github-deploy stack with the template in Git so the pipeline can deploy. Needs Ryan's go-ahead. Command and permission list are in infra/README.md. After it, every change goes through the pipeline.",
+  "type": "task",
+  "status": "open",
+  "priority": 1,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-be87f464-b2c7-4d6e-8c29-405d4f223f51",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T20:15:58.440500Z",
+  "updated_at": "2026-11-11T20:15:58.440516Z",
+  "closed_at": null,
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

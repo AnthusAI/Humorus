@@ -1,0 +1,20 @@
+{
+  "id": "HUM-be87f464-b2c7-4d6e-8c29-405d4f223f51",
+  "title": "Every cloud resource is deployed from Git",
+  "description": "Ryan's rule (2026-11-11): nobody creates a cloud resource by hand. Every resource is defined in Git and applied by a pipeline on merge to main (GitHub Actions + OIDC, public repo). Agents use the AWS CLI to read, never to create or change. One exception: the first apply of the pipeline's own wider role cannot come from a pipeline that does not exist yet. Also adopts the resources that were made by hand (the Route 53 zone, the budget, the deploy role stack). Design in project/wiki/infrastructure-pipeline.md. Secret values (the two SSM SecureString parameters) are the person-only exception.",
+  "type": "epic",
+  "status": "in_progress",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-76897062-7b9c-4085-89bf-163ede715ab5",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T20:15:41.033689Z",
+  "updated_at": "2026-11-11T20:16:03.863673Z",
+  "closed_at": null,
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

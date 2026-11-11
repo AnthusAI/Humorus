@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "event_id": "72b33e65-2e50-4194-9de0-54a47f3d07e8",
+  "issue_id": "HUM-e3dbf453-6adf-4ec3-bcb7-750c25174a36",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T20:15:58.460Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Document the secret SSM parameters as the person-only exception",
+    "description": "/papyrus/the-hallucinator/openai-api-key and /papyrus/shared/typesafe-api-key are SecureString values. CloudFormation cannot create SecureString parameters and values never go in Git, so a person puts the values; the pipeline manages everything around them. Document in infra/README.md.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-be87f464-b2c7-4d6e-8c29-405d4f223f51",
+    "labels": []
+  }
+}

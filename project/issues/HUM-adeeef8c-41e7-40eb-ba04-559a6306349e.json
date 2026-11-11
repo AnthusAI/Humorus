@@ -1,0 +1,20 @@
+{
+  "id": "HUM-adeeef8c-41e7-40eb-ba04-559a6306349e",
+  "title": "Merging to main deploys the account's stacks",
+  "description": "```gherkin\nFeature: The account's stacks are deployed from Git\n\n  Scenario: A merge to main applies the changed stacks\n    Given a stack template under infra/stacks changed in a commit merged to main\n    When the Deploy workflow runs\n    Then it signs in to AWS with GitHub OIDC as the deploy role, with no stored keys\n    And it creates a change set for each changed stack, in the order listed in infra/stacks.json\n    And it executes a change set only if it replaces or removes nothing that is not listed as allowed\n    And the job summary shows each stack's result\n\n  Scenario: Only main can deploy\n    Given a workflow run for a pull request or a branch other than main\n    When it asks AWS for the deploy role\n    Then AWS refuses\n\n  Scenario: A board-only commit deploys nothing\n    Given a commit that changes only project/\n    When it is merged to main\n    Then the Deploy workflow does not run\n\n  Scenario: Nothing is created by hand\n    Given any stack in infra/stacks.json\n    Then it is created and changed only by the Deploy workflow, except the one-time apply recorded in HUM-c9ac64\n```",
+  "type": "story",
+  "status": "in_progress",
+  "priority": 1,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-be87f464-b2c7-4d6e-8c29-405d4f223f51",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T20:15:58.353109Z",
+  "updated_at": "2026-11-11T20:16:03.880184Z",
+  "closed_at": null,
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

@@ -3,17 +3,25 @@
   "title": "Add the `dataparade-papyrus-production` profile and confirm `aws sts get-caller-identity`",
   "description": "Add the `dataparade-papyrus-production` profile and confirm `aws sts get-caller-identity`",
   "type": "sub-task",
-  "status": "open",
+  "status": "closed",
   "priority": 2,
   "assignee": null,
   "creator": null,
   "parent": "HUM-1885d9f5-26cb-43c0-ab35-87f8f07e0ffe",
   "labels": [],
   "dependencies": [],
-  "comments": [],
+  "comments": [
+    {
+      "id": "c8214475-71b8-4279-8235-276e2ebda893",
+      "author": "home",
+      "text": "2026-11-11: local single sign-on profile dataparade-papyrus-production added; aws sts get-caller-identity answers with the AdministratorAccess role.",
+      "created_at": "2026-11-11T17:32:42.092757Z",
+      "comment_type": "default"
+    }
+  ],
   "created_at": "2026-11-11T17:14:43.835526Z",
-  "updated_at": "2026-11-11T17:14:43.835547Z",
-  "closed_at": null,
+  "updated_at": "2026-11-11T17:32:42.097933Z",
+  "closed_at": "2026-11-11T17:32:42.097919Z",
   "agent": {
     "platform": "claude_code",
     "model": "Claude Fable 5.2",

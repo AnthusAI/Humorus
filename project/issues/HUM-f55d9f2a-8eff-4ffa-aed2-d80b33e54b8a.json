@@ -15,9 +15,24 @@
       "type": "blocked-by"
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "id": "04abcf8a-323b-4d11-8131-53da135be506",
+      "author": "home",
+      "text": "Draft of five sections (government, campaigns, business, technology, world) is in project/wiki/the-hallucinator-newsroom-draft.md (PR #4), for Ryan's review. Section image documents are not storable in Papyrus yet; see the draft's table.",
+      "created_at": "2026-11-11T18:48:03.966703Z",
+      "comment_type": "default"
+    },
+    {
+      "id": "939a6cf3-5ce1-436c-96eb-ef7ad54f6876",
+      "author": "home",
+      "text": "Draft of five sections (government, campaigns, business, technology, world) is in project/wiki/the-hallucinator-newsroom-draft.md (PR #4), for Ryan's review. Section image documents are not storable in Papyrus yet.",
+      "created_at": "2026-11-11T18:48:20.795101Z",
+      "comment_type": "default"
+    }
+  ],
   "created_at": "2026-11-11T17:14:44.452302Z",
-  "updated_at": "2026-11-11T17:45:52.454849Z",
+  "updated_at": "2026-11-11T18:48:20.795317Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

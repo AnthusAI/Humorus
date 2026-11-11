@@ -15,9 +15,24 @@
       "type": "blocked-by"
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "id": "25d3cdbc-3fba-458e-b067-db53a440cf51",
+      "author": "home",
+      "text": "Draft merged for Ryan's review (PR #4): project/wiki/the-hallucinator-newsroom-draft.md. Mission, 14 policies plus 10 proposed checks, mapped to Papyrus records; 10 items marked for legal review (HUM-948077). Not saved to any backend.",
+      "created_at": "2026-11-11T18:48:03.950536Z",
+      "comment_type": "default"
+    },
+    {
+      "id": "eb1938ba-0fa9-4454-9dfb-00f0ba3cd046",
+      "author": "home",
+      "text": "Draft merged for Ryan's review (PR #4): project/wiki/the-hallucinator-newsroom-draft.md. Mission, 14 policies, 10 proposed checks, mapped to Papyrus records; 10 items marked for legal review (HUM-948077). Not saved to any backend.",
+      "created_at": "2026-11-11T18:48:20.780256Z",
+      "comment_type": "default"
+    }
+  ],
   "created_at": "2026-11-11T17:45:43.362542Z",
-  "updated_at": "2026-11-11T17:45:52.540003Z",
+  "updated_at": "2026-11-11T18:48:20.780477Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

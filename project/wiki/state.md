@@ -5,6 +5,7 @@ Updated 2026-11-11. Update this page when the state changes; the board has the d
 ## Done
 
 - Public repository `AnthusAI/Humorus` with `main` and `develop` (`develop` is the default branch), agent rules, licence.
+- Checks on every pull request and push (secret and AWS-identifier scan, board validation, wiki links, pull request title), Semantic Release on `main` (GitHub release notes, no committed changelog), branch protection: `main` needs a pull request and the `ci` check, admins included; `develop` blocks only force-push and deletion.
 - Kanbus board, key `HUM`, methodologies `bdd` and `git-flow`. The whole plan is filed.
 - LeftBlock pre-commit check installed in this checkout and tested by hand: a commit holding an AWS account ID was refused. A new clone must run `leftblock install --local --check-only` itself.
 - AWS account `papyrus-production` created in the DataParade organisation. Administrator access through single sign-on. Local profile: `dataparade-papyrus-production`.
@@ -22,7 +23,6 @@ Updated 2026-11-11. Update this page when the state changes; the board has the d
 - Domain delegation: the registrar still points at its own name servers until Ryan changes them.
 - No certificate or mail-sending identity yet; both wait on the delegation.
 - Mail sending is still in the sandbox.
-- No checks on pull requests, no Semantic Release, no branch protection yet.
 - No deployment files in the repository yet.
 - The Cyclotron session has not been told what Humorus needs.
 
@@ -33,7 +33,6 @@ Changing TheHallucinator.ai's name servers at the registrar to the four Route 53
 ## What can start now
 
 In this repository:
-- Checks on pull requests, Semantic Release and branch protection (epic "The project is ready for work").
 - The GitHub sign-in provider and deploy role in the account.
 - Analytics and privacy page, operator access notes, the legal conversation.
 

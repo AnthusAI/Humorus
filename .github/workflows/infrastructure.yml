@@ -4,7 +4,7 @@
 #   pull request   cfn-lint (no AWS), then a read-only plan
 #   push to main   deploys the stacks; changes to the pipeline roles wait for a person to approve the GitHub environment pipeline-roles
 #
-# No stored keys (GitHub OIDC only) and no AWS identifiers in Git: the account id is the AWS_ACCOUNT_ID repository variable and the budget alert
+# No stored keys (GitHub OIDC only) and no AWS identifiers in Git: the account id is the AWS_ACCOUNT_ID repository variable and the budget
 # alert address is an SSM parameter in the account. See infra/README.md.
 name: Infrastructure
 

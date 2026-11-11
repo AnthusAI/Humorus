@@ -10,9 +10,22 @@
   "parent": "HUM-1885d9f5-26cb-43c0-ab35-87f8f07e0ffe",
   "labels": [],
   "dependencies": [],
-  "comments": [],
+  "comments": [
+    {
+      "id": "02bd86cd-8584-4a13-be3a-d1be31a94aaa",
+      "author": "home",
+      "text": "2026-11-11: account papyrus-production created in the DataParade organisation (ACTIVE). Still to do by a person: assign the AdministratorAccess permission set to the account in IAM Identity Center. An agent was not permitted to grant it.",
+      "created_at": "2026-11-11T17:20:45.754169Z",
+      "comment_type": "default",
+      "agent": {
+        "platform": "claude_code",
+        "model": "Claude Fable 5.2",
+        "name": "Humorus Planning"
+      }
+    }
+  ],
   "created_at": "2026-11-11T17:14:43.825788Z",
-  "updated_at": "2026-11-11T17:14:43.825810Z",
+  "updated_at": "2026-11-11T17:20:45.754859Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

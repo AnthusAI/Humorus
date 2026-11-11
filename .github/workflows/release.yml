@@ -1,0 +1,43 @@
+name: Release
+
+# A merge to main tags a version and writes a GitHub release from the
+# feat: and fix: commit titles. Board-only commits (Kanbus issues and events,
+# under project/) never release. Only GITHUB_TOKEN is used; no long-lived
+# secrets, no AWS access.
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "project/**"
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions: {}
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - name: Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: >
+          npx --yes
+          -p semantic-release@25.0.9
+          -p conventional-changelog-conventionalcommits@10.4.1
+          semantic-release

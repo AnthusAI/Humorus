@@ -1,0 +1,64 @@
+{
+  "region": "us-east-1",
+  "serviceRoleName": "humorus-cloudformation",
+  "pipelineCheck": false,
+  "root": ".",
+  "stacks": [
+    {
+      "name": "humorus-github-deploy",
+      "template": "papyrus:infra/account/baseline.yaml",
+      "group": "roles",
+      "serviceRoleName": "humorus-cloudformation-roles",
+      "capabilities": ["CAPABILITY_NAMED_IAM"],
+      "enabled": true,
+      "parameters": {
+        "Prefix": "humorus",
+        "GithubRepository": "AnthusAI/Humorus",
+        "ProductionBranch": "main",
+        "AmplifyAppId": "*",
+        "CreateOidcProvider": "true",
+        "ApprovalEnvironment": "pipeline-roles",
+        "BudgetName": "papyrus-production-monthly"
+      }
+    },
+    {
+      "name": "humorus-dns",
+      "template": "papyrus:infra/account/stacks/dns.yaml",
+      "enabled": true,
+      "parameters": {"DomainName": "thehallucinator.ai", "ZoneComment": "Humorus: TheHallucinator.ai"},
+      "import": {
+        "logicalId": "HostedZone",
+        "resourceType": "AWS::Route53::HostedZone",
+        "lookup": {"kind": "hostedZoneByName", "name": "thehallucinator.ai"},
+        "identifierKey": "Id"
+      },
+      "checks": [{"kind": "nameservers", "zone": "thehallucinator.ai", "expectedFile": "expected-nameservers.json"}]
+    },
+    {
+      "name": "humorus-budget",
+      "template": "papyrus:infra/account/stacks/budget.yaml",
+      "enabled": true,
+      "parameters": {"BudgetName": "papyrus-production-monthly", "MonthlyLimitUsd": "200", "AlertEmail": {"fromEnv": "BUDGET_ALERT_EMAIL"}},
+      "import": {
+        "logicalId": "MonthlyBudget",
+        "resourceType": "AWS::Budgets::Budget",
+        "lookup": {"kind": "budgetByName", "name": "papyrus-production-monthly"},
+        "identifierKey": "Id"
+      }
+    },
+    {
+      "name": "humorus-certificate",
+      "template": "papyrus:infra/account/stacks/certificate.yaml",
+      "enabled": false,
+      "reason": "Waits for the registrar to delegate thehallucinator.ai to the Route 53 zone; DNS validation cannot succeed before that.",
+      "parameters": {"DomainName": "thehallucinator.ai", "HostedZoneId": {"fromStackOutput": {"stack": "humorus-dns", "output": "HostedZoneId"}}}
+    },
+    {
+      "name": "humorus-ses",
+      "template": "papyrus:infra/account/stacks/ses.yaml",
+      "enabled": false,
+      "reason": "Waits for the registrar to delegate thehallucinator.ai to the Route 53 zone; the DKIM records live in it.",
+      "parameters": {"DomainName": "thehallucinator.ai", "HostedZoneId": {"fromStackOutput": {"stack": "humorus-dns", "output": "HostedZoneId"}}}
+    }
+  ]
+}

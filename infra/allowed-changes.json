@@ -1,0 +1,4 @@
+{
+  "comment": "Removes and Replaces a deploy may make on purpose, each with a reason. Empty it again once they have deployed.",
+  "allowed": []
+}

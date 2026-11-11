@@ -1,0 +1,31 @@
+# Humorus's AWS account is defined in Git and changed only from here. The mechanism is Papyrus's reusable workflow
+# (epic PPY-9bd776); this repository holds only its settings: infra/stacks.json.
+#
+#   pull request   cfn-lint (no AWS), then a read-only plan
+#   push to main   deploys the stacks; changes to the pipeline roles wait for a person to approve the GitHub environment pipeline-roles
+#
+# No stored keys (GitHub OIDC only) and no AWS identifiers in Git: the account id is the AWS_ACCOUNT_ID repository variable and the budget alert
+# address is BUDGET_ALERT_EMAIL. See infra/README.md.
+name: Infrastructure
+
+on:
+  pull_request:
+    branches: [develop, main]
+    paths: ["infra/**", ".github/workflows/infrastructure.yml"]
+  push:
+    branches: [main]
+    paths-ignore: ["project/**"]
+
+permissions:
+  contents: read
+
+jobs:
+  account:
+    permissions:
+      contents: read
+      id-token: write
+    uses: AnthusAI/Papyrus/.github/workflows/account-stacks.yml@develop # TODO: pin to a Papyrus release tag once one carries account-stacks.yml
+    with:
+      prefix: humorus
+      papyrus-ref: develop
+      aws-account-id: ${{ vars.AWS_ACCOUNT_ID }}

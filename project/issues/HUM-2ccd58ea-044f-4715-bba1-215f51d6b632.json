@@ -10,9 +10,17 @@
   "parent": "HUM-76897062-7b9c-4085-89bf-163ede715ab5",
   "labels": [],
   "dependencies": [],
-  "comments": [],
+  "comments": [
+    {
+      "id": "7d383075-3ca6-4ee3-9c33-0bd074216e30",
+      "author": "home",
+      "text": "The organisation-level seeding design (StackSets, account creation as code, managed offer, read-only everyday SSO with break-glass, who does the one-time setup, cost) is in the draft Papyrus epic comment on HUM-be87f4. Design only.",
+      "created_at": "2026-11-11T20:25:37.563890Z",
+      "comment_type": "default"
+    }
+  ],
   "created_at": "2026-11-11T20:15:41.138498Z",
-  "updated_at": "2026-11-11T20:15:41.138531Z",
+  "updated_at": "2026-11-11T20:25:37.564100Z",
   "closed_at": null,
   "right_now_summary": null,
   "right_now_updated_at": null,

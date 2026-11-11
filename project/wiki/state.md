@@ -1,6 +1,6 @@
 # Current state
 
-Updated 2026-11-11. Update this page when the state changes; the board has the detail.
+Updated 2026-11-12. Update this page when the state changes; the board has the detail.
 
 ## Done
 
@@ -10,8 +10,9 @@ Updated 2026-11-11. Update this page when the state changes; the board has the d
 - LeftBlock pre-commit check installed in this checkout and tested by hand: a commit holding an AWS account ID was refused. A new clone must run `leftblock install --local --check-only` itself.
 - AWS account `papyrus-production` created in the DataParade organisation. Administrator access through single sign-on. Local profile: `dataparade-papyrus-production`.
 - CDK bootstrap in `us-east-1`.
-- GitHub sign-in provider and deploy role created from `infra/github-deploy/` (stack `humorus-github-deploy`). The role only starts and watches Amplify jobs from `main`. Its ARN and the region are repository variables. Narrow it to the one Amplify app once that app exists.
-- Budget: 200 USD a month, alerts at 50% and 80% of spend and when the forecast passes 100%.
+- **The AWS account is managed by a pipeline.** Every change to the account's stacks is a merge to `main`; the Infrastructure workflow (`infra/README.md`) deploys it with GitHub sign-in and no stored keys. The mechanism is Papyrus's account pipeline (epic `PPY-9bd776`); this repository holds only the settings. First real deploy: 2026-11-11, run 43117405856.
+- Stacks: `humorus-github-deploy` (provider and the roles), `humorus-dns` (the Route 53 zone, imported, name servers unchanged), `humorus-budget` (200 USD a month, alerts at 50% and 80% of spend and when the forecast passes 100%, imported), `humorus-ses` (sending identity with DKIM, MAIL FROM, SPF and DMARC records). Nothing in GitHub needs anyone's approval.
+- Waiting for the registrar, deployed by the pipeline by itself: `humorus-certificate` and `humorus-placeholder` (a labelled satire page on the apex and www). A `Delegation watch` workflow checks every 15 minutes and, once, opens a GitHub issue and starts the deploy.
 - A Lambda concurrency increase from 10 to 1,000 is requested; AWS opened a case.
 - First site: TheHallucinator.ai. Route 53 hosted zone created in the account; waiting for Ryan to point the domain's name servers at it.
 - OpenAI and TypeSafe keys stored as SecureString parameters (`/papyrus/the-hallucinator/openai-api-key`, `/papyrus/shared/typesafe-api-key`).
@@ -19,13 +20,12 @@ Updated 2026-11-11. Update this page when the state changes; the board has the d
 
 ## Not done, and why
 
-- **Papyrus pipeline bootstrap: deliberately not run.** `infra/pipeline/bootstrap.sh` trusts the Papyrus repository and sets that repository's `AWS_ACCOUNT_ID` variable. Run for this account it would redirect Papyrus's own releases. Its stacks also name another organisation's domain. Wait for `PPY-1a6aa6`.
+- Papyrus's `bootstrap.sh` is not used for this account: the account pipeline replaced it for deployment accounts.
 - Newsroom text for TheHallucinator.ai: first draft in [the-hallucinator-newsroom-draft](the-hallucinator-newsroom-draft.md), waiting for Ryan's review and the legal conversation.
 - CLI sign-in without Prospectus: recommendation on HUM-539f78 (Google through the site's own Cognito; remote login for agents).
-- Domain delegation: the registrar still points at its own name servers until Ryan changes them.
-- No certificate or mail-sending identity yet; both wait on the delegation.
-- Mail sending is still in the sandbox.
-- No deployment files in the repository yet.
+- Domain delegation: as of 2026-11-12 `dig NS thehallucinator.ai` still answers `ns27.domaincontrol.com` and `ns28.domaincontrol.com`. Ryan changes it at the registrar.
+- Mail sending is still in the sandbox; verification of the sending domain is pending delegation. The production-access request is drafted on `HUM-bdd767` and not submitted.
+- Not in the pipeline: the CDK bootstrap stack `CDKToolkit` (CDK's own template, made by `cdk bootstrap`), and the Amplify app (not created yet).
 - The Cyclotron session has not been told what Humorus needs.
 
 ## Waiting on Ryan
@@ -41,6 +41,14 @@ In Papyrus (through the Papyrus session, not from here):
 - The neutral theme, the scaffold, policy as data, and running in another organisation. These gate the first deploy and the first automated piece.
 
 Run `kbs ready` for the full list of work with nothing in its way.
+
+## What only a person does
+
+- Give the registrar the zone's four name servers (`infra/expected-nameservers.json`).
+- Create the Google sign-in client for the newsroom.
+- Put secret values: the two SecureString parameters `/papyrus/the-hallucinator/openai-api-key` and `/papyrus/shared/typesafe-api-key` (CloudFormation cannot create a SecureString, and values never go in Git), and the String parameter `/humorus/budget-alert-email`.
+- Submit the SES production-access request.
+- Every other account change is a merge to `main`. Agents read the account with the AWS CLI and never change it.
 
 ## Things a new session should know
 

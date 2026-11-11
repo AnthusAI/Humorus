@@ -38,7 +38,7 @@
       "name": "humorus-budget",
       "template": "papyrus:infra/account/stacks/budget.yaml",
       "enabled": true,
-      "parameters": {"BudgetName": "papyrus-production-monthly", "MonthlyLimitUsd": "200", "AlertEmail": {"fromEnv": "BUDGET_ALERT_EMAIL"}},
+      "parameters": {"BudgetName": "papyrus-production-monthly", "MonthlyLimitUsd": "200", "AlertEmail": "/humorus/budget-alert-email"},
       "import": {
         "logicalId": "MonthlyBudget",
         "resourceType": "AWS::Budgets::Budget",

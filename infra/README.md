@@ -17,7 +17,7 @@ The mechanism lives in Papyrus (epic PPY-9bd776; see `docs/account-pipeline.md` 
 | --- | --- | --- |
 | Stack `humorus-github-deploy` (GitHub provider, `humorus-github-deploy` role) | by hand, stack | Updated in place from Papyrus's account baseline template; logical ids and role name are unchanged, so nothing is replaced. Adds the plan, roles-apply and two service roles |
 | Route 53 zone for thehallucinator.ai | by hand | Imported into `humorus-dns` (Retain), name servers verified unchanged |
-| Monthly budget `papyrus-production-monthly` | by hand | Imported into `humorus-budget` (Retain). The alert address comes from the `BUDGET_ALERT_EMAIL` variable. Whether CloudFormation can import a budget by name is unverified; the change set will say. Fallback, only with Ryan's approval: recreate it |
+| Monthly budget `papyrus-production-monthly` | by hand | Imported into `humorus-budget` (Retain). The alert address is read at deploy time from the SSM String parameter `/humorus/budget-alert-email` (never a GitHub variable: workflow logs on a public repo are public). The budget's `BudgetName` and `NotificationsWithSubscribers` are create-only in CloudFormation, so the template must declare the live subscriber exactly, or the update would replace the budget; the deployer refuses any Replace. Whether CloudFormation can import a budget by name is unverified; the change set will say. Fallback, only with Ryan's approval: recreate it |
 | `CDKToolkit` (CDK bootstrap) | by hand (`cdk bootstrap`) | Left alone: it is CDK's own template. Nothing here uses it yet |
 | SSM SecureStrings `/papyrus/the-hallucinator/openai-api-key`, `/papyrus/shared/typesafe-api-key` | by a person | The person-only exception: CloudFormation cannot create a SecureString and values never go in Git |
 
@@ -42,7 +42,11 @@ aws cloudformation deploy --stack-name humorus-github-deploy \
     AmplifyAppId='*' CreateOidcProvider=true ApprovalEnvironment=pipeline-roles BudgetName=papyrus-production-monthly
 ```
 
-Before the first merge that touches the baseline: set the repository variables `AWS_ACCOUNT_ID` and `BUDGET_ALERT_EMAIL`, and create the GitHub environment `pipeline-roles` with a required reviewer.
+One-time GitHub and account setup, each waiting for Ryan's go-ahead (before the first merge to `main` that touches `infra/`):
+
+1. Repository variable `AWS_ACCOUNT_ID` (the Humorus account id; a variable, not Git).
+2. GitHub environment `pipeline-roles` with a required reviewer and deployment branch `main`. It must exist before the first baseline change merges, or GitHub would auto-create it unprotected.
+3. SSM String parameter `/humorus/budget-alert-email` holding the current budget alert address (`aws ssm put-parameter --name /humorus/budget-alert-email --type String --value <the live subscriber>`). A person does this: the address stays out of Git and logs.
 
 ## What each role can do, in plain English
 

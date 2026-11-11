@@ -10,6 +10,7 @@ Updated 2026-11-11. Update this page when the state changes; the board has the d
 - LeftBlock pre-commit check installed in this checkout and tested by hand: a commit holding an AWS account ID was refused. A new clone must run `leftblock install --local --check-only` itself.
 - AWS account `papyrus-production` created in the DataParade organisation. Administrator access through single sign-on. Local profile: `dataparade-papyrus-production`.
 - CDK bootstrap in `us-east-1`.
+- GitHub sign-in provider and deploy role created from `infra/github-deploy/` (stack `humorus-github-deploy`). The role only starts and watches Amplify jobs from `main`. Its ARN and the region are repository variables. Narrow it to the one Amplify app once that app exists.
 - Budget: 200 USD a month, alerts at 50% and 80% of spend and when the forecast passes 100%.
 - A Lambda concurrency increase from 10 to 1,000 is requested; AWS opened a case.
 - First site: TheHallucinator.ai. Route 53 hosted zone created in the account; waiting for Ryan to point the domain's name servers at it.
@@ -19,7 +20,6 @@ Updated 2026-11-11. Update this page when the state changes; the board has the d
 ## Not done, and why
 
 - **Papyrus pipeline bootstrap: deliberately not run.** `infra/pipeline/bootstrap.sh` trusts the Papyrus repository and sets that repository's `AWS_ACCOUNT_ID` variable. Run for this account it would redirect Papyrus's own releases. Its stacks also name another organisation's domain. Wait for `PPY-1a6aa6`.
-- GitHub sign-in provider and deploy role: template ready in `infra/github-deploy/` (only starts and watches Amplify jobs on `main`); not applied, waiting for Ryan's go-ahead.
 - Newsroom text for TheHallucinator.ai: first draft in [the-hallucinator-newsroom-draft](the-hallucinator-newsroom-draft.md), waiting for Ryan's review and the legal conversation.
 - CLI sign-in without Prospectus: recommendation on HUM-539f78 (Google through the site's own Cognito; remote login for agents).
 - Domain delegation: the registrar still points at its own name servers until Ryan changes them.
@@ -35,7 +35,6 @@ Changing TheHallucinator.ai's name servers at the registrar to the four Route 53
 ## What can start now
 
 In this repository:
-- The GitHub sign-in provider and deploy role in the account.
 - Analytics and privacy page, operator access notes, the legal conversation.
 
 In Papyrus (through the Papyrus session, not from here):

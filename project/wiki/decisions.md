@@ -22,10 +22,12 @@ Decisions Ryan has made for Humorus. Add new ones at the bottom with the date. D
 | 14 | Satire is labelled for agents as well as people. |
 | 15 | Kanbus with the `bdd` and `git-flow` methodologies. Prefer behaviour stories; use tasks and sub-tasks for plain work; epics are milestones; initiatives group them. Also LeftBlock and Semantic Release. |
 | 16 | Budget alarm on the account: 200 USD a month. |
+| 17 | The first site is **TheHallucinator.ai** (site id `the-hallucinator`). The domain is registered elsewhere; Route 53 in the account serves its DNS. |
+| 18 | Reuse the Papyrus development OpenAI and TypeSafe keys in this account rather than new ones. |
+| 19 | Working model: Claude (Opus) is product owner and project manager; one Sonnet engineering lead runs Sonnet and Haiku workers, reviews their work, and reports only working code. |
 
 ## Open questions for Ryan
 
-- The first site's name and domain.
 - Whether the second user who received administrator access on the new account should keep it.
-- Model provider keys and spend limits for the account.
+- Spend limits at the model providers (the keys are shared with the Anthus sites).
 - How Prospectus fits, if at all.

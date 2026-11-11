@@ -11,13 +11,16 @@ Updated 2026-11-11. Update this page when the state changes; the board has the d
 - CDK bootstrap in `us-east-1`.
 - Budget: 200 USD a month, alerts at 50% and 80% of spend and when the forecast passes 100%.
 - A Lambda concurrency increase from 10 to 1,000 is requested; AWS opened a case.
+- First site: TheHallucinator.ai. Route 53 hosted zone created in the account; waiting for Ryan to point the domain's name servers at it.
+- OpenAI and TypeSafe keys stored as SecureString parameters (`/papyrus/the-hallucinator/openai-api-key`, `/papyrus/shared/typesafe-api-key`).
 - Papyrus issues filed under `PPY-059573`; Machines on Machines issues under `MOM-065620`. The Papyrus implementation session was told.
 
 ## Not done, and why
 
 - **Papyrus pipeline bootstrap: deliberately not run.** `infra/pipeline/bootstrap.sh` trusts the Papyrus repository and sets that repository's `AWS_ACCOUNT_ID` variable. Run for this account it would redirect Papyrus's own releases. Its stacks also name another organisation's domain. Wait for `PPY-1a6aa6`.
 - No GitHub sign-in provider or deploy role in the account yet.
-- No hosted zone: the first site has no name or domain.
+- Domain delegation: the registrar still points at its own name servers until Ryan changes them.
+- No certificate or mail-sending identity yet; both wait on the delegation.
 - Mail sending is still in the sandbox.
 - No checks on pull requests, no Semantic Release, no branch protection yet.
 - No deployment files in the repository yet.
@@ -25,7 +28,7 @@ Updated 2026-11-11. Update this page when the state changes; the board has the d
 
 ## Waiting on Ryan
 
-See the open questions in [Decisions](decisions.md): the site's name and domain come first, because the hosted zone, certificate, mail sending and Google sign-in all wait on them.
+Changing TheHallucinator.ai's name servers at the registrar to the four Route 53 servers. The certificate, mail sending and Google sign-in wait on it. Other open questions are in [Decisions](decisions.md).
 
 ## What can start now
 

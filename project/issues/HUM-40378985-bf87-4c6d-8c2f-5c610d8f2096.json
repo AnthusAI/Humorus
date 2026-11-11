@@ -1,0 +1,25 @@
+{
+  "id": "HUM-40378985-bf87-4c6d-8c2f-5c610d8f2096",
+  "title": "Cyclotron support runs in the site's own account",
+  "description": "Relevance and ranking decisions come from a shared service elsewhere.\n\n```gherkin\nFeature: Cyclotron in the site's account\n\n  Scenario: Votes train the site's own model\n    Given a deployment in its own account\n    When editors and readers vote\n    Then the site's own model is trained and used\n    And no request leaves the account's services\n```",
+  "type": "story",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-e9e96f73-587f-4278-90b3-011a80cc93a0",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.269419Z",
+  "updated_at": "2026-11-11T17:14:44.269442Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

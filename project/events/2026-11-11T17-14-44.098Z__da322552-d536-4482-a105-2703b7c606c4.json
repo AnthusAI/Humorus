@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "da322552-d536-4482-a105-2703b7c606c4",
+  "issue_id": "HUM-4bca14ea-a14b-40cf-bbda-6b1df8d14e46",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.098Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "One command creates a working site folder",
+    "description": "Starting a site is about twelve manual steps copied from another repository.\n\n```gherkin\nFeature: Site scaffold\n\n  Scenario: A new site folder builds\n    Given an empty folder\n    When I run the site scaffold with a site name\n    Then the folder holds the settings, deployment files and tests for that site\n    And its tests pass\n    And no AWS identifier is written to any file\n\n  Scenario: A site inside a monorepo\n    Given a repository that already holds a deployment\n    When I run the scaffold for a second site\n    Then only that site's folder and the site list change\n```",
+    "issue_type": "story",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-dc9f7129-486d-492b-8a2b-bc238c1e41ee",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

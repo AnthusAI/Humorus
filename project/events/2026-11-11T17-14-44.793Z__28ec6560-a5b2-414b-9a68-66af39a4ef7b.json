@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "28ec6560-a5b2-414b-9a68-66af39a4ef7b",
+  "issue_id": "HUM-f7a31919-6153-495e-99c9-977b6c306e5a",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.793Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "An operator rolls out a Papyrus update to the client's account",
+    "description": "The managed offer is that we orchestrate updates over time.\n\n```gherkin\nFeature: Operated update\n\n  Scenario: An update is applied and checked\n    Given a new Papyrus release that affects sites\n    When the operator rolls it out to the deployment\n    Then the deployment runs the new version\n    And the sites are checked afterwards\n    And the client's account shows who did it\n```",
+    "issue_type": "story",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-71706ab1-0629-42b6-bd46-610da00e722f",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

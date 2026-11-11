@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "408498f2-06cb-4d5e-8be3-f0cab2dff9b1",
+  "issue_id": "HUM-c88c4b50-b436-473f-87d2-69b27cfcbe42",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:43.983Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "The deploy reads its identifiers from variables",
+    "description": "The deploy workflow and the deployment settings must work with no identifier in any tracked file.\n\n```gherkin\nFeature: Identifiers come from variables\n\n  Scenario: The deploy workflow uses repository variables\n    Given the account ID, app ID and role name are set as repository variables\n    When a change merges to main\n    Then the workflow assumes the deploy role and starts the Amplify job\n    And no tracked file contains those values\n\n  Scenario: A missing variable stops the deploy clearly\n    Given the app ID variable is not set\n    When the deploy job starts\n    Then it stops with a message that names the missing variable\n```",
+    "issue_type": "story",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-632832a2-cecc-4705-b093-e81e63f7d989",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

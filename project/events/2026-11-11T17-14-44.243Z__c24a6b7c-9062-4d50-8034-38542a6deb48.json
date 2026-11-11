@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "c24a6b7c-9062-4d50-8034-38542a6deb48",
+  "issue_id": "HUM-ac28dd76-6445-4217-b830-0ba7bacdabcf",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.243Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "A deployment carries no defaults from another company",
+    "description": "Core still has default domains, a family footer and a privacy link that belong to Anthus.\n\n```gherkin\nFeature: No borrowed defaults\n\n  Scenario: A fresh deployment names only itself\n    Given a deployment with only its own settings\n    When the site is built and the backend is deployed\n    Then no page, mail or record refers to a domain the site does not own\n```",
+    "issue_type": "story",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-e9e96f73-587f-4278-90b3-011a80cc93a0",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

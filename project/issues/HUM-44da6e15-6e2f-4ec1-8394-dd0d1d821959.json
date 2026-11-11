@@ -1,0 +1,25 @@
+{
+  "id": "HUM-44da6e15-6e2f-4ec1-8394-dd0d1d821959",
+  "title": "Newsroom policy is data",
+  "description": "Milestone: Papyrus code holds no editorial opinion. This reverses the earlier rule that agent prompts are add-only: a site owns the whole text.",
+  "type": "epic",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-b04209ad-bc31-4fbd-b233-d539c4acf950",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.133974Z",
+  "updated_at": "2026-11-11T17:14:44.133996Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

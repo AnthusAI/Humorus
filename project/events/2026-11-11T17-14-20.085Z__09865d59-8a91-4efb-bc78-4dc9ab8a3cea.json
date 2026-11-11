@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "09865d59-8a91-4efb-bc78-4dc9ab8a3cea",
+  "issue_id": "HUM-894b93cd-18e3-463e-8336-ede4a469f2ae",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:20.085Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "The project is ready for work",
+    "description": "Milestone: any session can clone Humorus, read the rules, find its work on the board and have its commits and pull requests checked.",
+    "issue_type": "epic",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-76897062-7b9c-4085-89bf-163ede715ab5",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

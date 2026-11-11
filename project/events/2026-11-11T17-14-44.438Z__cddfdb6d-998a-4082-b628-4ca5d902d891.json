@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "cddfdb6d-998a-4082-b628-4ca5d902d891",
+  "issue_id": "HUM-c320b002-631c-4dea-8994-8ece5ef70b2a",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.438Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Write the mission and policy",
+    "description": "What the site satirises and its limits: public figures only, no private people, no victims of tragedies, no invented crimes, never reuse a source's wording or pictures. Saved with `papyrus sections doctrine set`.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-f5f43042-7e0c-42a1-84d4-afdc5b0b97f7",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

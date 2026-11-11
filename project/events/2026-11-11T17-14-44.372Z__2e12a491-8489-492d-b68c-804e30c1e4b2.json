@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "2e12a491-8489-492d-b68c-804e30c1e4b2",
+  "issue_id": "HUM-5f156df6-418d-445f-81ba-029439fb3d19",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.372Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Point the domain at the edge",
+    "description": "Point the domain at the edge",
+    "issue_type": "sub-task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-7e44b057-7410-43fe-8806-97fd77ea578e",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

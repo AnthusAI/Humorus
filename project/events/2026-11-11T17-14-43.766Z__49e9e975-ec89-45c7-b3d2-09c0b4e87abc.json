@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "49e9e975-ec89-45c7-b3d2-09c0b4e87abc",
+  "issue_id": "HUM-73dbfe73-8cbe-4bf9-b850-d36a4045e9c3",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:43.766Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Run checks on pull requests with GitHub Actions",
+    "description": "One workflow on pull requests to `develop` and `main`: LeftBlock scan, then per-site tests once a site exists. Use path filters so a change to one site tests only that site. The repository is public so the minutes are free.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-894b93cd-18e3-463e-8336-ede4a469f2ae",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

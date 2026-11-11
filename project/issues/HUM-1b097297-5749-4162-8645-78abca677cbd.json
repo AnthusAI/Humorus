@@ -1,0 +1,25 @@
+{
+  "id": "HUM-1b097297-5749-4162-8645-78abca677cbd",
+  "title": "Monitoring runs in the site's own account",
+  "description": "The monitoring stack and its router are tied to one account.\n\n```gherkin\nFeature: Monitoring in the site's account\n\n  Scenario: Monitors deploy with the deployment\n    Given a new account\n    When the deployment is created\n    Then its monitors run in that account\n    And nothing is granted from another account\n```",
+  "type": "story",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-e9e96f73-587f-4278-90b3-011a80cc93a0",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.256383Z",
+  "updated_at": "2026-11-11T17:14:44.256419Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

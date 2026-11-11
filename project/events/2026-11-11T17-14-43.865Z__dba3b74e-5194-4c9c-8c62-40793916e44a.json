@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "dba3b74e-5194-4c9c-8c62-40793916e44a",
+  "issue_id": "HUM-bc2f4060-2c6c-47f4-9f3c-e38268d08843",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:43.865Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Set a monthly budget with alarms",
+    "description": "Set a monthly budget with alarms",
+    "issue_type": "sub-task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-a61498ed-39e7-47f5-9f8e-337385f21343",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

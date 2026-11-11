@@ -1,0 +1,25 @@
+{
+  "id": "HUM-c320b002-631c-4dea-8994-8ece5ef70b2a",
+  "title": "Write the mission and policy",
+  "description": "What the site satirises and its limits: public figures only, no private people, no victims of tragedies, no invented crimes, never reuse a source's wording or pictures. Saved with `papyrus sections doctrine set`.",
+  "type": "task",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-f5f43042-7e0c-42a1-84d4-afdc5b0b97f7",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.438662Z",
+  "updated_at": "2026-11-11T17:14:44.438685Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

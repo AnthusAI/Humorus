@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "005aea10-5875-4226-9041-5c513c144c24",
+  "issue_id": "HUM-c7a25c7c-0c24-416d-a4ac-3f85af4e1149",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.763Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "The managed service rehearsal",
+    "description": "Later. Humorus runs in an account its owner controls and we operate it, which is the managed offer: software updates and operation for a service fee.",
+    "issue_type": "initiative",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": null,
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

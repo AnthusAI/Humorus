@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "bd24db23-ae42-4ae1-b895-91dd79be0722",
+  "issue_id": "HUM-e155f8bd-fe22-4a02-8b79-f0ef79b19f52",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.534Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "An idea starts from one real story and invents the angle",
+    "description": "Every idea path today joins at least two sources and refuses invention.\n\n```gherkin\nFeature: Premise-led ideas\n\n  Scenario: One real event, one invented angle\n    Given an accepted Reference about a real event\n    When satire ideas are generated\n    Then each idea names the real event it comes from\n    And states its invented premise separately\n\n  Scenario: The source is not copied\n    Given an idea from a Reference\n    When the piece is drafted\n    Then it reuses none of the source's sentences\n```",
+    "issue_type": "story",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-952a436f-4ebc-44f5-9f65-64fd05817ad2",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

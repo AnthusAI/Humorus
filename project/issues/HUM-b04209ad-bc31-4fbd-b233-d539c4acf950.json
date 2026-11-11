@@ -1,0 +1,25 @@
+{
+  "id": "HUM-b04209ad-bc31-4fbd-b233-d539c4acf950",
+  "title": "Papyrus as a neutral base",
+  "description": "Papyrus changes that let a very different newsroom run on the same code. The work is done in Papyrus and Machines on Machines and tracked on their boards; each story here states what Humorus needs and links to it.",
+  "type": "initiative",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": null,
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.016531Z",
+  "updated_at": "2026-11-11T17:14:44.016553Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

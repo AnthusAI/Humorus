@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "142eb186-629b-4937-aee1-476da763ee78",
+  "issue_id": "HUM-7645cc58-e408-4f34-81c1-7660b1de1e2e",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:43.746Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Create the repository, branches, board and agent rules",
+    "description": "Public `AnthusAI/Humorus` with `main` and `develop`, Kanbus key `HUM` with the `bdd` and `git-flow` methodologies, `AGENTS.md`, `README.md`, MIT licence, LeftBlock pre-commit check.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-894b93cd-18e3-463e-8336-ede4a469f2ae",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

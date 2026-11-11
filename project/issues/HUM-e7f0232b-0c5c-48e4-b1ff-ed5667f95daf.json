@@ -1,0 +1,25 @@
+{
+  "id": "HUM-e7f0232b-0c5c-48e4-b1ff-ed5667f95daf",
+  "title": "Rules that are logic become site settings",
+  "description": "The two-citation minimum and the point check's verdicts are code, not text, so a scaffold alone cannot change them.\n\n```gherkin\nFeature: Idea rules are settings\n\n  Scenario: A site allows one-source ideas\n    Given a site whose idea settings need one Reference\n    When ideas are generated\n    Then an idea built on one Reference is kept\n\n  Scenario: Another site keeps the stricter rule\n    Given a site whose idea settings need two References\n    When ideas are generated\n    Then an idea built on one Reference is dropped\n```",
+  "type": "story",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-44da6e15-6e2f-4ec1-8394-dd0d1d821959",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.205856Z",
+  "updated_at": "2026-11-11T17:14:44.205877Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

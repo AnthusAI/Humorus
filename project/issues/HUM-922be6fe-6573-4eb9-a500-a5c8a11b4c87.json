@@ -1,0 +1,25 @@
+{
+  "id": "HUM-922be6fe-6573-4eb9-a500-a5c8a11b4c87",
+  "title": "Usage is metered for the service fee",
+  "description": "Milestone: we can say what a deployment cost to run.",
+  "type": "epic",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-c7a25c7c-0c24-416d-a4ac-3f85af4e1149",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.822876Z",
+  "updated_at": "2026-11-11T17:14:44.822896Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

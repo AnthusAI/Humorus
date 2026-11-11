@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "1bf33ae1-6720-4c83-8fe1-059cffac8916",
+  "issue_id": "HUM-d062a23c-1ace-4e5c-a8f8-2da5b4025156",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.733Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "We know what a new site costs",
+    "description": "Milestone: the second site's setup is measured and the findings shape provisioning.",
+    "issue_type": "epic",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-82d7fb31-d438-496c-acc1-4fabeede65c1",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

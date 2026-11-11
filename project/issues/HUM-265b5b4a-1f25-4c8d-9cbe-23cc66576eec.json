@@ -1,0 +1,25 @@
+{
+  "id": "HUM-265b5b4a-1f25-4c8d-9cbe-23cc66576eec",
+  "title": "A second site runs on the same deployment",
+  "description": "Milestone: two publications, two domains, one deployment. This is an early milestone for the Papyrus multi-tenant plan (PPY-6a6357), ahead of permission isolation.",
+  "type": "epic",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-82d7fb31-d438-496c-acc1-4fabeede65c1",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.660018Z",
+  "updated_at": "2026-11-11T17:14:44.660044Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "892c57a3-618c-48f4-90aa-1951440b9ccc",
+  "issue_id": "HUM-3aec8ca6-bcf1-4c25-b3b1-2b99e417a54e",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.050Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "A site changes its look with a brand pack of tokens",
+    "description": "Colours, fonts, logo and spacing must be data so the shared deployment can accept them.\n\n```gherkin\nFeature: Brand pack\n\n  Scenario: Tokens restyle the site\n    Given a brand pack that sets colours for light and dark, fonts and a logo\n    When the site is built\n    Then every page uses those values\n    And the layout is unchanged\n\n  Scenario: A brand pack cannot carry code\n    Given a brand pack that includes a script or arbitrary CSS rules\n    When it is saved\n    Then it is refused with the reason\n```\n\n**Needs Papyrus work:** PPY-e572de, PPY-0f4e10, PPY-2a44b2.",
+    "issue_type": "story",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-1be84311-4172-477a-9453-07054429cede",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "HUM-1be84311-4172-477a-9453-07054429cede",
+  "title": "A neutral theme, factored out of Machines on Machines",
+  "description": "Milestone: Papyrus ships a plain default public theme built from the useful parts of the Machines on Machines design, plus example themes. A site changes its look with tokens only.",
+  "type": "epic",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-b04209ad-bc31-4fbd-b233-d539c4acf950",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.027761Z",
+  "updated_at": "2026-11-11T17:14:44.027784Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

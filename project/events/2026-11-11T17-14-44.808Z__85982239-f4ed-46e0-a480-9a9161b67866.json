@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "85982239-f4ed-46e0-a480-9a9161b67866",
+  "issue_id": "HUM-f39b286b-e319-4c35-a39e-656068162cff",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.808Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Write the operator runbook",
+    "description": "Access, update, check, roll back, and what the client is told.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-71706ab1-0629-42b6-bd46-610da00e722f",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

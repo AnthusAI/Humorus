@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "da9c03b2-04dc-4c06-bcdc-9a486c08350e",
+  "issue_id": "HUM-b071d2b0-89dd-4540-89e7-d9f6c7f5fb2e",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:43.785Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Protect main and develop",
+    "description": "Require the checks on pull requests to `main`. Allow board-only pushes straight to `develop`.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-894b93cd-18e3-463e-8336-ede4a469f2ae",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

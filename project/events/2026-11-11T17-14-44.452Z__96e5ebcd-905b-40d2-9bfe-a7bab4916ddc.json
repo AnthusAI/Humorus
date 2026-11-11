@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "96e5ebcd-905b-40d2-9bfe-a7bab4916ddc",
+  "issue_id": "HUM-f55d9f2a-8eff-4ffa-aed2-d80b33e54b8a",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.452Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Define the sections",
+    "description": "Topic sections for the site, each with its mission and kill criteria.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-f5f43042-7e0c-42a1-84d4-afdc5b0b97f7",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

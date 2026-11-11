@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "3a7a1ca6-efd8-4fd0-902b-8d92285edc90",
+  "issue_id": "HUM-2ecd7042-a553-4a77-aeb7-7e2f22e93595",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.398Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "An editor signs in to the newsroom with Google",
+    "description": "Google sign-in is the only way in.\n\n```gherkin\nFeature: Newsroom sign-in\n\n  Scenario: An invited editor signs in\n    Given an editor who has been added to the editors group\n    When they sign in with Google\n    Then they reach the newsroom\n\n  Scenario: There is no password form\n    Given the sign-in page\n    Then it offers Google sign-in only\n```",
+    "issue_type": "story",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-24ef9c5d-3b69-4f0a-a69a-497a8c736833",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

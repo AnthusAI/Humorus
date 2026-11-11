@@ -1,0 +1,25 @@
+{
+  "id": "HUM-def2090a-5b6f-403f-bff1-0e2c7f39e930",
+  "title": "Write the writing guidelines and agent instructions",
+  "description": "Voice, audience, tone, lexicon and exemplars for deadpan news satire; the agents' role text from the satire profile.",
+  "type": "task",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-f5f43042-7e0c-42a1-84d4-afdc5b0b97f7",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.466051Z",
+  "updated_at": "2026-11-11T17:14:44.466084Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

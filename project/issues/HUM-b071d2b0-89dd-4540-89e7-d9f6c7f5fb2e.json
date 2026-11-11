@@ -1,0 +1,25 @@
+{
+  "id": "HUM-b071d2b0-89dd-4540-89e7-d9f6c7f5fb2e",
+  "title": "Protect main and develop",
+  "description": "Require the checks on pull requests to `main`. Allow board-only pushes straight to `develop`.",
+  "type": "task",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-894b93cd-18e3-463e-8336-ede4a469f2ae",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:43.785826Z",
+  "updated_at": "2026-11-11T17:14:43.785847Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

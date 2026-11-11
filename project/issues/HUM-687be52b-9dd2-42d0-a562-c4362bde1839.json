@@ -1,0 +1,38 @@
+{
+  "id": "HUM-687be52b-9dd2-42d0-a562-c4362bde1839",
+  "title": "A commit that contains an AWS identifier is refused",
+  "description": "Humorus is public. Account IDs, app IDs, ARNs and bucket names must never reach it.\n\n```gherkin\nFeature: AWS identifiers stay out of Git\n\n  Scenario: The local hook refuses the commit\n    Given a staged file that contains an AWS account ID in a role ARN\n    When I commit\n    Then the commit is refused\n    And the message names the file, the line and the rule\n\n  Scenario: A pull request that contains an identifier fails its check\n    Given a pull request whose changes contain an AWS account ID\n    When the checks run\n    Then the LeftBlock check fails\n\n  Scenario: A clean change passes\n    Given a staged file with a placeholder such as <account-id>\n    When I commit\n    Then the commit succeeds\n```",
+  "type": "story",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-894b93cd-18e3-463e-8336-ede4a469f2ae",
+  "labels": [],
+  "dependencies": [],
+  "comments": [
+    {
+      "id": "31cdaca3-e0b1-4bb0-9ca4-447c0cd5da32",
+      "author": "home",
+      "text": "2026-11-11: the local hook scenario passes by hand (a synthetic account ID in a role ARN was refused by leftblock-aws-account-id). The pull request check and automated scenarios are still to do.",
+      "created_at": "2026-11-11T17:15:00.441941Z",
+      "comment_type": "default",
+      "agent": {
+        "platform": "claude_code",
+        "model": "Claude Fable 5.2",
+        "name": "Humorus Planning"
+      }
+    }
+  ],
+  "created_at": "2026-11-11T17:14:43.756245Z",
+  "updated_at": "2026-11-11T17:15:00.442166Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

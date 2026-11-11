@@ -1,0 +1,25 @@
+{
+  "id": "HUM-7f682d32-0652-4887-81f6-f54e1fc19809",
+  "title": "A site can see where it has drifted from current defaults",
+  "description": "A scaffolded site no longer inherits improved defaults. It needs to see what changed.\n\n```gherkin\nFeature: Scaffold diff\n\n  Scenario: Drift is reported and nothing is changed\n    Given a site scaffolded with an earlier Papyrus version\n    When I run the scaffold diff\n    Then I see each record that differs from the current default\n    And no record is changed\n```",
+  "type": "story",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-dc9f7129-486d-492b-8a2b-bc238c1e41ee",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.122132Z",
+  "updated_at": "2026-11-11T17:14:44.122152Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

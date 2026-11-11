@@ -1,0 +1,33 @@
+{
+  "id": "HUM-7645cc58-e408-4f34-81c1-7660b1de1e2e",
+  "title": "Create the repository, branches, board and agent rules",
+  "description": "Public `AnthusAI/Humorus` with `main` and `develop`, Kanbus key `HUM` with the `bdd` and `git-flow` methodologies, `AGENTS.md`, `README.md`, MIT licence, LeftBlock pre-commit check.",
+  "type": "task",
+  "status": "closed",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-894b93cd-18e3-463e-8336-ede4a469f2ae",
+  "labels": [],
+  "dependencies": [],
+  "comments": [
+    {
+      "id": "8abb41e3-3e18-4411-9d22-0967d2d1109a",
+      "author": "home",
+      "text": "Done 2026-11-11: public AnthusAI/Humorus with main and develop (develop is the default branch), Kanbus key HUM with bdd and git-flow, AGENTS.md, README, MIT licence, LeftBlock pre-commit check installed and tested with a synthetic account ID (refused).",
+      "created_at": "2026-11-11T17:15:00.420763Z",
+      "comment_type": "default"
+    }
+  ],
+  "created_at": "2026-11-11T17:14:43.746690Z",
+  "updated_at": "2026-11-11T17:15:00.428162Z",
+  "closed_at": "2026-11-11T17:15:00.428135Z",
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

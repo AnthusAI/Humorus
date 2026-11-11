@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "bf08d4ca-5be4-4181-8802-2973c9cb250b",
+  "issue_id": "HUM-bdd7676e-d498-487f-9110-b6044ad64cf3",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:43.896Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Get mail sending out of the sandbox",
+    "description": "Request production access for SES in the new account and verify the sending domain. Approval takes days.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-bb321f56-8611-40f1-853a-92381282c824",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

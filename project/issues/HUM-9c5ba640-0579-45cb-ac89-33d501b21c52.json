@@ -1,0 +1,25 @@
+{
+  "id": "HUM-9c5ba640-0579-45cb-ac89-33d501b21c52",
+  "title": "Sign in to the DataParade single sign-on from this machine",
+  "description": "Sign in to the DataParade single sign-on from this machine",
+  "type": "sub-task",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-1885d9f5-26cb-43c0-ab35-87f8f07e0ffe",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:43.815714Z",
+  "updated_at": "2026-11-11T17:14:43.815738Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

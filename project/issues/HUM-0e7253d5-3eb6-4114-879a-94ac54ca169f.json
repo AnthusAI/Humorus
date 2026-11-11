@@ -1,0 +1,25 @@
+{
+  "id": "HUM-0e7253d5-3eb6-4114-879a-94ac54ca169f",
+  "title": "Create the account and assign the administrator permission set",
+  "description": "Create the account and assign the administrator permission set",
+  "type": "sub-task",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-1885d9f5-26cb-43c0-ab35-87f8f07e0ffe",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:43.825788Z",
+  "updated_at": "2026-11-11T17:14:43.825810Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

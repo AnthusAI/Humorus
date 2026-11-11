@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "e6520347-c3ab-4a4a-8be4-b4834f357993",
+  "issue_id": "HUM-9c5ba640-0579-45cb-ac89-33d501b21c52",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:43.815Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Sign in to the DataParade single sign-on from this machine",
+    "description": "Sign in to the DataParade single sign-on from this machine",
+    "issue_type": "sub-task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-1885d9f5-26cb-43c0-ab35-87f8f07e0ffe",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

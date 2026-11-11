@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "27ce9b1e-a306-418a-a232-4efd177cb997",
+  "issue_id": "HUM-e8fe202c-ac1c-4e48-b6f2-b5a8c46462c8",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.307Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Add the deployment to the repository",
+    "description": "`papyrus.config.ts`, `amplify/`, `amplify.yml`, `infra/`, one Papyrus pin, and `sites/<site-id>/` from the scaffold. Start from the Shipped-web wrappers if the scaffold is not ready.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-24ef9c5d-3b69-4f0a-a69a-497a8c736833",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

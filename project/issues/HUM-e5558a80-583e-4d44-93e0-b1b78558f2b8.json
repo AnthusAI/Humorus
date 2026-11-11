@@ -1,0 +1,25 @@
+{
+  "id": "HUM-e5558a80-583e-4d44-93e0-b1b78558f2b8",
+  "title": "The check confirms the real setup and flags invention that could pass as fact",
+  "description": "For satire the fact check inverts: the real part must be right and the invented part must be plainly absurd.\n\n```gherkin\nFeature: Satire check\n\n  Scenario: A wrong real detail is flagged\n    Given a draft that gives a real official the wrong office\n    When the satire check runs\n    Then that detail is flagged\n\n  Scenario: A believable invented claim is flagged\n    Given a draft with an invented quotation a reader could take as real\n    When the satire check runs\n    Then it is flagged for the editor\n\n  Scenario: A piece outside the limits is flagged\n    Given a draft about a private person\n    When the satire check runs\n    Then it is flagged against the site's policy\n```",
+  "type": "story",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-952a436f-4ebc-44f5-9f65-64fd05817ad2",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.547932Z",
+  "updated_at": "2026-11-11T17:14:44.547955Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

@@ -42,7 +42,7 @@ aws cloudformation describe-change-set --stack-name humorus-github-deploy \
   --change-set-name "$(aws cloudformation list-change-sets --stack-name humorus-github-deploy \
     --query 'Summaries[0].ChangeSetName' --output text)"
 
-# 2. Apply the same change set.
+# 2. Apply (this makes a fresh change set and executes it).
 aws cloudformation deploy --stack-name humorus-github-deploy \
   --template-file infra/github-deploy/github-deploy.yaml \
   --capabilities CAPABILITY_NAMED_IAM

@@ -3,7 +3,7 @@
   "title": "Name the first site and register its domain",
   "description": "Ryan chooses the name. Register the domain and create its hosted zone in the new account.",
   "type": "task",
-  "status": "open",
+  "status": "closed",
   "priority": 1,
   "assignee": null,
   "creator": null,
@@ -22,11 +22,18 @@
         "model": "Claude Fable 5.2",
         "name": "Humorus Planning"
       }
+    },
+    {
+      "id": "9b1c20fc-98e4-4f36-8ad1-0690706accb8",
+      "author": "home",
+      "text": "Ryan 2026-11-11: the first site is TheHallucinator.ai, site id the-hallucinator. The domain is already registered at another registrar (GoDaddy). A Route 53 hosted zone was created in the account; Ryan changes the domain's name servers at the registrar to the four Route 53 servers (listed in the zone, not here). Before the switch the domain held only the registrar's parking records, so nothing needs copying.",
+      "created_at": "2026-11-11T18:13:31.544078Z",
+      "comment_type": "default"
     }
   ],
   "created_at": "2026-11-11T17:14:43.886430Z",
-  "updated_at": "2026-11-11T17:45:52.954127Z",
-  "closed_at": null,
+  "updated_at": "2026-11-11T18:13:31.590709Z",
+  "closed_at": "2026-11-11T18:13:31.590690Z",
   "agent": {
     "platform": "claude_code",
     "model": "Claude Fable 5.2",

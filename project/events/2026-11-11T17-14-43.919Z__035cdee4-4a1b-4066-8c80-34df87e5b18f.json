@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "035cdee4-4a1b-4066-8c80-34df87e5b18f",
+  "issue_id": "HUM-e00f7740-f551-4264-bd03-e5ac2fe18016",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:43.919Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Connect GitHub and set the deploy variables",
+    "description": "Install the Amplify GitHub connection for `AnthusAI/Humorus`. Put the account ID, app ID and role name in GitHub and Amplify variables, never in files.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-bb321f56-8611-40f1-853a-92381282c824",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

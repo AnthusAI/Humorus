@@ -1,0 +1,30 @@
+{
+  "id": "HUM-ed7684d2-ba8b-4f1e-9da1-a9874b83de78",
+  "title": "Record every manual step and how long site two took",
+  "description": "Write the list into the wiki and file the Papyrus issues that would remove each step. Feed the provisioning epic PPY-cada52.",
+  "type": "task",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-d062a23c-1ace-4e5c-a8f8-2da5b4025156",
+  "labels": [],
+  "dependencies": [
+    {
+      "target": "HUM-352c2f54-ec8c-4a58-b271-7595ff3c6a4e",
+      "type": "blocked-by"
+    }
+  ],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.748480Z",
+  "updated_at": "2026-11-11T17:45:52.874199Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

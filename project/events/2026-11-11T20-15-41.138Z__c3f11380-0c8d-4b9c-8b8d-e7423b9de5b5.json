@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "event_id": "c3f11380-0c8d-4b9c-8b8d-e7423b9de5b5",
+  "issue_id": "HUM-2ccd58ea-044f-4715-bba1-215f51d6b632",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T20:15:41.138Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "New DataParade accounts are seeded from the organisation",
+    "description": "Layer 2, DESIGN ONLY for Ryan's review; nothing here is built. Seed every new DataParade account with the GitHub sign-in provider, deploy roles and budget from the organisation level; account creation as code; how the managed offer works; read-only everyday SSO with break-glass admin. Design in project/wiki/organisation-seeding-design.md.",
+    "issue_type": "epic",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-76897062-7b9c-4085-89bf-163ede715ab5",
+    "labels": []
+  }
+}

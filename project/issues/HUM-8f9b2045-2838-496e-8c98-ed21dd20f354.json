@@ -1,0 +1,25 @@
+{
+  "id": "HUM-8f9b2045-2838-496e-8c98-ed21dd20f354",
+  "title": "The first satire site",
+  "description": "One publication, live, on the neutral theme, with a satire newsroom whose every rule is data.",
+  "type": "initiative",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": null,
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.281578Z",
+  "updated_at": "2026-11-11T17:14:44.281602Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

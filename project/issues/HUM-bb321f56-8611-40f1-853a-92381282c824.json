@@ -1,0 +1,25 @@
+{
+  "id": "HUM-bb321f56-8611-40f1-853a-92381282c824",
+  "title": "The dedicated AWS account is ready",
+  "description": "Milestone: a Papyrus deployment can be created in a new account in the DataParade AWS organisation. Start the slow items first: mail sending approval, the domain and the certificates.",
+  "type": "epic",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-76897062-7b9c-4085-89bf-163ede715ab5",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:43.795737Z",
+  "updated_at": "2026-11-11T17:14:43.795760Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

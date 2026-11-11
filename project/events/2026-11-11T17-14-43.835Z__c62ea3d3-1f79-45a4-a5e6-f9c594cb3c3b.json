@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "c62ea3d3-1f79-45a4-a5e6-f9c594cb3c3b",
+  "issue_id": "HUM-5da84024-c649-4a6a-ad31-1f8f32bbe7ef",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:43.835Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Add the `dataparade-papyrus-production` profile and confirm `aws sts get-caller-identity`",
+    "description": "Add the `dataparade-papyrus-production` profile and confirm `aws sts get-caller-identity`",
+    "issue_type": "sub-task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-1885d9f5-26cb-43c0-ab35-87f8f07e0ffe",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

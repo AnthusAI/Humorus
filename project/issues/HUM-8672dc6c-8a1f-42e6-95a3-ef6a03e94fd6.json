@@ -1,0 +1,50 @@
+{
+  "id": "HUM-8672dc6c-8a1f-42e6-95a3-ef6a03e94fd6",
+  "title": "The newsroom drafts a piece and asks an editor to review it",
+  "description": "The automated newsroom ends at a review request, never at a publish.\n\n```gherkin\nFeature: Automated drafting\n\n  Scenario: A draft reaches an editor\n    Given accepted References\n    When the newsroom runs\n    Then an idea is chosen, drafted, illustrated and checked\n    And an editor receives a review request\n    And nothing is published\n```",
+  "type": "story",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-b0d9991e-ddc9-4da7-8b45-2d3f8a7c8bdc",
+  "labels": [],
+  "dependencies": [
+    {
+      "target": "HUM-8af98abc-915f-4f69-83aa-ea508491fb53",
+      "type": "blocked-by"
+    },
+    {
+      "target": "HUM-a29894c2-b814-4fe6-8d8a-2e6dbb2fba54",
+      "type": "blocked-by"
+    },
+    {
+      "target": "HUM-e155f8bd-fe22-4a02-8b79-f0ef79b19f52",
+      "type": "blocked-by"
+    },
+    {
+      "target": "HUM-e5558a80-583e-4d44-93e0-b1b78558f2b8",
+      "type": "blocked-by"
+    },
+    {
+      "target": "HUM-fce3b0ba-f454-4414-8620-46824346736b",
+      "type": "blocked-by"
+    },
+    {
+      "target": "HUM-bdd7676e-d498-487f-9110-b6044ad64cf3",
+      "type": "blocked-by"
+    }
+  ],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.617707Z",
+  "updated_at": "2026-11-11T17:45:52.776551Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

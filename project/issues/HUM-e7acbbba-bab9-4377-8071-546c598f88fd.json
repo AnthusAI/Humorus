@@ -1,0 +1,25 @@
+{
+  "id": "HUM-e7acbbba-bab9-4377-8071-546c598f88fd",
+  "title": "A site sets its own byline policy",
+  "description": "Satire uses pen names. The current rule is to attribute to AI and never invent an author.\n\n```gherkin\nFeature: Byline policy\n\n  Scenario: A pen name is allowed where the site says so\n    Given a site whose byline policy allows listed pen names\n    When a piece is published under one of them\n    Then the page shows that pen name\n\n  Scenario: The default stays honest\n    Given a site with no byline policy\n    When an agent writes a piece\n    Then it is attributed to AI\n```",
+  "type": "story",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-44da6e15-6e2f-4ec1-8394-dd0d1d821959",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.194221Z",
+  "updated_at": "2026-11-11T17:14:44.194247Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

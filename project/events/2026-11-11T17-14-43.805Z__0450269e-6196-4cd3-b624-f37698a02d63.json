@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "0450269e-6196-4cd3-b624-f37698a02d63",
+  "issue_id": "HUM-1885d9f5-26cb-43c0-ab35-87f8f07e0ffe",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:43.805Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Create the account and a local profile",
+    "description": "Sign in with `aws sso login --sso-session dataparade`. Create the Papyrus production account in the DataParade organisation. Add the local profile `dataparade-papyrus-production`. The existing profile `papyrus-production` is another organisation's account and must not be reused.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-bb321f56-8611-40f1-853a-92381282c824",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

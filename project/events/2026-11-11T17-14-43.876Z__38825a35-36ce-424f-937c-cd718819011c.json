@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "38825a35-36ce-424f-937c-cd718819011c",
+  "issue_id": "HUM-56be6f4f-7e9b-45f5-a426-9a549fb609c8",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:43.876Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Request raised limits where the defaults are too low",
+    "description": "Request raised limits where the defaults are too low",
+    "issue_type": "sub-task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-a61498ed-39e7-47f5-9f8e-337385f21343",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

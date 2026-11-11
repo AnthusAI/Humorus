@@ -1,0 +1,33 @@
+{
+  "id": "HUM-2036d05b-e38f-46ec-bd66-d97b9263acb9",
+  "title": "Store model provider keys and set spend limits",
+  "description": "A separate OpenAI key for this account and a second image provider, stored as SSM SecureString parameters. Set spend limits at the providers.",
+  "type": "task",
+  "status": "open",
+  "priority": 1,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-bb321f56-8611-40f1-853a-92381282c824",
+  "labels": [],
+  "dependencies": [],
+  "comments": [
+    {
+      "id": "3da4bef2-4242-4c18-83a0-2794bb4f5f7a",
+      "author": "home",
+      "text": "Ryan 2026-11-11: reuse the Papyrus development OpenAI and TypeSafe keys rather than new ones. Stored as SecureString parameters /papyrus/the-hallucinator/openai-api-key and /papyrus/shared/typesafe-api-key (the default names Papyrus reads). Not done: spend limits at the providers (shared with the Anthus sites, so a limit there covers both), a second image provider, and Amplify secrets (they need the Amplify app first).",
+      "created_at": "2026-11-11T18:13:31.564513Z",
+      "comment_type": "default"
+    }
+  ],
+  "created_at": "2026-11-11T17:14:43.908578Z",
+  "updated_at": "2026-11-11T18:13:31.564713Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "event_id": "9386adc5-77e6-490b-8e36-b1e3c48ba1a1",
+  "issue_id": "HUM-e9e96f73-587f-4278-90b3-011a80cc93a0",
+  "event_type": "comment_added",
+  "occurred_at": "2026-11-11T17:16:29.471Z",
+  "actor_id": "home",
+  "payload": {
+    "comment_id": "fb1a5ba2-ce6b-4fe5-ba09-50614f6b3532",
+    "comment_author": "home",
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

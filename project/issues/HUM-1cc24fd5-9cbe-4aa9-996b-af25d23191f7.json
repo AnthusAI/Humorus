@@ -1,0 +1,25 @@
+{
+  "id": "HUM-1cc24fd5-9cbe-4aa9-996b-af25d23191f7",
+  "title": "A site replaces the agents' role instructions",
+  "description": "The built-in reporter, copywriter, editor and illustrator text assumes evidence-first news and can only be added to.\n\n```gherkin\nFeature: Role instructions are site data\n\n  Scenario: The site's text is the only text\n    Given a site whose copywriter instructions describe satire\n    When the copywriter agent is given a Story\n    Then its instructions contain the site's text\n    And they contain no built-in news wording\n```\n\n**Needs Papyrus work:** PPY-7a61ca; guidelines epic PPY-2a2a8a.",
+  "type": "story",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-44da6e15-6e2f-4ec1-8394-dd0d1d821959",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.145977Z",
+  "updated_at": "2026-11-11T17:14:44.145997Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

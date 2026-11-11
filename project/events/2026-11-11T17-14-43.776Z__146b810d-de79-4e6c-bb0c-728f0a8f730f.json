@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "146b810d-de79-4e6c-bb0c-728f0a8f730f",
+  "issue_id": "HUM-665f5907-6762-4aaf-96a6-f7ca70d0de08",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:43.776Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Tag releases and write the changelog with Semantic Release",
+    "description": "`release.config.cjs` on `main`: version tag, GitHub release and changelog from `feat:` and `fix:` titles. Nothing is published to a package registry.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-894b93cd-18e3-463e-8336-ede4a469f2ae",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

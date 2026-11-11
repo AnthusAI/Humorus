@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "80d9f714-b97b-4a3b-851e-d5a6cfad8e77",
+  "issue_id": "HUM-dc9f7129-486d-492b-8a2b-bc238c1e41ee",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.086Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "A scaffold that starts a new site and newsroom",
+    "description": "Milestone: one command creates a new site. The defaults it writes are the only editorial opinion in Papyrus code; after that the site owner controls all of it.",
+    "issue_type": "epic",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-b04209ad-bc31-4fbd-b233-d539c4acf950",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "HUM-84dc0ee9-c318-4040-991a-a4bec259c2ff",
+  "title": "The pipeline adopts the hand-made resources without replacing them",
+  "description": "```gherkin\nFeature: Hand-made resources become pipeline stacks\n\n  Scenario: The hosted zone is imported, not replaced\n    Given the Route 53 zone for thehallucinator.ai exists and was made by hand\n    And the registrar already holds its four name servers\n    When the pipeline first deploys the DNS stack\n    Then CloudFormation imports the zone into the stack\n    And the change set shows Import and no Add, Modify or Remove of the zone\n    And afterwards the zone's name servers are exactly the four the registrar holds\n    And the zone has DeletionPolicy Retain, so deleting the stack never deletes the zone\n\n  Scenario: The budget is imported, not replaced\n    Given the monthly budget exists and was made by hand\n    When the pipeline first deploys the budget stack\n    Then the budget is imported with its limit, thresholds and subscribers unchanged\n    And the alert address comes from a GitHub variable, never from Git\n\n  Scenario: The deploy role stack becomes pipeline-managed\n    Given the stack humorus-github-deploy was created by hand\n    When the wider role template is applied once\n    Then the same stack is updated in place and the OIDC provider and role are not replaced\n\n  Scenario: A deploy stops if the name servers would change\n    Given a deployed DNS stack\n    When the zone's name servers differ from infra/expected-nameservers.json after a deploy\n    Then the deploy fails loudly\n```",
+  "type": "story",
+  "status": "open",
+  "priority": 1,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-be87f464-b2c7-4d6e-8c29-405d4f223f51",
+  "labels": [],
+  "dependencies": [],
+  "comments": [
+    {
+      "id": "24174e72-7336-47f8-9ba7-797d8816f7d3",
+      "author": "home",
+      "text": "Now delivered by Papyrus epic PPY-9bd776 (see HUM-be87f4). Humorus keeps only its stack settings and the one-time seed apply.",
+      "created_at": "2026-11-11T20:37:16.390984Z",
+      "comment_type": "default"
+    }
+  ],
+  "created_at": "2026-11-11T20:15:58.396966Z",
+  "updated_at": "2026-11-11T20:37:16.391189Z",
+  "closed_at": null,
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

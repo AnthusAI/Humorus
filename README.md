@@ -14,7 +14,7 @@ Humorus runs newsrooms with a very different focus from the other Papyrus public
 
 ## Status
 
-Planning. The board holds the plan: run `kbs list` to see it. No site is live yet.
+Planning. No site is live yet. The plan, the decisions and the current state are in the [project wiki](project/wiki/index.md), and the board holds the work: run `kbs list` to see it.
 
 ## How changes ship
 

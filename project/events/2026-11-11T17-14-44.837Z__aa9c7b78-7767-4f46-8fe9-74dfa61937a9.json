@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "aa9c7b78-7767-4f46-8fe9-74dfa61937a9",
+  "issue_id": "HUM-3170280c-d43c-4227-93c9-93c063a2492b",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.837Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Decide how usage is metered through Prospectus",
+    "description": "Prospectus is not needed for launch. Decide whether and how a client-owned deployment reports usage to it.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-922be6fe-6573-4eb9-a500-a5c8a11b4c87",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

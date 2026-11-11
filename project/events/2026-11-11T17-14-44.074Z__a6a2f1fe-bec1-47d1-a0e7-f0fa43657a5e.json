@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "a6a2f1fe-bec1-47d1-a0e7-f0fa43657a5e",
+  "issue_id": "HUM-10c4b231-6586-4a98-9792-f9ae4fc8c3c8",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.074Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Papyrus ships two example themes",
+    "description": "Examples show how far tokens alone can take a site.\n\n```gherkin\nFeature: Example themes\n\n  Scenario: An example theme can be chosen by name\n    Given the example themes that ship with Papyrus\n    When a site names one in its settings\n    Then the site is built with that theme\n```",
+    "issue_type": "story",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-1be84311-4172-477a-9453-07054429cede",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

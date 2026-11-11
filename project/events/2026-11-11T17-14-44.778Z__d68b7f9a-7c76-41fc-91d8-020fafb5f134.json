@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "d68b7f9a-7c76-41fc-91d8-020fafb5f134",
+  "issue_id": "HUM-71706ab1-0629-42b6-bd46-610da00e722f",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.778Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "We operate and update a deployment in a client-owned account",
+    "description": "Milestone: an update reaches the Humorus deployment the way it would reach a paying client's.",
+    "issue_type": "epic",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-c7a25c7c-0c24-416d-a4ac-3f85af4e1149",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

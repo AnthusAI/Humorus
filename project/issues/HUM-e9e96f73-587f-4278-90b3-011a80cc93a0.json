@@ -1,0 +1,38 @@
+{
+  "id": "HUM-e9e96f73-587f-4278-90b3-011a80cc93a0",
+  "title": "Papyrus runs in another AWS organisation",
+  "description": "Milestone: a deployment in an account Papyrus has never seen needs nothing from the Anthus accounts.",
+  "type": "epic",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-b04209ad-bc31-4fbd-b233-d539c4acf950",
+  "labels": [],
+  "dependencies": [],
+  "comments": [
+    {
+      "id": "fb1a5ba2-ce6b-4fe5-ba09-50614f6b3532",
+      "author": "home",
+      "text": "Papyrus: PPY-1a6aa6.",
+      "created_at": "2026-11-11T17:16:29.471283Z",
+      "comment_type": "default",
+      "agent": {
+        "platform": "claude_code",
+        "model": "Claude Fable 5.2",
+        "name": "Humorus Planning"
+      }
+    }
+  ],
+  "created_at": "2026-11-11T17:14:44.230617Z",
+  "updated_at": "2026-11-11T17:16:29.471609Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

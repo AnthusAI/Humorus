@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "6f5724cc-c4ef-4694-a92b-de3e20092a81",
+  "issue_id": "HUM-687be52b-9dd2-42d0-a562-c4362bde1839",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:43.756Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "A commit that contains an AWS identifier is refused",
+    "description": "Humorus is public. Account IDs, app IDs, ARNs and bucket names must never reach it.\n\n```gherkin\nFeature: AWS identifiers stay out of Git\n\n  Scenario: The local hook refuses the commit\n    Given a staged file that contains an AWS account ID in a role ARN\n    When I commit\n    Then the commit is refused\n    And the message names the file, the line and the rule\n\n  Scenario: A pull request that contains an identifier fails its check\n    Given a pull request whose changes contain an AWS account ID\n    When the checks run\n    Then the LeftBlock check fails\n\n  Scenario: A clean change passes\n    Given a staged file with a placeholder such as <account-id>\n    When I commit\n    Then the commit succeeds\n```",
+    "issue_type": "story",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-894b93cd-18e3-463e-8336-ede4a469f2ae",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

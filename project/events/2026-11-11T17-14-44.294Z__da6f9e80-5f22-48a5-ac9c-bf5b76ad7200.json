@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "da6f9e80-5f22-48a5-ac9c-bf5b76ad7200",
+  "issue_id": "HUM-24ef9c5d-3b69-4f0a-a69a-497a8c736833",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.294Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "A walking skeleton is live",
+    "description": "Milestone: the site answers on its domain with a labelled placeholder and editors can sign in.",
+    "issue_type": "epic",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-8f9b2045-2838-496e-8c98-ed21dd20f354",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

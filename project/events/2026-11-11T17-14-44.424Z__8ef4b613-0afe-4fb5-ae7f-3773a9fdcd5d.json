@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "8ef4b613-0afe-4fb5-ae7f-3773a9fdcd5d",
+  "issue_id": "HUM-f5f43042-7e0c-42a1-84d4-afdc5b0b97f7",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.424Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "The satire newsroom is defined in data",
+    "description": "Milestone: the site's mission, limits, sections, voice, image rules and approval rule exist as records an administrator can edit.",
+    "issue_type": "epic",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-8f9b2045-2838-496e-8c98-ed21dd20f354",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

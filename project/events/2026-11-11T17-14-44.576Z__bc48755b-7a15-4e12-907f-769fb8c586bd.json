@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "bc48755b-7a15-4e12-907f-769fb8c586bd",
+  "issue_id": "HUM-b0d9991e-ddc9-4da7-8b45-2d3f8a7c8bdc",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.576Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "The newsroom publishes on its own schedule",
+    "description": "Milestone: first a piece by hand, then monitors, ideas, drafts, pictures and review requests without a person starting each one.",
+    "issue_type": "epic",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-8f9b2045-2838-496e-8c98-ed21dd20f354",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

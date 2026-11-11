@@ -1,0 +1,25 @@
+{
+  "id": "HUM-632832a2-cecc-4705-b093-e81e63f7d989",
+  "title": "No AWS identifiers in Git anywhere",
+  "description": "Milestone: Humorus starts clean and the older site repositories stop carrying identifiers. No history rewrite: the values are not credentials and the repositories are already public.",
+  "type": "epic",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-76897062-7b9c-4085-89bf-163ede715ab5",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:43.972557Z",
+  "updated_at": "2026-11-11T17:14:43.972579Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

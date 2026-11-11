@@ -1,0 +1,30 @@
+{
+  "id": "HUM-3dd1e854-46d1-465f-8bb1-ac79f5f33dd6",
+  "title": "Each domain serves only its own site",
+  "description": "The edge must map a host to a site.\n\n```gherkin\nFeature: Host to site\n\n  Scenario: Two domains, two sites\n    Given two sites on one deployment\n    When a reader opens each domain\n    Then each shows its own home page, feed and sitemap\n\n  Scenario: An unknown host is refused\n    Given a host that no site owns\n    When a reader opens it\n    Then they get a not-found page\n```",
+  "type": "story",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-265b5b4a-1f25-4c8d-9cbe-23cc66576eec",
+  "labels": [],
+  "dependencies": [
+    {
+      "target": "HUM-352c2f54-ec8c-4a58-b271-7595ff3c6a4e",
+      "type": "blocked-by"
+    }
+  ],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.689623Z",
+  "updated_at": "2026-11-11T17:45:52.832121Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

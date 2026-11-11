@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "event_id": "0e65ed34-d6d5-441a-b2d7-b28d558273e3",
+  "issue_id": "HUM-87bd8953-5ebd-4b9b-8872-8af71c89821f",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T20:15:58.374Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "A pull request shows what a stack change would do",
+    "description": "```gherkin\nFeature: Infrastructure changes are checked before merge\n\n  Scenario: Templates are linted and the config is validated without AWS\n    Given a pull request that changes anything under infra/\n    When CI runs\n    Then cfn-lint and the stack config checks run with no AWS access\n    And the required check \"ci\" fails if either fails\n\n  Scenario: The pull request shows the live difference with a read-only role\n    Given a pull request from a branch in this repository\n    When the plan job runs as the read-only plan role\n    Then the job summary shows, per stack, whether it would be created, imported, updated or unchanged\n    And the plan role cannot create, change or delete anything\n\n  Scenario: A fork gets no AWS access\n    Given a pull request from a fork\n    When CI runs\n    Then the lint job runs and the plan job is skipped\n```",
+    "issue_type": "story",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-be87f464-b2c7-4d6e-8c29-405d4f223f51",
+    "labels": []
+  }
+}

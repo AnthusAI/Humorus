@@ -1,0 +1,45 @@
+{
+  "id": "HUM-1472621b-f01b-46b3-81b3-6912b16cde6e",
+  "title": "Write the satire editorial policies",
+  "description": "Rule checks and judgment questions for satire, saved with `papyrus editorial policies add`: the satire limits (public figures only, no private people, no victims, no invented crimes), source wording not reused, the real setup stated correctly. Do not import the starter pack written for news without reading it.",
+  "type": "task",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-f5f43042-7e0c-42a1-84d4-afdc5b0b97f7",
+  "labels": [],
+  "dependencies": [
+    {
+      "target": "HUM-7e44b057-7410-43fe-8806-97fd77ea578e",
+      "type": "blocked-by"
+    }
+  ],
+  "comments": [
+    {
+      "id": "25d3cdbc-3fba-458e-b067-db53a440cf51",
+      "author": "home",
+      "text": "Draft merged for Ryan's review (PR #4): project/wiki/the-hallucinator-newsroom-draft.md. Mission, 14 policies plus 10 proposed checks, mapped to Papyrus records; 10 items marked for legal review (HUM-948077). Not saved to any backend.",
+      "created_at": "2026-11-11T18:48:03.950536Z",
+      "comment_type": "default"
+    },
+    {
+      "id": "eb1938ba-0fa9-4454-9dfb-00f0ba3cd046",
+      "author": "home",
+      "text": "Draft merged for Ryan's review (PR #4): project/wiki/the-hallucinator-newsroom-draft.md. Mission, 14 policies, 10 proposed checks, mapped to Papyrus records; 10 items marked for legal review (HUM-948077). Not saved to any backend.",
+      "created_at": "2026-11-11T18:48:20.780256Z",
+      "comment_type": "default"
+    }
+  ],
+  "created_at": "2026-11-11T17:45:43.362542Z",
+  "updated_at": "2026-11-11T18:48:20.780477Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

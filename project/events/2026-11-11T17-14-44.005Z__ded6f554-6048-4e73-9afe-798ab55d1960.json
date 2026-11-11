@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "ded6f554-6048-4e73-9afe-798ab55d1960",
+  "issue_id": "HUM-77e55bc8-eb1e-41c1-8328-e8e918debd5b",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.005Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Move the DataParade newsroom's identifiers to variables",
+    "description": "The same change in DataParade-newsroom, including the Cognito user pool ID in its agent instructions.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-632832a2-cecc-4705-b093-e81e63f7d989",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

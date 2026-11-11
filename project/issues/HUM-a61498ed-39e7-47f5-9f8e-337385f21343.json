@@ -1,0 +1,25 @@
+{
+  "id": "HUM-a61498ed-39e7-47f5-9f8e-337385f21343",
+  "title": "Bootstrap the account",
+  "description": "Run Papyrus `infra/pipeline/bootstrap.sh` and `create-environment.sh`, bootstrap CDK, and check the new-account limits for Amplify, Lambda and CloudFront.",
+  "type": "task",
+  "status": "in_progress",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-bb321f56-8611-40f1-853a-92381282c824",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:43.845646Z",
+  "updated_at": "2026-11-11T17:37:55.142166Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

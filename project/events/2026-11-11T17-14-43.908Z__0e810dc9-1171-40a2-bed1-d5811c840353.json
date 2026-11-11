@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "0e810dc9-1171-40a2-bed1-d5811c840353",
+  "issue_id": "HUM-2036d05b-e38f-46ec-bd66-d97b9263acb9",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:43.908Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Store model provider keys and set spend limits",
+    "description": "A separate OpenAI key for this account and a second image provider, stored as SSM SecureString parameters. Set spend limits at the providers.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-bb321f56-8611-40f1-853a-92381282c824",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

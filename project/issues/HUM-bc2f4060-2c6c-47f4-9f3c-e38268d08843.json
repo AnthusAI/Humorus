@@ -1,0 +1,45 @@
+{
+  "id": "HUM-bc2f4060-2c6c-47f4-9f3c-e38268d08843",
+  "title": "Set a monthly budget with alarms",
+  "description": "Set a monthly budget with alarms",
+  "type": "sub-task",
+  "status": "closed",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-a61498ed-39e7-47f5-9f8e-337385f21343",
+  "labels": [],
+  "dependencies": [],
+  "comments": [
+    {
+      "id": "12b671ca-b673-49d0-8900-a8233917d2da",
+      "author": "home",
+      "text": "2026-11-11: waiting on Ryan for the monthly amount.",
+      "created_at": "2026-11-11T17:37:28.728317Z",
+      "comment_type": "default",
+      "agent": {
+        "platform": "claude_code",
+        "model": "Claude Fable 5.2",
+        "name": "Humorus Planning"
+      }
+    },
+    {
+      "id": "ae2eb00b-da75-4c2c-94c0-758c89e6d946",
+      "author": "home",
+      "text": "2026-11-11: budget papyrus-production-monthly, 200 USD a month (Ryan's figure), with email alerts at 50% and 80% of actual spend and when the forecast passes 100%. Alerts go to the account's root address. A budget warns; it does not stop spending.",
+      "created_at": "2026-11-11T17:42:53.284556Z",
+      "comment_type": "default"
+    }
+  ],
+  "created_at": "2026-11-11T17:14:43.865773Z",
+  "updated_at": "2026-11-11T17:42:53.309898Z",
+  "closed_at": "2026-11-11T17:42:53.309518Z",
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

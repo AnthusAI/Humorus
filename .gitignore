@@ -10,3 +10,4 @@ amplify_outputs.json
 .amplify/
 .next/
 .DS_Store
+project/.cache/

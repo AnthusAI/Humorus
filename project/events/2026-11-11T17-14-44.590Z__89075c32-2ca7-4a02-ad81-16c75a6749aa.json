@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "89075c32-2ca7-4a02-ad81-16c75a6749aa",
+  "issue_id": "HUM-8af98abc-915f-4f69-83aa-ea508491fb53",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.590Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Publish the first piece by hand, end to end",
+    "description": "Reference, idea, draft, image, checks, approval, publish. File every snag as a Papyrus issue instead of working around it.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-b0d9991e-ddc9-4da7-8b45-2d3f8a7c8bdc",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

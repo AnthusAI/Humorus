@@ -1,0 +1,50 @@
+{
+  "id": "HUM-7e44b057-7410-43fe-8806-97fd77ea578e",
+  "title": "Deploy the app shell, backend, edge and DNS",
+  "description": "In the dedicated account: app shell, the two-stage first backend, the edge stack with its certificate, and the DNS records.",
+  "type": "task",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-24ef9c5d-3b69-4f0a-a69a-497a8c736833",
+  "labels": [],
+  "dependencies": [
+    {
+      "target": "HUM-e8fe202c-ac1c-4e48-b6f2-b5a8c46462c8",
+      "type": "blocked-by"
+    },
+    {
+      "target": "HUM-a61498ed-39e7-47f5-9f8e-337385f21343",
+      "type": "blocked-by"
+    },
+    {
+      "target": "HUM-5d819bc6-77f4-4c60-af1c-5dd855e2add6",
+      "type": "blocked-by"
+    },
+    {
+      "target": "HUM-e00f7740-f551-4264-bd03-e5ac2fe18016",
+      "type": "blocked-by"
+    },
+    {
+      "target": "HUM-35e378f9-2693-4de4-94f9-54092339f535",
+      "type": "blocked-by"
+    },
+    {
+      "target": "HUM-56be6f4f-7e9b-45f5-a426-9a549fb609c8",
+      "type": "blocked-by"
+    }
+  ],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.320158Z",
+  "updated_at": "2026-11-11T17:45:52.371575Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

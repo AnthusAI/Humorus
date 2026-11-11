@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "dfd44c72-fe4b-4adf-8a49-0b4a8283f8b0",
+  "issue_id": "HUM-5d819bc6-77f4-4c60-af1c-5dd855e2add6",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:43.886Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Name the first site and register its domain",
+    "description": "Ryan chooses the name. Register the domain and create its hosted zone in the new account.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-bb321f56-8611-40f1-853a-92381282c824",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

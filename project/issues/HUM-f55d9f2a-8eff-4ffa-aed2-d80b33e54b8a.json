@@ -1,0 +1,45 @@
+{
+  "id": "HUM-f55d9f2a-8eff-4ffa-aed2-d80b33e54b8a",
+  "title": "Define the sections",
+  "description": "Topic sections for the site, each with its mission and kill criteria.",
+  "type": "task",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-f5f43042-7e0c-42a1-84d4-afdc5b0b97f7",
+  "labels": [],
+  "dependencies": [
+    {
+      "target": "HUM-7e44b057-7410-43fe-8806-97fd77ea578e",
+      "type": "blocked-by"
+    }
+  ],
+  "comments": [
+    {
+      "id": "04abcf8a-323b-4d11-8131-53da135be506",
+      "author": "home",
+      "text": "Draft of five sections (government, campaigns, business, technology, world) is in project/wiki/the-hallucinator-newsroom-draft.md (PR #4), for Ryan's review. Section image documents are not storable in Papyrus yet; see the draft's table.",
+      "created_at": "2026-11-11T18:48:03.966703Z",
+      "comment_type": "default"
+    },
+    {
+      "id": "939a6cf3-5ce1-436c-96eb-ef7ad54f6876",
+      "author": "home",
+      "text": "Draft of five sections (government, campaigns, business, technology, world) is in project/wiki/the-hallucinator-newsroom-draft.md (PR #4), for Ryan's review. Section image documents are not storable in Papyrus yet.",
+      "created_at": "2026-11-11T18:48:20.795101Z",
+      "comment_type": "default"
+    }
+  ],
+  "created_at": "2026-11-11T17:14:44.452302Z",
+  "updated_at": "2026-11-11T18:48:20.795317Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

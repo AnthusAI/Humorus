@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "event_id": "3651d90f-7066-4e7b-a762-21c373adc152",
+  "issue_id": "HUM-f325efd9-8510-4e72-944d-ff70281b4763",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T20:15:58.480Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Reserve slots for the certificate and the SES identity",
+    "description": "Templates and stacks.json entries for the ACM certificate and SES domain identity, disabled until DNS delegation completes.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-be87f464-b2c7-4d6e-8c29-405d4f223f51",
+    "labels": []
+  }
+}

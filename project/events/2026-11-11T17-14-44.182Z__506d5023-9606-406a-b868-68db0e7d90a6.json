@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "506d5023-9606-406a-b868-68db0e7d90a6",
+  "issue_id": "HUM-5ca2e307-b97b-439d-bef0-0d8a0ad001ca",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.182Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "A site adds news sources without an engine release",
+    "description": "Feed hosts and source types are a list in code.\n\n```gherkin\nFeature: Sources are data\n\n  Scenario: An administrator adds a feed\n    Given a political news feed that Papyrus has never seen\n    When an administrator adds it as a monitor\n    Then its items arrive as References\n    And no Papyrus release was needed\n```",
+    "issue_type": "story",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-44da6e15-6e2f-4ec1-8394-dd0d1d821959",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

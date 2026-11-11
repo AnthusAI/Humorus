@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "50c61a64-a173-4f81-b7ea-14761d82158b",
+  "issue_id": "HUM-6050a97c-4f61-4782-a643-53149b615fb4",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.520Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Every page says it is satire, to people and to agents",
+    "description": "Papyrus makes every page easy for agents to read. Without a marker, satire is read as fact.\n\n```gherkin\nFeature: Satire marker\n\n  Scenario: A reader sees the label\n    Given a published piece on a satire site\n    When a reader opens it\n    Then the page shows that it is satire\n\n  Scenario: An agent reads the label\n    Given the same piece\n    When an agent fetches the Markdown version, the feed, the structured data or llms.txt\n    Then each one states that the piece is satire\n\n  Scenario: A shared link carries the label\n    Given the same piece\n    When its link is shared\n    Then the preview text or image states that it is satire\n\n  Scenario: A news site has no label\n    Given a site that is not marked as satire\n    When its pages are built\n    Then no satire label appears\n```",
+    "issue_type": "story",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-952a436f-4ebc-44f5-9f65-64fd05817ad2",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

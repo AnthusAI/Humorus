@@ -1,0 +1,25 @@
+{
+  "id": "HUM-7c546e20-0b9d-4b61-8956-dd3c8b4d0332",
+  "title": "A new site with no theme settings gets the neutral theme",
+  "description": "Today a new site has only an accessibility baseline and must write its own stylesheet and hooks.\n\n```gherkin\nFeature: Neutral default theme\n\n  Scenario: A site with only a name looks finished\n    Given a site whose settings contain only its name\n    When the site is built\n    Then the home page, section pages and article pages use the neutral theme\n    And no site stylesheet or hook was written\n```\n\n**Needs Papyrus work:** PPY-31efef (core cards, layout preset, brand pack), PPY-3aa10f (starter).",
+  "type": "story",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-1be84311-4172-477a-9453-07054429cede",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.038646Z",
+  "updated_at": "2026-11-11T17:14:44.038676Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

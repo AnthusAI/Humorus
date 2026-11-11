@@ -1,0 +1,30 @@
+{
+  "id": "HUM-300e79ce-4a69-428e-aa71-29a4ed606cc5",
+  "title": "A piece cannot publish without a person's approval",
+  "description": "Agents write; a person decides.\n\n```gherkin\nFeature: Approval before publishing\n\n  Scenario: An unapproved piece stays unpublished\n    Given a finished piece that no editor has approved\n    When anything tries to publish it\n    Then it is refused\n    And the piece stays unpublished\n\n  Scenario: An approved piece publishes\n    Given a finished piece\n    When an editor approves it\n    Then it is published\n```",
+  "type": "story",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-f5f43042-7e0c-42a1-84d4-afdc5b0b97f7",
+  "labels": [],
+  "dependencies": [
+    {
+      "target": "HUM-7e44b057-7410-43fe-8806-97fd77ea578e",
+      "type": "blocked-by"
+    }
+  ],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.492894Z",
+  "updated_at": "2026-11-11T17:45:52.525980Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

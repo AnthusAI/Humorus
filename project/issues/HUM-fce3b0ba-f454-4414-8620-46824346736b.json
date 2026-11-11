@@ -1,0 +1,34 @@
+{
+  "id": "HUM-fce3b0ba-f454-4414-8620-46824346736b",
+  "title": "Political news arrives as References",
+  "description": "The newsroom needs real events to satirise.\n\n```gherkin\nFeature: Political news monitors\n\n  Scenario: New items arrive\n    Given monitors on political news sources\n    When a source publishes a new item\n    Then it appears as a Reference with its kind of source\n```",
+  "type": "story",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-b0d9991e-ddc9-4da7-8b45-2d3f8a7c8bdc",
+  "labels": [],
+  "dependencies": [
+    {
+      "target": "HUM-5ca2e307-b97b-439d-bef0-0d8a0ad001ca",
+      "type": "blocked-by"
+    },
+    {
+      "target": "HUM-1b097297-5749-4162-8645-78abca677cbd",
+      "type": "blocked-by"
+    }
+  ],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.603822Z",
+  "updated_at": "2026-11-11T17:45:52.678646Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

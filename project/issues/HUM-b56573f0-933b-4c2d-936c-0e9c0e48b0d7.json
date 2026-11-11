@@ -1,0 +1,25 @@
+{
+  "id": "HUM-b56573f0-933b-4c2d-936c-0e9c0e48b0d7",
+  "title": "Create analytics and a privacy page",
+  "description": "A new GA4 property for Humorus with standard Consent Mode. The sites link to their own privacy page, not another company's.",
+  "type": "task",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-bb321f56-8611-40f1-853a-92381282c824",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:43.940415Z",
+  "updated_at": "2026-11-11T17:14:43.940439Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

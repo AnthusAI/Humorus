@@ -1,0 +1,30 @@
+{
+  "id": "HUM-068086d7-3cab-457b-9df9-00974311cb67",
+  "title": "A reader on one site never sees the other site's stories",
+  "description": "Scoping must hold everywhere a list is built.\n\n```gherkin\nFeature: No cross-site leaks\n\n  Scenario: Lists are scoped\n    Given stories published on both sites\n    When the home page, section pages, feeds, search and Markdown versions of site two are built\n    Then none of them contains a story from site one\n\n  Scenario: The newsroom is scoped\n    Given an editor working on site two\n    When they list Stories, References and ideas\n    Then they see only site two's records\n```",
+  "type": "story",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-265b5b4a-1f25-4c8d-9cbe-23cc66576eec",
+  "labels": [],
+  "dependencies": [
+    {
+      "target": "HUM-352c2f54-ec8c-4a58-b271-7595ff3c6a4e",
+      "type": "blocked-by"
+    }
+  ],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.703970Z",
+  "updated_at": "2026-11-11T17:45:52.846277Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

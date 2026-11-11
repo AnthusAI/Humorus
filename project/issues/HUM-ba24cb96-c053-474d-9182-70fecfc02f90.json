@@ -1,0 +1,47 @@
+{
+  "id": "HUM-ba24cb96-c053-474d-9182-70fecfc02f90",
+  "title": "Create the GitHub sign-in provider and the deploy role",
+  "description": "The account has no GitHub OIDC provider. Create it and a deploy role trusted only for the main branch of AnthusAI/Humorus, able only to start the Amplify job.",
+  "type": "sub-task",
+  "status": "closed",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-e00f7740-f551-4264-bd03-e5ac2fe18016",
+  "labels": [],
+  "dependencies": [],
+  "comments": [
+    {
+      "id": "b7566dff-2f6c-4182-b1a7-0ba690d973a0",
+      "author": "home",
+      "text": "Template merged to develop (PR #3): infra/github-deploy/github-deploy.yaml and README.md (apply commands, plain-English capability list). NOT applied; needs Ryan's go-ahead. cfn-lint clean. Creates the GitHub OIDC provider (skippable) and role humorus-github-deploy, trusted only for repo:AnthusAI/Humorus on refs/heads/main, allowed only amplify:StartJob/GetJob on that branch's jobs (app id narrows once the Amplify app exists). No CDK or bootstrap-role rights, following the Papyrus site pattern where Amplify's own service role does the deployment.",
+      "created_at": "2026-11-11T18:48:03.918798Z",
+      "comment_type": "default"
+    },
+    {
+      "id": "26ea15e2-a2d1-4ddf-80ee-ad6fe7110e40",
+      "author": "home",
+      "text": "Template merged to develop (PR #3): infra/github-deploy/github-deploy.yaml and README.md with apply commands and a plain-English capability list. NOT applied; needs Ryan's go-ahead. cfn-lint clean. Creates the GitHub OIDC provider (skippable) and role humorus-github-deploy, trusted only for repo:AnthusAI/Humorus on refs/heads/main, allowed only amplify:StartJob/GetJob on that branch's jobs. No CDK or bootstrap-role rights, following the Papyrus site pattern where Amplify's service role does the deploy.",
+      "created_at": "2026-11-11T18:48:20.763781Z",
+      "comment_type": "default"
+    },
+    {
+      "id": "5dca6d08-8c20-4c19-be7f-e7997fbae429",
+      "author": "home",
+      "text": "Applied 2026-11-11 with Ryan's go-ahead: stack humorus-github-deploy is CREATE_COMPLETE in us-east-1. Trust is exactly AnthusAI/Humorus on refs/heads/main. The role ARN and region are stored as the repository variables AWS_DEPLOY_ROLE_ARN and AWS_REGION. Still to do when the Amplify app exists: update the stack with AmplifyAppId so the role names one app.",
+      "created_at": "2026-11-11T20:08:31.033843Z",
+      "comment_type": "default"
+    }
+  ],
+  "created_at": "2026-11-11T17:45:43.377794Z",
+  "updated_at": "2026-11-11T20:08:31.082592Z",
+  "closed_at": "2026-11-11T20:08:31.082564Z",
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

@@ -1,0 +1,50 @@
+{
+  "id": "HUM-56be6f4f-7e9b-45f5-a426-9a549fb609c8",
+  "title": "Request raised limits where the defaults are too low",
+  "description": "Request raised limits where the defaults are too low",
+  "type": "sub-task",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-a61498ed-39e7-47f5-9f8e-337385f21343",
+  "labels": [],
+  "dependencies": [],
+  "comments": [
+    {
+      "id": "9e02138b-bb28-476e-b33b-29cd37e0a945",
+      "author": "home",
+      "text": "2026-11-11: limits read. Lambda concurrency was 10, far too low for a Papyrus backend; an increase to 1000 is requested and PENDING with AWS. Amplify: 25 apps. CloudFront: 500 distributions. Mail sending is still in the sandbox (200 a day), tracked in HUM-bdd767.",
+      "created_at": "2026-11-11T17:37:28.717240Z",
+      "comment_type": "default",
+      "agent": {
+        "platform": "claude_code",
+        "model": "Claude Fable 5.2",
+        "name": "Humorus Planning"
+      }
+    },
+    {
+      "id": "7dd1b292-1493-45cc-a5c2-c4803cebbd8d",
+      "author": "home",
+      "text": "2026-11-11 later: AWS opened a case for the Lambda limit (status CASE_OPENED, desired 1000). Check it before the first backend deploy.",
+      "created_at": "2026-11-11T17:45:43.391126Z",
+      "comment_type": "default",
+      "agent": {
+        "platform": "claude_code",
+        "model": "Claude Fable 5.2",
+        "name": "Humorus Planning"
+      }
+    }
+  ],
+  "created_at": "2026-11-11T17:14:43.876172Z",
+  "updated_at": "2026-11-11T17:45:43.391338Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

@@ -1,0 +1,30 @@
+{
+  "id": "HUM-fa28001c-6e47-4c07-bb03-e71a2cfa6aa7",
+  "title": "Each site has its own policy, theme and sources",
+  "description": "Two newsrooms on one deployment must not share editorial data.\n\n```gherkin\nFeature: Per-site newsroom data\n\n  Scenario: Agents use the right site's rules\n    Given two sites with different missions and guidelines\n    When an agent drafts a piece for site two\n    Then its instructions come only from site two's records\n```",
+  "type": "story",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-265b5b4a-1f25-4c8d-9cbe-23cc66576eec",
+  "labels": [],
+  "dependencies": [
+    {
+      "target": "HUM-352c2f54-ec8c-4a58-b271-7595ff3c6a4e",
+      "type": "blocked-by"
+    }
+  ],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.718453Z",
+  "updated_at": "2026-11-11T17:45:52.860129Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

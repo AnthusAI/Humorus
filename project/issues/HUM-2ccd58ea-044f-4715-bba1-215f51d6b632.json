@@ -1,0 +1,35 @@
+{
+  "id": "HUM-2ccd58ea-044f-4715-bba1-215f51d6b632",
+  "title": "New DataParade accounts are seeded from the organisation",
+  "description": "Layer 2, DESIGN ONLY for Ryan's review; nothing here is built. Seed every new DataParade account with the GitHub sign-in provider, deploy roles and budget from the organisation level; account creation as code; how the managed offer works; read-only everyday SSO with break-glass admin. Design in project/wiki/organisation-seeding-design.md.",
+  "type": "epic",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-76897062-7b9c-4085-89bf-163ede715ab5",
+  "labels": [],
+  "dependencies": [],
+  "comments": [
+    {
+      "id": "7d383075-3ca6-4ee3-9c33-0bd074216e30",
+      "author": "home",
+      "text": "The organisation-level seeding design (StackSets, account creation as code, managed offer, read-only everyday SSO with break-glass, who does the one-time setup, cost) is in the draft Papyrus epic comment on HUM-be87f4. Design only.",
+      "created_at": "2026-11-11T20:25:37.563890Z",
+      "comment_type": "default"
+    },
+    {
+      "id": "42e7e10d-eea3-4a67-90e4-56f1c61f3d44",
+      "author": "home",
+      "text": "Now delivered by Papyrus epic PPY-9bd776 (see HUM-be87f4). Humorus keeps only its stack settings and the one-time seed apply.",
+      "created_at": "2026-11-11T20:37:16.484730Z",
+      "comment_type": "default"
+    }
+  ],
+  "created_at": "2026-11-11T20:15:41.138498Z",
+  "updated_at": "2026-11-11T20:37:16.484935Z",
+  "closed_at": null,
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

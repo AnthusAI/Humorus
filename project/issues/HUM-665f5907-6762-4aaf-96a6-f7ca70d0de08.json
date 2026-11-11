@@ -1,0 +1,33 @@
+{
+  "id": "HUM-665f5907-6762-4aaf-96a6-f7ca70d0de08",
+  "title": "Tag releases and write the changelog with Semantic Release",
+  "description": "`release.config.cjs` on `main`: version tag, GitHub release and changelog from `feat:` and `fix:` titles. Nothing is published to a package registry.",
+  "type": "task",
+  "status": "closed",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-894b93cd-18e3-463e-8336-ede4a469f2ae",
+  "labels": [],
+  "dependencies": [],
+  "comments": [
+    {
+      "id": "4fe7840d-1d51-4955-a8d5-d7ca4f8dfa86",
+      "author": "home",
+      "text": "Merged in PR #1. release.yml on push to main (paths-ignore project/**), release.config.cjs (conventionalcommits preset, GitHub release; GITHUB_TOKEN only; no registry). Dry run against the repo analysed 15 commits: no release (no feat/fix yet). The changelog is the GitHub release notes; a committed CHANGELOG.md would need a bot push to protected main, which needs a decision from Ryan.",
+      "created_at": "2026-11-11T18:40:57.617935Z",
+      "comment_type": "default"
+    }
+  ],
+  "created_at": "2026-11-11T17:14:43.776016Z",
+  "updated_at": "2026-11-11T18:40:57.678548Z",
+  "closed_at": "2026-11-11T18:40:57.678530Z",
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

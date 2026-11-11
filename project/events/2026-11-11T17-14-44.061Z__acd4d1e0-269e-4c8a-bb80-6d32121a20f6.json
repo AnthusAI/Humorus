@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "acd4d1e0-269e-4c8a-bb80-6d32121a20f6",
+  "issue_id": "HUM-64506df0-bead-47b5-a7e2-c9547f2abd99",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.061Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Machines on Machines looks the same on the base theme",
+    "description": "The extraction touches a live site. It must not change what readers see.\n\n```gherkin\nFeature: Machines on Machines on the base theme\n\n  Scenario: Pages match before and after\n    Given Machines on Machines built on the base theme plus its own brand pack\n    When its home, section and article pages are compared with the current site at phone, laptop and wide widths\n    Then they match\n    And its site hooks no longer build cards or layout\n```",
+    "issue_type": "story",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-1be84311-4172-477a-9453-07054429cede",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

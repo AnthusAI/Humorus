@@ -1,0 +1,38 @@
+{
+  "id": "HUM-b04209ad-bc31-4fbd-b233-d539c4acf950",
+  "title": "Papyrus as a neutral base",
+  "description": "Papyrus changes that let a very different newsroom run on the same code. The work is done in Papyrus and Machines on Machines and tracked on their boards; each story here states what Humorus needs and links to it.",
+  "type": "initiative",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": null,
+  "labels": [],
+  "dependencies": [],
+  "comments": [
+    {
+      "id": "34c02b85-ea38-45f3-82ca-61772bee90d5",
+      "author": "home",
+      "text": "Papyrus work is tracked under epic PPY-059573 on the Papyrus board (filed 2026-11-11). Machines on Machines work is under MOM-065620.",
+      "created_at": "2026-11-11T17:16:29.396077Z",
+      "comment_type": "default",
+      "agent": {
+        "platform": "claude_code",
+        "model": "Claude Fable 5.2",
+        "name": "Humorus Planning"
+      }
+    }
+  ],
+  "created_at": "2026-11-11T17:14:44.016531Z",
+  "updated_at": "2026-11-11T17:16:29.396745Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

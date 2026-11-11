@@ -1,0 +1,30 @@
+{
+  "id": "HUM-403e4228-9412-4f88-a2e4-576ef67f5b23",
+  "title": "A reader sees a labelled placeholder on the site's domain",
+  "description": "Ship early with placeholders that say what they are.\n\n```gherkin\nFeature: Placeholder home page\n\n  Scenario: The domain answers\n    Given the site's domain\n    When a reader opens the home page\n    Then they see the site's name on the neutral theme\n    And a notice that the site is not yet publishing\n```",
+  "type": "story",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-24ef9c5d-3b69-4f0a-a69a-497a8c736833",
+  "labels": [],
+  "dependencies": [
+    {
+      "target": "HUM-7e44b057-7410-43fe-8806-97fd77ea578e",
+      "type": "blocked-by"
+    }
+  ],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.384708Z",
+  "updated_at": "2026-11-11T17:45:52.385554Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

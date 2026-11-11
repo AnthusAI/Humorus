@@ -1,0 +1,38 @@
+{
+  "id": "HUM-e7c7be91-19f0-4de4-b761-c95798c2baea",
+  "title": "Move Machines on Machines' identifiers to variables",
+  "description": "Filed on the MOM board. Account ID, Amplify app ID, CloudFront distribution, role ARN, bucket name and API Gateway ID move to GitHub and Amplify variables; LeftBlock is installed there.",
+  "type": "task",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-632832a2-cecc-4705-b093-e81e63f7d989",
+  "labels": [],
+  "dependencies": [],
+  "comments": [
+    {
+      "id": "68b435bb-07d4-4982-8f01-9066acd79aad",
+      "author": "home",
+      "text": "Machines on Machines: MOM-1faada.",
+      "created_at": "2026-11-11T17:16:29.514430Z",
+      "comment_type": "default",
+      "agent": {
+        "platform": "claude_code",
+        "model": "Claude Fable 5.2",
+        "name": "Humorus Planning"
+      }
+    }
+  ],
+  "created_at": "2026-11-11T17:14:43.994982Z",
+  "updated_at": "2026-11-11T17:16:29.514661Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

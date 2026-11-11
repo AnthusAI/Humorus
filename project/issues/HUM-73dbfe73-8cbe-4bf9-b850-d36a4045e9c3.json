@@ -1,0 +1,33 @@
+{
+  "id": "HUM-73dbfe73-8cbe-4bf9-b850-d36a4045e9c3",
+  "title": "Run checks on pull requests with GitHub Actions",
+  "description": "One workflow on pull requests to `develop` and `main`: LeftBlock scan, then per-site tests once a site exists. Use path filters so a change to one site tests only that site. The repository is public so the minutes are free.",
+  "type": "task",
+  "status": "closed",
+  "priority": 1,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-894b93cd-18e3-463e-8336-ede4a469f2ae",
+  "labels": [],
+  "dependencies": [],
+  "comments": [
+    {
+      "id": "fdee1949-9e8a-480d-ab4f-f6ae31ad33d0",
+      "author": "home",
+      "text": "Merged to develop in PR #1 (ddcb16f). ci.yml: LeftBlock-ruleset secret scan, kanbus validate, kanbus wiki lint, Conventional Commit PR title; aggregate job 'ci' is the one required check, app tests later = one more job in its needs. Actions pinned by SHA, no AWS access. Per-site path filters deliberately not used: they leave required checks pending on skipped runs; revisit when sites exist.",
+      "created_at": "2026-11-11T18:40:57.585806Z",
+      "comment_type": "default"
+    }
+  ],
+  "created_at": "2026-11-11T17:14:43.766212Z",
+  "updated_at": "2026-11-11T18:40:57.649089Z",
+  "closed_at": "2026-11-11T18:40:57.648865Z",
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

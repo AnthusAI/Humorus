@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "b9f056b3-d45d-4ce4-af0d-457581de5eda",
+  "issue_id": "HUM-0fe8cdb2-b8b7-4a79-a84e-b693d7500098",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:45:43.332Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Run the Papyrus pipeline bootstrap once it fits a second organisation",
+    "description": "Blocked on PPY-1a6aa6. Today `infra/pipeline/bootstrap.sh` trusts the Papyrus repository and sets that repository's AWS_ACCOUNT_ID variable, so running it for this account would redirect Papyrus's own releases; its stacks also name another organisation's domain. Do not run it until Papyrus changes. This is what brings monitoring into the account.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-bb321f56-8611-40f1-853a-92381282c824",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

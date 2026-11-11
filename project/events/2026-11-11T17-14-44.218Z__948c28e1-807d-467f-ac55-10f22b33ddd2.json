@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "948c28e1-807d-467f-ac55-10f22b33ddd2",
+  "issue_id": "HUM-e30752a0-69aa-41c3-8910-88996bd3ef69",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:44.218Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Replace the bundled example mission with a neutral one",
+    "description": "The example mission and sections that ship with Papyrus belong to one existing publication. Replace them with neutral examples so a new site cannot be seeded with someone else's mission.",
+    "issue_type": "task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-44da6e15-6e2f-4ec1-8394-dd0d1d821959",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

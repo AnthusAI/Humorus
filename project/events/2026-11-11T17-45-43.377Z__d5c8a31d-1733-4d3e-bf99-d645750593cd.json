@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "d5c8a31d-1733-4d3e-bf99-d645750593cd",
+  "issue_id": "HUM-ba24cb96-c053-474d-9182-70fecfc02f90",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:45:43.377Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "Create the GitHub sign-in provider and the deploy role",
+    "description": "The account has no GitHub OIDC provider. Create it and a deploy role trusted only for the main branch of AnthusAI/Humorus, able only to start the Amplify job.",
+    "issue_type": "sub-task",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-e00f7740-f551-4264-bd03-e5ac2fe18016",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

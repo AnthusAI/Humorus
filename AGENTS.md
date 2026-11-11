@@ -2,6 +2,16 @@
 
 Read [README.md](README.md) first. This file coordinates every session that works in Humorus.
 
+## Start of every session
+
+1. Read [project/wiki/state.md](project/wiki/state.md): what is done, what is not and why, what can start now.
+2. Read [project/wiki/decisions.md](project/wiki/decisions.md): what Ryan has decided. Do not reopen a settled decision without asking him.
+3. Read [project/wiki/plan.md](project/wiki/plan.md) for the shape of the work and the risks.
+4. Run `kbs ready` to see work with nothing in its way.
+5. In a new clone, run `leftblock install --local --check-only` before the first commit.
+
+Keep `state.md` and `decisions.md` current as part of the work, not afterwards.
+
 ## What Humorus is
 
 Humorus is a monorepo of political-satire publications built on [Papyrus](https://github.com/AnthusAI/Papyrus). It is one Papyrus deployment in a dedicated AWS account. The first site launches on that deployment. The second site is added to the same deployment as data, which is the test of the Papyrus multi-tenant MVP.
@@ -59,7 +69,11 @@ sites/<site-id>/                                            per-site settings (t
 
 ## AWS
 
-The deployment lives in a dedicated account in the DataParade AWS organisation. The local profile name is `dataparade-papyrus-production`. The profile named `papyrus-production` is a different organisation's account; never use it for Humorus.
+The deployment lives in a dedicated account in the DataParade AWS organisation, in `us-east-1`. The local profile name is `dataparade-papyrus-production` (sign in with `aws sso login --sso-session dataparade`). The profile named `papyrus-production` is a different organisation's account; never use it for Humorus.
+
+Do not run Papyrus's `infra/pipeline/bootstrap.sh` for this account until the Papyrus issue `PPY-1a6aa6` is done. Today it would point Papyrus's own releases at this account.
+
+Granting access, creating roles and anything that spends money need Ryan's go-ahead each time.
 
 ## Project management with Kanbus
 

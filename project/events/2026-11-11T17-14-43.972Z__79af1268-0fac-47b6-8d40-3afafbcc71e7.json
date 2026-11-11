@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "79af1268-0fac-47b6-8d40-3afafbcc71e7",
+  "issue_id": "HUM-632832a2-cecc-4705-b093-e81e63f7d989",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-11T17:14:43.972Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "No AWS identifiers in Git anywhere",
+    "description": "Milestone: Humorus starts clean and the older site repositories stop carrying identifiers. No history rewrite: the values are not credentials and the repositories are already public.",
+    "issue_type": "epic",
+    "status": "open",
+    "priority": 2,
+    "assignee": null,
+    "parent": "HUM-76897062-7b9c-4085-89bf-163ede715ab5",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Fable 5.2",
+      "name": "Humorus Planning"
+    }
+  }
+}

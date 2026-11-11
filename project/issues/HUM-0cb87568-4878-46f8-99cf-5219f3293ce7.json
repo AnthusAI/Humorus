@@ -1,0 +1,25 @@
+{
+  "id": "HUM-0cb87568-4878-46f8-99cf-5219f3293ce7",
+  "title": "A site sets its own figure and image rules",
+  "description": "The figure rules are one file for every site.\n\n```gherkin\nFeature: Per-site image rules\n\n  Scenario: The site's rules are used\n    Given two sites with different image rules\n    When each generates an image\n    Then each prompt is built only from its own site's rules\n```",
+  "type": "story",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-44da6e15-6e2f-4ec1-8394-dd0d1d821959",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-11T17:14:44.170153Z",
+  "updated_at": "2026-11-11T17:14:44.170174Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

@@ -1,0 +1,46 @@
+# Watches for the registrar to switch thehallucinator.ai to the four Route 53 name servers (infra/expected-nameservers.json).
+# Every 15 minutes it asks public resolvers; when the answers match it, once, (1) opens a GitHub issue so the owner is notified and
+# (2) dispatches the Infrastructure workflow on main, whose waiting stacks (certificate, placeholder site) then deploy. No AWS access.
+# The issue is the "already done" flag: while an issue titled "TheHallucinator.ai delegation switched" exists, this does nothing.
+# Scheduled workflows run on the default branch (develop); the dispatch targets main.
+name: Delegation watch
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write
+  issues: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: AnthusAI/Papyrus
+          ref: f714eb5fce4f7601c50dfe03082205889bda6656
+          path: .papyrus-tool
+          persist-credentials: false
+      - name: Ask the public resolvers
+        id: dns
+        run: python3 .papyrus-tool/infra/pipeline/stack_deploy.py delegation --config infra/stacks.json
+      - name: Report once and start the deploy
+        if: steps.dns.outputs.delegated == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="TheHallucinator.ai delegation switched"
+          if [ -n "$(gh issue list --state all --search "\"$title\" in:title" --json number --jq '.[0].number')" ]; then
+            echo "Already reported; nothing to do."
+            exit 0
+          fi
+          gh workflow run infrastructure.yml --ref main
+          gh issue create --title "$title" --body "The public name-server answers for thehallucinator.ai now match the four Route 53 servers. The Infrastructure workflow was dispatched on main: it creates the certificate and the placeholder site. Check the run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/workflows/infrastructure.yml"

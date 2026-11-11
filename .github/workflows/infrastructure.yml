@@ -15,6 +15,7 @@ on:
   push:
     branches: [main]
     paths-ignore: ["project/**"]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -24,9 +25,9 @@ jobs:
     permissions:
       contents: read
       id-token: write
-    # Pinned to a Papyrus develop commit that contains the account pipeline (PRs 1404, 1405, 1407 and 1408). Move both refs to a Papyrus release tag once one carries account-stacks.yml.
-    uses: AnthusAI/Papyrus/.github/workflows/account-stacks.yml@a4171160c833e8012b660baf886146fe838b5f08
+    # Pinned to a Papyrus develop commit that contains the account pipeline (PRs 1404, 1405, 1407, 1408 and 1409). Move both refs to a Papyrus release tag once one carries account-stacks.yml.
+    uses: AnthusAI/Papyrus/.github/workflows/account-stacks.yml@f714eb5fce4f7601c50dfe03082205889bda6656
     with:
       prefix: humorus
-      papyrus-ref: a4171160c833e8012b660baf886146fe838b5f08
+      papyrus-ref: f714eb5fce4f7601c50dfe03082205889bda6656
       aws-account-id: ${{ vars.AWS_ACCOUNT_ID }}

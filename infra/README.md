@@ -45,7 +45,7 @@ aws cloudformation deploy --stack-name humorus-github-deploy \
 One-time GitHub and account setup, each waiting for Ryan's go-ahead (before the first merge to `main` that touches `infra/`):
 
 1. Repository variable `AWS_ACCOUNT_ID` (the Humorus account id; a variable, not Git).
-2. GitHub environment `pipeline-roles` with a required reviewer and deployment branch `main`. It must exist before the first baseline change merges, or GitHub would auto-create it unprotected.
+2. GitHub environment `pipeline-roles` with deployment branch `main` only and no required reviewers (Ryan: nothing in GitHub should need his approval). Done. It must keep the branch policy, or a job on any branch could name the environment and assume the roles-apply role.
 3. SSM String parameter `/humorus/budget-alert-email` holding the current budget alert address (`aws ssm put-parameter --name /humorus/budget-alert-email --type String --value <the live subscriber>`). A person does this: the address stays out of Git and logs.
 
 Humorus's repository uses GitHub's immutable OIDC subject claims (`gh api repos/AnthusAI/Humorus/actions/oidc/customization/sub` reports the prefix above; the numbers are public GitHub ids, not AWS identifiers). Roles that trust the classic `repo:AnthusAI/Humorus` subject refuse every run, which is why `GithubSubjectPrefix` is set.
@@ -54,8 +54,8 @@ Humorus's repository uses GitHub's immutable OIDC subject claims (`gh api repos/
 
 - **`humorus-github-deploy`**: only a run of this repository started by a push to `main`. Starts and reads Amplify jobs on the `main` branch. Creates, reads and executes CloudFormation change sets on `humorus-*` stacks, always through `humorus-cloudformation`. Looks up a Route 53 zone and the budget by name, read-only. Explicitly denied every write to the `humorus-github-deploy` stack. Cannot create or change IAM.
 - **`humorus-github-plan`**: any pull request in this repository (not forks). Read-only: describes the stacks, reads their templates, looks up the zone and budget. Creates nothing.
-- **`humorus-github-roles-apply`**: only a job in the `pipeline-roles` environment, after a person approves. Can run a change set on the `humorus-github-deploy` stack only, through `humorus-cloudformation-roles`.
+- **`humorus-github-roles-apply`**: only a job in the `pipeline-roles` environment, whose branch policy allows `main` only. No person's approval is needed. Can run a change set on the `humorus-github-deploy` stack only, through `humorus-cloudformation-roles`.
 - **`humorus-cloudformation`**: what CloudFormation uses for DNS, budget, certificate and SES stacks. Route 53 zones and records, one budget, ACM certificates, SES identities. No IAM.
 - **`humorus-cloudformation-roles`**: what CloudFormation uses for the baseline stack. IAM on the five pipeline roles and the GitHub provider only.
 
-Whoever can approve `pipeline-roles` can change what the pipeline may do; read the change set before approving.
+Whoever can merge to `main` can change what the pipeline may do through the roles job. The safety is the main-only trust on every role, branch protection on `main` (a pull request and the `ci` check), the roles service role's narrow IAM rights, and the deployer refusing any Replace or Remove that `allowed-changes.json` does not list.

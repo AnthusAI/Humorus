@@ -10,9 +10,22 @@
   "parent": "HUM-b04209ad-bc31-4fbd-b233-d539c4acf950",
   "labels": [],
   "dependencies": [],
-  "comments": [],
+  "comments": [
+    {
+      "id": "23fa50f3-eccc-4e0c-a4fd-64c4c1c92f4c",
+      "author": "home",
+      "text": "Papyrus: PPY-c05a3c (role instructions), PPY-8fe7e6 (procedure), PPY-cbc0f3 (image rules), PPY-94458e (sources), PPY-804b7b (bylines), PPY-10a5e5 (idea rules), PPY-21cd32 (neutral example).",
+      "created_at": "2026-11-11T17:16:29.453561Z",
+      "comment_type": "default",
+      "agent": {
+        "platform": "claude_code",
+        "model": "Claude Fable 5.2",
+        "name": "Humorus Planning"
+      }
+    }
+  ],
   "created_at": "2026-11-11T17:14:44.133974Z",
-  "updated_at": "2026-11-11T17:14:44.133996Z",
+  "updated_at": "2026-11-11T17:16:29.453817Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

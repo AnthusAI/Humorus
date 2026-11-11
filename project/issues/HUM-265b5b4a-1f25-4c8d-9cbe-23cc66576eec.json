@@ -10,9 +10,22 @@
   "parent": "HUM-82d7fb31-d438-496c-acc1-4fabeede65c1",
   "labels": [],
   "dependencies": [],
-  "comments": [],
+  "comments": [
+    {
+      "id": "8e23ea52-a7b4-4dd9-afb0-5966c9e9ff68",
+      "author": "home",
+      "text": "Papyrus: PPY-e69d63, an early milestone for PPY-6a6357.",
+      "created_at": "2026-11-11T17:16:29.500355Z",
+      "comment_type": "default",
+      "agent": {
+        "platform": "claude_code",
+        "model": "Claude Fable 5.2",
+        "name": "Humorus Planning"
+      }
+    }
+  ],
   "created_at": "2026-11-11T17:14:44.660018Z",
-  "updated_at": "2026-11-11T17:14:44.660044Z",
+  "updated_at": "2026-11-11T17:16:29.500589Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

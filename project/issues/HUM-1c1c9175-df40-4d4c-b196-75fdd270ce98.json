@@ -3,7 +3,7 @@
   "title": "Run the Papyrus pipeline bootstrap and CDK bootstrap",
   "description": "Run the Papyrus pipeline bootstrap and CDK bootstrap",
   "type": "sub-task",
-  "status": "open",
+  "status": "closed",
   "priority": 2,
   "assignee": null,
   "creator": null,
@@ -22,11 +22,18 @@
         "model": "Claude Fable 5.2",
         "name": "Humorus Planning"
       }
+    },
+    {
+      "id": "2fc962f0-4041-49fb-8fff-f6b2d8570ad5",
+      "author": "home",
+      "text": "2026-11-11: the CDK half is done (CDKToolkit complete in us-east-1). The pipeline half moved to its own task because it is blocked on Papyrus (PPY-1a6aa6).",
+      "created_at": "2026-11-11T17:45:43.300767Z",
+      "comment_type": "default"
     }
   ],
   "created_at": "2026-11-11T17:14:43.855460Z",
-  "updated_at": "2026-11-11T17:37:28.696107Z",
-  "closed_at": null,
+  "updated_at": "2026-11-11T17:45:43.315358Z",
+  "closed_at": "2026-11-11T17:45:43.315128Z",
   "agent": {
     "platform": "claude_code",
     "model": "Claude Fable 5.2",

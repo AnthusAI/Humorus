@@ -1,0 +1,30 @@
+{
+  "id": "HUM-539f7805-8bde-4623-b74d-6f0883be2e29",
+  "title": "Decide how the papyrus CLI signs in without Prospectus",
+  "description": "Agents and editors use the signed-in `papyrus` CLI. On the existing sites remote login goes through Prospectus, which Humorus does not use at launch. Decide and document the sign-in path for this deployment (the newsroom's own Google sign-in, or IAM through the single sign-on profile for operators), and file the Papyrus issue if neither works.",
+  "type": "task",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-24ef9c5d-3b69-4f0a-a69a-497a8c736833",
+  "labels": [],
+  "dependencies": [
+    {
+      "target": "HUM-7e44b057-7410-43fe-8806-97fd77ea578e",
+      "type": "blocked-by"
+    }
+  ],
+  "comments": [],
+  "created_at": "2026-11-11T17:45:43.347398Z",
+  "updated_at": "2026-11-11T17:45:52.427275Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

@@ -4,7 +4,7 @@
   "description": "Install the Amplify GitHub connection for `AnthusAI/Humorus`. Put the account ID, app ID and role name in GitHub and Amplify variables, never in files.",
   "type": "task",
   "status": "open",
-  "priority": 2,
+  "priority": 1,
   "assignee": null,
   "creator": null,
   "parent": "HUM-bb321f56-8611-40f1-853a-92381282c824",
@@ -12,7 +12,7 @@
   "dependencies": [],
   "comments": [],
   "created_at": "2026-11-11T17:14:43.919151Z",
-  "updated_at": "2026-11-11T17:14:43.919173Z",
+  "updated_at": "2026-11-11T17:45:53.016871Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

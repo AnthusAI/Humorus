@@ -4,15 +4,28 @@
   "description": "`papyrus.config.ts`, `amplify/`, `amplify.yml`, `infra/`, one Papyrus pin, and `sites/<site-id>/` from the scaffold. Start from the Shipped-web wrappers if the scaffold is not ready.",
   "type": "task",
   "status": "open",
-  "priority": 2,
+  "priority": 1,
   "assignee": null,
   "creator": null,
   "parent": "HUM-24ef9c5d-3b69-4f0a-a69a-497a8c736833",
   "labels": [],
   "dependencies": [],
-  "comments": [],
+  "comments": [
+    {
+      "id": "8aebdcb7-fce9-48a9-9e6e-862ad4f7e456",
+      "author": "home",
+      "text": "Include a site list (sites.json: id, tenant id, name, domain, theme) so the second site is an entry, not a new folder of code. Pin Papyrus once for the whole repository.",
+      "created_at": "2026-11-11T17:45:43.444083Z",
+      "comment_type": "default",
+      "agent": {
+        "platform": "claude_code",
+        "model": "Claude Fable 5.2",
+        "name": "Humorus Planning"
+      }
+    }
+  ],
   "created_at": "2026-11-11T17:14:44.307553Z",
-  "updated_at": "2026-11-11T17:14:44.307584Z",
+  "updated_at": "2026-11-11T17:45:52.995850Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

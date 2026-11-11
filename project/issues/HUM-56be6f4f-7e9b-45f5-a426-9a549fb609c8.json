@@ -22,10 +22,22 @@
         "model": "Claude Fable 5.2",
         "name": "Humorus Planning"
       }
+    },
+    {
+      "id": "7dd1b292-1493-45cc-a5c2-c4803cebbd8d",
+      "author": "home",
+      "text": "2026-11-11 later: AWS opened a case for the Lambda limit (status CASE_OPENED, desired 1000). Check it before the first backend deploy.",
+      "created_at": "2026-11-11T17:45:43.391126Z",
+      "comment_type": "default",
+      "agent": {
+        "platform": "claude_code",
+        "model": "Claude Fable 5.2",
+        "name": "Humorus Planning"
+      }
     }
   ],
   "created_at": "2026-11-11T17:14:43.876172Z",
-  "updated_at": "2026-11-11T17:37:28.717454Z",
+  "updated_at": "2026-11-11T17:45:43.391338Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

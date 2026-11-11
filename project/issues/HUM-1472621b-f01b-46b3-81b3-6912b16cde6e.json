@@ -1,0 +1,30 @@
+{
+  "id": "HUM-1472621b-f01b-46b3-81b3-6912b16cde6e",
+  "title": "Write the satire editorial policies",
+  "description": "Rule checks and judgment questions for satire, saved with `papyrus editorial policies add`: the satire limits (public figures only, no private people, no victims, no invented crimes), source wording not reused, the real setup stated correctly. Do not import the starter pack written for news without reading it.",
+  "type": "task",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-f5f43042-7e0c-42a1-84d4-afdc5b0b97f7",
+  "labels": [],
+  "dependencies": [
+    {
+      "target": "HUM-7e44b057-7410-43fe-8806-97fd77ea578e",
+      "type": "blocked-by"
+    }
+  ],
+  "comments": [],
+  "created_at": "2026-11-11T17:45:43.362542Z",
+  "updated_at": "2026-11-11T17:45:52.540003Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude_code",
+    "model": "Claude Fable 5.2",
+    "name": "Humorus Planning"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

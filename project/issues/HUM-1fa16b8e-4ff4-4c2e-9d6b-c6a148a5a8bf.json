@@ -10,9 +10,22 @@
   "parent": "HUM-bb321f56-8611-40f1-853a-92381282c824",
   "labels": [],
   "dependencies": [],
-  "comments": [],
+  "comments": [
+    {
+      "id": "1cbfdc13-392d-46ba-be32-05f71f2dc135",
+      "author": "home",
+      "text": "2026-11-11: AdministratorAccess on the account was copied from the management account's assignments, so two users hold it. Ryan to confirm the second user should.",
+      "created_at": "2026-11-11T17:45:43.404541Z",
+      "comment_type": "default",
+      "agent": {
+        "platform": "claude_code",
+        "model": "Claude Fable 5.2",
+        "name": "Humorus Planning"
+      }
+    }
+  ],
   "created_at": "2026-11-11T17:14:43.951190Z",
-  "updated_at": "2026-11-11T17:14:43.951209Z",
+  "updated_at": "2026-11-11T17:45:43.404758Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

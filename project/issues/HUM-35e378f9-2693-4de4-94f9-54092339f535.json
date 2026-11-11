@@ -4,15 +4,20 @@
   "description": "A Google OAuth client for the deployment, with its secrets set through `papyrus site google-secrets set`. Google sign-in only; no password users.",
   "type": "task",
   "status": "open",
-  "priority": 2,
+  "priority": 1,
   "assignee": null,
   "creator": null,
   "parent": "HUM-bb321f56-8611-40f1-853a-92381282c824",
   "labels": [],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "target": "HUM-5d819bc6-77f4-4c60-af1c-5dd855e2add6",
+      "type": "blocked-by"
+    }
+  ],
   "comments": [],
   "created_at": "2026-11-11T17:14:43.929602Z",
-  "updated_at": "2026-11-11T17:14:43.929623Z",
+  "updated_at": "2026-11-11T17:45:52.974997Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

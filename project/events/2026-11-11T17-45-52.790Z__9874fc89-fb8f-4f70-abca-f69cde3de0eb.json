@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "event_id": "9874fc89-fb8f-4f70-abca-f69cde3de0eb",
+  "issue_id": "HUM-7e948ec9-878a-4663-a595-062c3331dedb",
+  "event_type": "dependency_added",
+  "occurred_at": "2026-11-11T17:45:52.790Z",
+  "actor_id": "home",
+  "payload": {
+    "dependency_type": "blocked-by",
+    "target_id": "HUM-40378985-bf87-4c6d-8c2f-5c610d8f2096"
+  }
+}

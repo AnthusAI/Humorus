@@ -9,10 +9,43 @@
   "creator": null,
   "parent": "HUM-b0d9991e-ddc9-4da7-8b45-2d3f8a7c8bdc",
   "labels": [],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "target": "HUM-c320b002-631c-4dea-8994-8ece5ef70b2a",
+      "type": "blocked-by"
+    },
+    {
+      "target": "HUM-def2090a-5b6f-403f-bff1-0e2c7f39e930",
+      "type": "blocked-by"
+    },
+    {
+      "target": "HUM-6f4e4517-d403-4f61-b844-198ab6ab31c6",
+      "type": "blocked-by"
+    },
+    {
+      "target": "HUM-300e79ce-4a69-428e-aa71-29a4ed606cc5",
+      "type": "blocked-by"
+    },
+    {
+      "target": "HUM-1472621b-f01b-46b3-81b3-6912b16cde6e",
+      "type": "blocked-by"
+    },
+    {
+      "target": "HUM-6050a97c-4f61-4782-a643-53149b615fb4",
+      "type": "blocked-by"
+    },
+    {
+      "target": "HUM-948077fc-6bf0-4e0c-9bbf-7d8fb2070cb0",
+      "type": "blocked-by"
+    },
+    {
+      "target": "HUM-2036d05b-e38f-46ec-bd66-d97b9263acb9",
+      "type": "blocked-by"
+    }
+  ],
   "comments": [],
   "created_at": "2026-11-11T17:14:44.589990Z",
-  "updated_at": "2026-11-11T17:14:44.590011Z",
+  "updated_at": "2026-11-11T17:45:52.651219Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

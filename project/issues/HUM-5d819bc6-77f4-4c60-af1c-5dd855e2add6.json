@@ -4,15 +4,28 @@
   "description": "Ryan chooses the name. Register the domain and create its hosted zone in the new account.",
   "type": "task",
   "status": "open",
-  "priority": 2,
+  "priority": 1,
   "assignee": null,
   "creator": null,
   "parent": "HUM-bb321f56-8611-40f1-853a-92381282c824",
   "labels": [],
   "dependencies": [],
-  "comments": [],
+  "comments": [
+    {
+      "id": "47ee0865-9f39-4ff4-b693-8c495282782b",
+      "author": "home",
+      "text": "2026-11-11: still waiting on Ryan for the name and domain. Several tasks wait on this: the hosted zone, the certificate, mail sending, Google sign-in redirect addresses.",
+      "created_at": "2026-11-11T17:45:43.430901Z",
+      "comment_type": "default",
+      "agent": {
+        "platform": "claude_code",
+        "model": "Claude Fable 5.2",
+        "name": "Humorus Planning"
+      }
+    }
+  ],
   "created_at": "2026-11-11T17:14:43.886430Z",
-  "updated_at": "2026-11-11T17:14:43.886448Z",
+  "updated_at": "2026-11-11T17:45:52.954127Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

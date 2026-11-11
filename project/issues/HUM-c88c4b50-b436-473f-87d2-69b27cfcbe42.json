@@ -9,10 +9,15 @@
   "creator": null,
   "parent": "HUM-632832a2-cecc-4705-b093-e81e63f7d989",
   "labels": [],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "target": "HUM-ba24cb96-c053-474d-9182-70fecfc02f90",
+      "type": "blocked-by"
+    }
+  ],
   "comments": [],
   "created_at": "2026-11-11T17:14:43.983679Z",
-  "updated_at": "2026-11-11T17:14:43.983701Z",
+  "updated_at": "2026-11-11T17:45:52.901742Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

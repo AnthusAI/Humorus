@@ -10,9 +10,22 @@
   "parent": "HUM-a61498ed-39e7-47f5-9f8e-337385f21343",
   "labels": [],
   "dependencies": [],
-  "comments": [],
+  "comments": [
+    {
+      "id": "12b671ca-b673-49d0-8900-a8233917d2da",
+      "author": "home",
+      "text": "2026-11-11: waiting on Ryan for the monthly amount.",
+      "created_at": "2026-11-11T17:37:28.728317Z",
+      "comment_type": "default",
+      "agent": {
+        "platform": "claude_code",
+        "model": "Claude Fable 5.2",
+        "name": "Humorus Planning"
+      }
+    }
+  ],
   "created_at": "2026-11-11T17:14:43.865773Z",
-  "updated_at": "2026-11-11T17:14:43.865839Z",
+  "updated_at": "2026-11-11T17:37:28.728520Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

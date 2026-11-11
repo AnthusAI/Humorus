@@ -10,9 +10,22 @@
   "parent": "HUM-a61498ed-39e7-47f5-9f8e-337385f21343",
   "labels": [],
   "dependencies": [],
-  "comments": [],
+  "comments": [
+    {
+      "id": "77b299de-f7f0-4663-a519-9ad6266ca704",
+      "author": "home",
+      "text": "2026-11-11: CDK bootstrap done in us-east-1 (CDKToolkit CREATE_COMPLETE). The Papyrus pipeline bootstrap (infra/pipeline/bootstrap.sh) was NOT run, on purpose: by default it trusts the Papyrus repository and would overwrite that repository's AWS_ACCOUNT_ID variable with this account, redirecting Papyrus's own releases; its stacks also name another organisation's domain. It needs the Papyrus change in PPY-1a6aa6 before it fits a second organisation. The account has no GitHub OIDC provider yet; the deploy role for Humorus will need one.",
+      "created_at": "2026-11-11T17:37:28.695652Z",
+      "comment_type": "default",
+      "agent": {
+        "platform": "claude_code",
+        "model": "Claude Fable 5.2",
+        "name": "Humorus Planning"
+      }
+    }
+  ],
   "created_at": "2026-11-11T17:14:43.855460Z",
-  "updated_at": "2026-11-11T17:14:43.855485Z",
+  "updated_at": "2026-11-11T17:37:28.696107Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

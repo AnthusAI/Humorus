@@ -15,9 +15,24 @@
       "type": "blocked-by"
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "id": "66580434-c3e2-4244-9a7f-98504b67bf02",
+      "author": "home",
+      "text": "DRAFT of the SES production-access request (AWS Support, SES \"increase sending limits / move out of the sandbox\"). NOT SUBMITTED. Bracketed items are for Ryan to confirm; I invented no numbers.\n\nMail type: Marketing (a subscriber newsletter) and Transactional (subscription confirmations).\nWebsite URL: https://thehallucinator.ai (a political-satire publication; every page is labelled as satire).\nRegion: us-east-1. Sending domain: thehallucinator.ai, with Easy DKIM, a custom MAIL FROM domain (mail.thehallucinator.ai), SPF and a DMARC record, all set up as infrastructure code.\n\nUse case: TheHallucinator.ai publishes satirical news stories. Readers who want email subscribe on the site. We send (1) one confirmation email per subscription request, (2) a periodic newsletter of recently published stories to confirmed subscribers only, and (3) internal notifications to our own editors. We do not buy, rent or import lists and we never email anyone who has not confirmed.\n\nHow recipients opt in: double opt-in. A reader enters their address on the site; we send a confirmation email with a single-use link; only after they click it are they subscribed. We store the consent record (time, form, page, wording). Subscription requests are rate-limited and bot-filtered.\n\nHow recipients opt out: every email has an unsubscribe link and a manage-preferences link, and carries the List-Unsubscribe and List-Unsubscribe-Post headers (RFC 8058 one-click). Unsubscribing takes effect immediately, and a reader can erase their data from the preferences page.\n\nBounces and complaints: SES bounce and complaint events are processed automatically. Hard bounces and complaints suppress the address permanently so it is never mailed again; repeated soft bounces suppress it too. Sending pauses automatically and raises an alarm if bounce or complaint rates approach SES thresholds. We watch the SES reputation metrics. The account-level suppression list is enabled.\n\nExpected volume: [PROPOSED: fewer than 1,000 emails a day at launch, below 20,000 a month in the first year. Ryan to confirm or replace.] Sending is paced, not bursty.\n\nContent: plain-text and HTML email in the site's house style, always identifying the sender and the publication, always saying the content is satire, and carrying the sender's postal address in the footer [Ryan to supply the postal address].\n\nContact for AWS: [Ryan to choose a role address].",
+      "created_at": "2026-11-11T22:44:28.670075Z",
+      "comment_type": "default"
+    },
+    {
+      "id": "fa47625b-5cea-4c7d-a434-a941e5cfae96",
+      "author": "home",
+      "text": "SES identity thehallucinator.ai exists (DKIM, MAIL FROM, SPF, DMARC p=none in the zone); verification is PENDING until the registrar delegates. Production-access request text drafted in the comment above, not submitted.",
+      "created_at": "2026-11-11T23:15:07.395680Z",
+      "comment_type": "default"
+    }
+  ],
   "created_at": "2026-11-11T17:14:43.896835Z",
-  "updated_at": "2026-11-11T17:45:52.964584Z",
+  "updated_at": "2026-11-11T23:15:07.395903Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

@@ -3,7 +3,7 @@
   "title": "One-time apply of the wider deploy role (the bootstrap exception)",
   "description": "The only manual apply: updates the existing humorus-github-deploy stack with the template in Git so the pipeline can deploy. Needs Ryan's go-ahead. Command and permission list are in infra/README.md. After it, every change goes through the pipeline.",
   "type": "task",
-  "status": "open",
+  "status": "closed",
   "priority": 1,
   "assignee": null,
   "creator": null,
@@ -24,11 +24,18 @@
       "text": "Executed 2026-11-11 with Ryan's go-ahead: humorus-github-deploy updated from Papyrus's account baseline (review-only change set first: 4 Add, Modify GithubDeployRole Replacement False). UPDATE_COMPLETE; deploy role trust unchanged. Follow-up needed: the roles trust the classic OIDC subject but this repo uses immutable subject claims, so a second update with GithubSubjectPrefix is required (Papyrus PR #1405). Also set: AWS_ACCOUNT_ID variable, pipeline-roles environment (reviewer endymion, branch main), SSM /humorus/budget-alert-email.",
       "created_at": "2026-11-11T21:31:20.664356Z",
       "comment_type": "default"
+    },
+    {
+      "id": "f013a986-205e-4855-b34d-1229b5eaee50",
+      "author": "home",
+      "text": "Done 2026-11-11. First real pipeline deploy: https://github.com/AnthusAI/Humorus/actions/runs/43117405856 (success). humorus-dns imported (name servers unchanged), humorus-budget imported (limit and alerts unchanged), humorus-ses created; certificate and placeholder deploy by themselves once the registrar delegates (when.delegated gate). Mechanism: Papyrus epic PPY-9bd776.",
+      "created_at": "2026-11-11T23:15:07.310702Z",
+      "comment_type": "default"
     }
   ],
   "created_at": "2026-11-11T20:15:58.440500Z",
-  "updated_at": "2026-11-11T21:31:20.664582Z",
-  "closed_at": null,
+  "updated_at": "2026-11-11T23:15:07.331274Z",
+  "closed_at": "2026-11-11T23:15:07.331247Z",
   "right_now_summary": null,
   "right_now_updated_at": null,
   "custom": {}

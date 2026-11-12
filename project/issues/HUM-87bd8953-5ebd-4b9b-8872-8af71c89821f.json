@@ -3,7 +3,7 @@
   "title": "A pull request shows what a stack change would do",
   "description": "```gherkin\nFeature: Infrastructure changes are checked before merge\n\n  Scenario: Templates are linted and the config is validated without AWS\n    Given a pull request that changes anything under infra/\n    When CI runs\n    Then cfn-lint and the stack config checks run with no AWS access\n    And the required check \"ci\" fails if either fails\n\n  Scenario: The pull request shows the live difference with a read-only role\n    Given a pull request from a branch in this repository\n    When the plan job runs as the read-only plan role\n    Then the job summary shows, per stack, whether it would be created, imported, updated or unchanged\n    And the plan role cannot create, change or delete anything\n\n  Scenario: A fork gets no AWS access\n    Given a pull request from a fork\n    When CI runs\n    Then the lint job runs and the plan job is skipped\n```",
   "type": "story",
-  "status": "open",
+  "status": "closed",
   "priority": 2,
   "assignee": null,
   "creator": null,
@@ -17,11 +17,18 @@
       "text": "Now delivered by Papyrus epic PPY-9bd776 (see HUM-be87f4). Humorus keeps only its stack settings and the one-time seed apply.",
       "created_at": "2026-11-11T20:37:16.364345Z",
       "comment_type": "default"
+    },
+    {
+      "id": "a46e3987-67a7-4202-812d-a5e27f50318b",
+      "author": "home",
+      "text": "Done 2026-11-11. First real pipeline deploy: https://github.com/AnthusAI/Humorus/actions/runs/43117405856 (success). humorus-dns imported (name servers unchanged), humorus-budget imported (limit and alerts unchanged), humorus-ses created; certificate and placeholder deploy by themselves once the registrar delegates (when.delegated gate). Mechanism: Papyrus epic PPY-9bd776.",
+      "created_at": "2026-11-11T23:15:07.121379Z",
+      "comment_type": "default"
     }
   ],
   "created_at": "2026-11-11T20:15:58.374549Z",
-  "updated_at": "2026-11-11T20:37:16.364559Z",
-  "closed_at": null,
+  "updated_at": "2026-11-11T23:15:07.147760Z",
+  "closed_at": "2026-11-11T23:15:07.147730Z",
   "right_now_summary": null,
   "right_now_updated_at": null,
   "custom": {}

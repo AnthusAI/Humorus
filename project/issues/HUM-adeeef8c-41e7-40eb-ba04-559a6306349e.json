@@ -3,7 +3,7 @@
   "title": "Merging to main deploys the account's stacks",
   "description": "```gherkin\nFeature: The account's stacks are deployed from Git\n\n  Scenario: A merge to main applies the changed stacks\n    Given a stack template under infra/stacks changed in a commit merged to main\n    When the Deploy workflow runs\n    Then it signs in to AWS with GitHub OIDC as the deploy role, with no stored keys\n    And it creates a change set for each changed stack, in the order listed in infra/stacks.json\n    And it executes a change set only if it replaces or removes nothing that is not listed as allowed\n    And the job summary shows each stack's result\n\n  Scenario: Only main can deploy\n    Given a workflow run for a pull request or a branch other than main\n    When it asks AWS for the deploy role\n    Then AWS refuses\n\n  Scenario: A board-only commit deploys nothing\n    Given a commit that changes only project/\n    When it is merged to main\n    Then the Deploy workflow does not run\n\n  Scenario: Nothing is created by hand\n    Given any stack in infra/stacks.json\n    Then it is created and changed only by the Deploy workflow, except the one-time apply recorded in HUM-c9ac64\n```",
   "type": "story",
-  "status": "open",
+  "status": "closed",
   "priority": 1,
   "assignee": null,
   "creator": null,
@@ -17,11 +17,18 @@
       "text": "Now delivered by Papyrus epic PPY-9bd776 (see HUM-be87f4). Humorus keeps only its stack settings and the one-time seed apply.",
       "created_at": "2026-11-11T20:37:16.336077Z",
       "comment_type": "default"
+    },
+    {
+      "id": "d82747b0-f94f-48dd-8777-900dcee6e1e0",
+      "author": "home",
+      "text": "Done 2026-11-11. First real pipeline deploy: https://github.com/AnthusAI/Humorus/actions/runs/43117405856 (success). humorus-dns imported (name servers unchanged), humorus-budget imported (limit and alerts unchanged), humorus-ses created; certificate and placeholder deploy by themselves once the registrar delegates (when.delegated gate). Mechanism: Papyrus epic PPY-9bd776.",
+      "created_at": "2026-11-11T23:15:07.060694Z",
+      "comment_type": "default"
     }
   ],
   "created_at": "2026-11-11T20:15:58.353109Z",
-  "updated_at": "2026-11-11T20:37:16.336281Z",
-  "closed_at": null,
+  "updated_at": "2026-11-11T23:15:07.098059Z",
+  "closed_at": "2026-11-11T23:15:07.097947Z",
   "right_now_summary": null,
   "right_now_updated_at": null,
   "custom": {}

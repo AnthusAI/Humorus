@@ -3,7 +3,7 @@
   "title": "The pipeline cannot widen its own permissions without an approval",
   "description": "```gherkin\nFeature: Changing the pipeline's roles needs a person's approval\n\n  Scenario: Ordinary deploys cannot touch the pipeline's roles\n    Given the deploy role and the CloudFormation service role\n    When a normal stack deploy runs\n    Then neither role can change the humorus-github-deploy stack, the OIDC provider or the pipeline roles\n\n  Scenario: A roles change waits for an approval\n    Given a merged change to infra/stacks/github-deploy.yaml\n    When the Deploy workflow reaches the pipeline-roles job\n    Then the job waits for a person to approve it in the GitHub environment pipeline-roles\n    And only after approval does the roles-apply role update that one stack through the roles service role\n```",
   "type": "story",
-  "status": "open",
+  "status": "closed",
   "priority": 2,
   "assignee": null,
   "creator": null,
@@ -17,11 +17,18 @@
       "text": "Now delivered by Papyrus epic PPY-9bd776 (see HUM-be87f4). Humorus keeps only its stack settings and the one-time seed apply.",
       "created_at": "2026-11-11T20:37:16.410973Z",
       "comment_type": "default"
+    },
+    {
+      "id": "370490ee-eefc-4cbe-bbd6-d0f2a4acc18f",
+      "author": "home",
+      "text": "Superseded by Ryan's rule (2026-11-11): nothing in GitHub requires his approval. The roles job applies roles changes with no approval; safety is the main-only trust, branch protection on main, the narrow roles service role and the deployer's Replace/Remove refusal. Environment pipeline-roles keeps a main-only branch policy and no reviewers.",
+      "created_at": "2026-11-11T23:15:07.352735Z",
+      "comment_type": "default"
     }
   ],
   "created_at": "2026-11-11T20:15:58.420677Z",
-  "updated_at": "2026-11-11T20:37:16.411196Z",
-  "closed_at": null,
+  "updated_at": "2026-11-11T23:15:07.375343Z",
+  "closed_at": "2026-11-11T23:15:07.375316Z",
   "right_now_summary": null,
   "right_now_updated_at": null,
   "custom": {}

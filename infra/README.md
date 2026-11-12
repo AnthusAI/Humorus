@@ -50,6 +50,8 @@ One-time GitHub and account setup, each waiting for Ryan's go-ahead (before the 
 
 Humorus's repository uses GitHub's immutable OIDC subject claims (`gh api repos/AnthusAI/Humorus/actions/oidc/customization/sub` reports the prefix above; the numbers are public GitHub ids, not AWS identifiers). Roles that trust the classic `repo:AnthusAI/Humorus` subject refuse every run, which is why `GithubSubjectPrefix` is set.
 
+The deploy role's Amplify rights cover only the app `the-hallucinator-cms`: `AmplifyAppId` in `infra/stacks.json` is read from the `CmsAppId` output of the `humorus-app-shell` stack (so the id is never in Git), with `*` as the fallback until that stack exists.
+
 ## What each role can do, in plain English
 
 - **`humorus-github-deploy`**: only a run of this repository started by a push to `main`. Starts and reads Amplify jobs on the `main` branch. Creates, reads and executes CloudFormation change sets on `humorus-*` stacks, always through `humorus-cloudformation`. Looks up a Route 53 zone and the budget by name, read-only. Explicitly denied every write to the `humorus-github-deploy` stack. Cannot create or change IAM.

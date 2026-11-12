@@ -18,7 +18,13 @@
         "GithubRepository": "AnthusAI/Humorus",
         "GithubSubjectPrefix": "repo:AnthusAI@152415604/Humorus@1454269356",
         "ProductionBranch": "main",
-        "AmplifyAppId": "*",
+        "AmplifyAppId": {
+          "fromStackOutput": {
+            "stack": "humorus-app-shell",
+            "output": "CmsAppId",
+            "default": "*"
+          }
+        },
         "CreateOidcProvider": "true",
         "ApprovalEnvironment": "pipeline-roles",
         "BudgetName": "papyrus-production-monthly"

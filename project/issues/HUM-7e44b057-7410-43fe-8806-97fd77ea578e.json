@@ -49,10 +49,17 @@
       "text": "Job 2 (auto-build) failed at asset publish: the console responder container image (flag defaults on). Fixed by setting all four PAPYRUS_ENABLE_* flags false in infra/site.json (PR #27/#28); the branch now has them. Auto-build is off; the first build is the two-pass first-build workflow.",
       "created_at": "2026-11-12T12:17:04.977638Z",
       "comment_type": "default"
+    },
+    {
+      "id": "a1e3bd25-3a6f-4bd9-8a8b-f04ccfc50d7c",
+      "author": "home",
+      "text": "Follow-up, waiting on Papyrus: the Papyrus session is changing the default so optional features are off unless enabled, and synth fails clearly when one is on without its prerequisites. Once that is released and Humorus is pinned to it, delete the four PAPYRUS_ENABLE_* = false entries from infra/site.json (cms.environment). Coordinator will say when it is released. Leave this issue open until then.",
+      "created_at": "2026-11-12T12:18:38.770770Z",
+      "comment_type": "default"
     }
   ],
   "created_at": "2026-11-11T17:14:44.320158Z",
-  "updated_at": "2026-11-12T12:17:04.977850Z",
+  "updated_at": "2026-11-12T12:18:38.771993Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

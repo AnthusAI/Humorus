@@ -22,10 +22,17 @@
         "model": "Claude Fable 5.2",
         "name": "Humorus Planning"
       }
+    },
+    {
+      "id": "018afeb1-aec1-4932-a9fd-cef433ad46de",
+      "author": "home",
+      "text": "First version written and merged: project/wiki/operator-access.md (PR #13): layers, who-can-do-what table, proposal (everyday ReadOnly, break-glass admin, 1-hour sessions), client-account model. Live SSO facts were not read because the token expired; the page lists the read-only calls to verify. Open for Ryan: does the second administrator keep access?",
+      "created_at": "2026-11-12T04:00:09.212711Z",
+      "comment_type": "default"
     }
   ],
   "created_at": "2026-11-11T17:14:43.951190Z",
-  "updated_at": "2026-11-11T17:45:43.404758Z",
+  "updated_at": "2026-11-12T04:00:09.212938Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

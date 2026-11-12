@@ -14,7 +14,8 @@
     "applyCognitoDomainPrefix": true,
     "environment": {
       "PAPYRUS_OAUTH_REDIRECT_URLS": "http://localhost:3001/",
-      "PAPYRUS_TENANT_ID": "the-hallucinator"
+      "PAPYRUS_TENANT_ID": "the-hallucinator",
+      "PAPYRUS_SITE_REVISION": "2"
     }
   },
   "email": {

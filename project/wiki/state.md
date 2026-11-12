@@ -12,6 +12,7 @@ Updated 2026-11-12. Update this page when the state changes; the board has the d
 - CDK bootstrap in `us-east-1`.
 - **The AWS account is managed by a pipeline.** Every change to the account's stacks is a merge to `main`; the Infrastructure workflow (`infra/README.md`) deploys it with GitHub sign-in and no stored keys. The mechanism is Papyrus's account pipeline (epic `PPY-9bd776`); this repository holds only the settings. First real deploy: 2026-11-11, run 43117405856.
 - Stacks: `humorus-github-deploy` (provider and the roles), `humorus-dns` (the Route 53 zone, imported, name servers unchanged), `humorus-budget` (200 USD a month, alerts at 50% and 80% of spend and when the forecast passes 100%, imported), `humorus-ses` (sending identity with DKIM, MAIL FROM, SPF and DMARC records). Nothing in GitHub needs anyone's approval.
+- **The newsroom app shell is deployed** (stack `humorus-app-shell`, 2026-11-12, by the App shell workflow): an Amplify app with no repository yet, its roles, no domain. The repository connection is a one-time authorization by an organisation administrator (the Amplify GitHub App), as for Machines on Machines; then Google sign-in secrets and the first build.
 - Waiting for the registrar, deployed by the pipeline by itself: `humorus-certificate` and `humorus-placeholder` (a labelled satire page on the apex and www). A `Delegation watch` workflow checks every 15 minutes and, once, opens a GitHub issue and starts the deploy.
 - A Lambda concurrency increase from 10 to 1,000 is requested; AWS opened a case.
 - First site: TheHallucinator.ai. Route 53 hosted zone created in the account; waiting for Ryan to point the domain's name servers at it.
@@ -44,6 +45,8 @@ Run `kbs ready` for the full list of work with nothing in its way.
 
 ## What only a person does
 
+- Authorize the Amplify GitHub App for this repository and connect it to the `the-hallucinator-cms` app (Amplify console, once).
+- Create the Google OAuth client and run `papyrus site google-secrets set`.
 - Give the registrar the zone's four name servers (`infra/expected-nameservers.json`).
 - Create the Google sign-in client for the newsroom.
 - Put secret values: the two SecureString parameters `/papyrus/the-hallucinator/openai-api-key` and `/papyrus/shared/typesafe-api-key` (CloudFormation cannot create a SecureString, and values never go in Git), and the String parameter `/humorus/budget-alert-email`.

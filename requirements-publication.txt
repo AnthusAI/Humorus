@@ -1,0 +1,1 @@
+papyrus-newsroom==5.104.0

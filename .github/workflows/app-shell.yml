@@ -1,0 +1,33 @@
+# The per-site Papyrus app shell (Amplify CMS app, roles) for TheHallucinator.ai, deployed from Git by Papyrus's reusable workflow
+# (epic PPY-9bd776). Pull requests synthesize the stack with no AWS access and refuse any assembly that is not exactly the one expected
+# stack; a push to main deploys it as the main-only deploy role through the CDK bootstrap roles. No stored keys.
+# The Amplify app is created with no repository. Connecting it to this repository is a one-time authorization by an organisation
+# administrator (the Amplify GitHub App), exactly as for Machines on Machines; see infra/README.md. Set start-amplify-build to true after that.
+name: App shell
+
+on:
+  pull_request:
+    branches: [develop, main]
+    paths: ["infra/site.json", "package.json", "package-lock.json", "papyrus.config.ts", "publication/**", "amplify/**", ".github/workflows/app-shell.yml"]
+  push:
+    branches: [main]
+    paths-ignore: ["project/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  app-shell:
+    permissions:
+      contents: read
+      id-token: write
+    # Pinned to a Papyrus develop commit. Move both refs to a Papyrus release tag once one carries app-shell-deploy.yml.
+    uses: AnthusAI/Papyrus/.github/workflows/app-shell-deploy.yml@b6c7188eaea2d74433a764c9ca9d44453c3c68be
+    with:
+      prefix: humorus
+      papyrus-ref: b6c7188eaea2d74433a764c9ca9d44453c3c68be
+      aws-account-id: ${{ vars.AWS_ACCOUNT_ID }}
+      stack-name: humorus-app-shell
+      site-id: the-hallucinator
+      start-amplify-build: false

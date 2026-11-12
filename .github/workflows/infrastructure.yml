@@ -26,8 +26,8 @@ jobs:
       contents: read
       id-token: write
     # Pinned to a Papyrus develop commit that contains the account pipeline (PRs 1404, 1405, 1407, 1408, 1409, 1412 and 1414). Move both refs to a Papyrus release tag once one carries account-stacks.yml.
-    uses: AnthusAI/Papyrus/.github/workflows/account-stacks.yml@d534a8def44944380ff7c64908fc3367eae21039
+    uses: AnthusAI/Papyrus/.github/workflows/account-stacks.yml@f12f86986dc69eaf5ad91d0608e21d8c25dc3df7
     with:
       prefix: humorus
-      papyrus-ref: d534a8def44944380ff7c64908fc3367eae21039
+      papyrus-ref: f12f86986dc69eaf5ad91d0608e21d8c25dc3df7
       aws-account-id: ${{ vars.AWS_ACCOUNT_ID }}

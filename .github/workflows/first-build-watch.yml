@@ -1,0 +1,28 @@
+# Every 15 minutes, until the two person-only steps are done (the Amplify app has a repository, and the Google client parameters exist),
+# this asks AWS read-only. When both are true it dispatches first-build.yml on main and turns itself off. Scheduled workflows run on the
+# default branch (develop). The mechanism is Papyrus's reusable workflow (epic PPY-9bd776). No stored keys; no AWS writes.
+name: first-build-watch
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  watch:
+    permissions:
+      contents: read
+      id-token: write
+      actions: write
+    # Pinned to a Papyrus develop commit. Move both refs to a Papyrus release tag once one carries first-build-watch.yml.
+    uses: AnthusAI/Papyrus/.github/workflows/first-build-watch.yml@d534a8def44944380ff7c64908fc3367eae21039
+    with:
+      prefix: humorus
+      papyrus-ref: d534a8def44944380ff7c64908fc3367eae21039
+      aws-account-id: ${{ vars.AWS_ACCOUNT_ID }}
+      stack-name: humorus-app-shell
+      watcher-workflow-file: first-build-watch.yml
+      dispatch-workflow: first-build.yml

@@ -101,7 +101,9 @@
           }
         },
         "MailFromSubdomain": "mail",
-        "DmarcPolicy": "none"
+        "DmarcPolicy": "none",
+        "ConfigurationSetName": "humorus-the-hallucinator",
+        "EventTopicName": "humorus-the-hallucinator-mail-events"
       }
     },
     {
@@ -131,6 +133,15 @@
         "SiteName": "TheHallucinator.ai",
         "Label": "Satire: everything on this site is invented, and none of it is news.",
         "Message": "The first stories are on their way."
+      }
+    },
+    {
+      "name": "humorus-cloudtrail",
+      "template": "papyrus:infra/account/stacks/cloudtrail.yaml",
+      "enabled": true,
+      "parameters": {
+        "TrailName": "humorus-trail",
+        "RetentionDays": "400"
       }
     }
   ]

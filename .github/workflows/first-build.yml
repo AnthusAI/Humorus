@@ -1,0 +1,34 @@
+# Runs the FIRST BUILD of the newsroom's Amplify app (the two-pass bootstrap) once its two person-only steps are done: the app has a
+# repository connected, and the Google client parameters exist. Started by first-build-watch.yml; a push to main also resumes an
+# interrupted build. The mechanism is Papyrus's reusable workflow (epic PPY-9bd776). When it is done it disables the watcher.
+name: first-build
+
+on:
+  workflow_dispatch:
+    inputs:
+      retry-failed:
+        description: Start again after a failed first-build job (only after a person read the job log and fixed the cause)
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths-ignore: ["project/**"]
+
+permissions:
+  contents: read
+
+jobs:
+  first-build:
+    permissions:
+      contents: read
+      id-token: write
+      actions: write
+    # Pinned to a Papyrus develop commit. Move both refs to a Papyrus release tag once one carries first-build.yml.
+    uses: AnthusAI/Papyrus/.github/workflows/first-build.yml@d534a8def44944380ff7c64908fc3367eae21039
+    with:
+      prefix: humorus
+      papyrus-ref: d534a8def44944380ff7c64908fc3367eae21039
+      aws-account-id: ${{ vars.AWS_ACCOUNT_ID }}
+      stack-name: humorus-app-shell
+      watcher-workflow: first-build-watch.yml
+      retry-failed: ${{ inputs.retry-failed || false }}

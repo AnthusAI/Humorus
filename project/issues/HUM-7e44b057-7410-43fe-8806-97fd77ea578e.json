@@ -35,9 +35,17 @@
       "type": "blocked-by"
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "id": "ac699ae7-6b43-436f-b788-e9af9b95f3b7",
+      "author": "home",
+      "text": "App shell deployed through the pipeline 2026-11-12: https://github.com/AnthusAI/Humorus/actions/runs/43161336433 (success). Stack humorus-app-shell CREATE_COMPLETE: Amplify app the-hallucinator-cms (WEB_COMPUTE, no repository yet, auto-build off, one production branch main), roles, no domain. Branch variables set: tenant id the-hallucinator, Cognito prefix papyrus-the-hallucinator. Waiting on person-only steps: Amplify GitHub authorization (connect the repository to the app, as for Machines on Machines) and the Google OAuth client.",
+      "created_at": "2026-11-12T05:30:13.465668Z",
+      "comment_type": "default"
+    }
+  ],
   "created_at": "2026-11-11T17:14:44.320158Z",
-  "updated_at": "2026-11-11T17:45:52.371575Z",
+  "updated_at": "2026-11-12T05:30:13.466175Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

@@ -23,10 +23,10 @@ jobs:
       contents: read
       id-token: write
     # Pinned to a Papyrus develop commit. Move both refs to a Papyrus release tag once one carries app-shell-deploy.yml.
-    uses: AnthusAI/Papyrus/.github/workflows/app-shell-deploy.yml@b6c7188eaea2d74433a764c9ca9d44453c3c68be
+    uses: AnthusAI/Papyrus/.github/workflows/app-shell-deploy.yml@324cc25ae6845da05de304cc43970cb673f95d7c
     with:
       prefix: humorus
-      papyrus-ref: b6c7188eaea2d74433a764c9ca9d44453c3c68be
+      papyrus-ref: 324cc25ae6845da05de304cc43970cb673f95d7c
       aws-account-id: ${{ vars.AWS_ACCOUNT_ID }}
       stack-name: humorus-app-shell
       site-id: the-hallucinator

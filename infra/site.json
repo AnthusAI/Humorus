@@ -20,8 +20,8 @@
   "email": {
     "mode": "existing",
     "sendingDomain": "thehallucinator.ai",
-    "configurationSet": "papyrus-the-hallucinator",
-    "eventTopicName": "papyrus-newsletter-events-the-hallucinator"
+    "configurationSet": "humorus-the-hallucinator",
+    "eventTopicName": "humorus-the-hallucinator-mail-events"
   },
   "github": {
     "owner": "AnthusAI",

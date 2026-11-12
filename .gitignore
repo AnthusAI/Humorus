@@ -11,3 +11,17 @@ amplify_outputs.json
 .next/
 .DS_Store
 project/.cache/
+.npm/
+out/
+dist/
+coverage/
+cdk.out/
+*.tsbuildinfo
+next-env.d.ts
+
+# >>> papyrus-app sync (generated route shims)
+# Written by `papyrus-app sync`; regenerated on every dev, build and typecheck run.
+/app/
+/middleware.ts
+/.papyrus/
+# <<< papyrus-app sync

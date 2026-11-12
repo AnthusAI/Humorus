@@ -31,10 +31,17 @@
       "text": "RESUMED as a Papyrus-wide effort (Ryan's decision). Filed on the Papyrus board: epic PPY-9bd776 'A Papyrus deployment needs no hand-made cloud resources', stories PPY-2a6d14, PPY-3c38b3, PPY-b5ddec, PPY-a73cd8, PPY-1f6e73, PPY-c320b0, PPY-a41df9; PPY-1a6aa6 linked. The generic build happens in Papyrus; this epic keeps only the Humorus-specific settings and the one-time seed apply (task PPY-7f564a on the Papyrus board tracks the Humorus consumption).",
       "created_at": "2026-11-11T20:37:16.319478Z",
       "comment_type": "default"
+    },
+    {
+      "id": "227a9380-5309-4dd1-a36f-7855aeff30a1",
+      "author": "home",
+      "text": "Layer-2 designs written 2026-11-11 and posted on the Papyrus issues: client-owned account on PPY-1f6e73, organisation seeding on PPY-a41df9. Anthus dry-run plan on PPY-b5ddec (five zones in a rehearsal-first order; the Anthus budget must NOT be imported with the current template). App shell through the pipeline: story PPY-e5d1fb with the plan.",
+      "created_at": "2026-11-12T04:00:09.277794Z",
+      "comment_type": "default"
     }
   ],
   "created_at": "2026-11-11T20:15:41.033689Z",
-  "updated_at": "2026-11-11T20:37:16.319721Z",
+  "updated_at": "2026-11-12T04:00:09.278034Z",
   "closed_at": null,
   "right_now_summary": null,
   "right_now_updated_at": null,

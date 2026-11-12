@@ -1,0 +1,35 @@
+{
+  "siteId": "the-hallucinator",
+  "repository": "https://github.com/AnthusAI/Humorus",
+  "brand": "the-hallucinator",
+  "frontend": "pretext",
+  "stackName": "humorus-app-shell",
+  "aws": {
+    "region": "us-east-1"
+  },
+  "papyrusVersion": "5.104.0",
+  "cms": {
+    "staging": false,
+    "cognitoDomainPrefix": "papyrus-the-hallucinator",
+    "applyCognitoDomainPrefix": true,
+    "environment": {
+      "PAPYRUS_OAUTH_REDIRECT_URLS": "http://localhost:3001/",
+      "PAPYRUS_TENANT_ID": "the-hallucinator"
+    }
+  },
+  "email": {
+    "mode": "existing",
+    "sendingDomain": "thehallucinator.ai",
+    "configurationSet": "papyrus-the-hallucinator",
+    "eventTopicName": "papyrus-newsletter-events-the-hallucinator"
+  },
+  "github": {
+    "owner": "AnthusAI",
+    "repo": "Humorus",
+    "branches": [
+      "main"
+    ],
+    "ownerId": 152415604,
+    "repoId": 1454269356
+  }
+}

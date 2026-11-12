@@ -1,0 +1,24 @@
+/* TODO(HUM-1be843): neutral placeholder theme. Theme tokens only, no component CSS.
+   Colour is never the only signal: states also carry a text label or a mark. */
+:root {
+  --paper: #f4f4f5;
+  --ink: #18181b;
+  --muted: #52525b;
+  --accent: #1d4ed8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-papyrus-theme="light"]) {
+    --paper: #18181b;
+    --ink: #f4f4f5;
+    --muted: #a1a1aa;
+    --accent: #93c5fd;
+  }
+}
+
+:root[data-papyrus-theme="dark"] {
+  --paper: #18181b;
+  --ink: #f4f4f5;
+  --muted: #a1a1aa;
+  --accent: #93c5fd;
+}

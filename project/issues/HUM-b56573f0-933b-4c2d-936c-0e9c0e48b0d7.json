@@ -10,9 +10,17 @@
   "parent": "HUM-bb321f56-8611-40f1-853a-92381282c824",
   "labels": [],
   "dependencies": [],
-  "comments": [],
+  "comments": [
+    {
+      "id": "f43e87dc-d63f-4a0e-8969-64bf79be664d",
+      "author": "home",
+      "text": "Draft written and merged: project/wiki/analytics-and-privacy.md (PR #13). The GA4 consent standard as Papyrus implements it, what the Humorus site needs, the gaps in Papyrus (PPY-d0a3d5 consent per tenant, PPY-1252ce stored site config), and a draft privacy page with [CONFIRM] and [LEGAL REVIEW] markers. Person-only: Ryan creates the GA4 property under DataParade and the id goes into the site's Papyrus setting (placeholder <GA4-measurement-id>).",
+      "created_at": "2026-11-12T04:00:09.178715Z",
+      "comment_type": "default"
+    }
+  ],
   "created_at": "2026-11-11T17:14:43.940415Z",
-  "updated_at": "2026-11-11T17:14:43.940439Z",
+  "updated_at": "2026-11-12T04:00:09.178938Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

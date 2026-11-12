@@ -10,9 +10,17 @@
   "parent": "HUM-dc9f7129-486d-492b-8a2b-bc238c1e41ee",
   "labels": [],
   "dependencies": [],
-  "comments": [],
+  "comments": [
+    {
+      "id": "19b19235-d3c5-4a17-8769-c9f2640da7b7",
+      "author": "home",
+      "text": "First test case for the scaffold: the Humorus site layout (branch site/skeleton, PR to follow). Hand-written or copied, in order of how much a scaffold should generate: boilerplate copied verbatim (next.config.mjs, tsconfig.json, papyrus-modules.d.ts, postcss.config.mjs, amplify/backend.ts, amplify/data/resource.ts); templated from a few inputs (package.json with exact pins from Papyrus's own peerDependencies, requirements-publication.txt, papyrus.config.ts, publication/brand.ts and theme.css, .gitignore additions, infra/site.json including the now-mandatory email block). Gaps: no papyrus-app init; papyrus-infra has no validate-only mode and needs PAPYRUS_AWS_ACCOUNT_ID even to synth; typecheck needs a stub amplify_outputs.json; examples/pretext.site.json is stale (no email, old papyrusVersion); github.ownerId and repoId are undocumented. Pretext needs no site code (markus-static needs hook code, against rule 2).",
+      "created_at": "2026-11-12T04:14:51.941276Z",
+      "comment_type": "default"
+    }
+  ],
   "created_at": "2026-11-11T17:14:44.098426Z",
-  "updated_at": "2026-11-11T17:14:44.098451Z",
+  "updated_at": "2026-11-12T04:14:51.941498Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

@@ -5,7 +5,7 @@ Working notes for HUM-1fa16b: how we reach the Humorus AWS account to operate it
 ## What was verified, and what was not
 
 - **Verified from the repositories (2026-11-11):** the pipeline roles and what they may do (`infra/README.md` in Humorus; `docs/account-pipeline.md` in Papyrus), the rules in `AGENTS.md`, the organisation design and the access proposal recorded on HUM-be87f4, and the second administrator note recorded on HUM-1fa16b.
-- **Not verified live:** the AWS single sign-on token for the local profile `dataparade-papyrus-production` had expired when this page was written, and signing in needs a person. So the list of permission sets assigned in the account, their session durations, and whether CloudTrail is on were **not read** from AWS. Where this page gives those facts it says where the fact came from. A person or an agent with a fresh sign-in should read them (see "To verify" at the end) and correct this page.
+- **Verified live on 2026-11-12** (read-only calls, fresh sign-in): the permission sets present in the account, the session length, that there are no IAM users and no access keys, whether CloudTrail trails exist, the CDK bootstrap execution policy, and that the five `humorus-*` roles exist. The results are in "Verified live" below.
 
 ## The access layers
 
@@ -15,7 +15,7 @@ Working notes for HUM-1fa16b: how we reach the Humorus AWS account to operate it
 | Agents | Claude sessions and other tools working for Ryan | The same single sign-on profile, `dataparade-papyrus-production`, in region `us-east-1`, used with the AWS CLI. | Read-only by rule, not by technology: today the profile is an administrator role, so the rule is the only barrier. |
 | Pipeline | The Infrastructure workflow and its roles | GitHub OIDC (sign-in with no stored keys), trusted only for this repository and the `main` branch. | Narrow, per role. See the table below. |
 
-There are no IAM users and no long-lived access keys in the account. **[verify]** with a read of the IAM user list when the sign-in is fresh.
+There are no IAM users and no long-lived access keys in the account (verified live 2026-11-12: zero IAM users, zero account access keys).
 
 ## Who can do what
 
@@ -34,9 +34,9 @@ The person-only steps (not available to the pipeline): the first apply of the ro
 
 ## Today's state
 
-- **Permission sets assigned:** the repository notes say AdministratorAccess is the only permission set assigned in this account, and that it was copied from the management account's assignments, so **two users hold it** (HUM-1fa16b comment, 2026-11-11). The live list of permission sets (roles named `AWSReservedSSO_...` in the account) was **not read** this time because the sign-in had expired.
-- **Session length:** not read. AWS's default for a permission set is one hour; the actual value on the assigned set is **unknown** until someone reads it in the management account.
-- **CloudTrail:** not read. The management event history is on by default in every account for 90 days; whether a trail with longer retention exists is **unknown**. The pipeline's stacks do not create one (the stacks are DNS, budget, certificate, email, placeholder, and the baseline roles).
+- **Permission sets assigned:** exactly one role named `AWSReservedSSO_AdministratorAccess_...` exists in the account, so AdministratorAccess is the only permission set assigned (verified live 2026-11-12). It was copied from the management account's assignments, so **two users hold it** (HUM-1fa16b comment, 2026-11-11).
+- **Session length:** 12 hours (43,200 seconds) on that permission set (verified live). The proposal below shortens break-glass to one hour.
+- **CloudTrail:** no trails exist in the account (verified live: `describe-trails` returns none), so only the 90-day management event history is available. A trail (account or organisation) is a follow-up that belongs in the pipeline.
 - **Pipeline roles:** exist and are managed by the baseline stack `humorus-github-deploy`, first deployed by the pipeline on 2026-11-11.
 
 ### Open question for Ryan
@@ -94,16 +94,21 @@ Humorus is the rehearsal: it is our own account, but the roles and the rules sho
 - Does everyday ReadOnly give agents enough, once the `papyrus` tool covers Papyrus operations? What reads, if any, need more?
 - For a client account, who holds the external id on our side, and how is it rotated?
 
-## To verify with a fresh sign-in
+## Verified live
 
-These are read-only calls, with `AWS_PROFILE=dataparade-papyrus-production`, `AWS_REGION=us-east-1` and `AWS_PAGER=` set after `aws sso login --sso-session dataparade`.
+Read-only calls on 2026-11-12 with `AWS_PROFILE=dataparade-papyrus-production`, region `us-east-1`:
 
-- Roles whose names begin with `AWSReservedSSO` (`aws iam list-roles --query` with a filter on the name), and for each, `MaxSessionDuration`.
-- IAM users and access keys: `aws iam list-users` should return none.
-- `aws cloudtrail describe-trails` and `aws cloudtrail lookup-events --max-results 5`.
-- The five `humorus-*` pipeline roles' trust policies, to compare with the table above.
+| Fact | Result |
+| --- | --- |
+| Permission sets present (`AWSReservedSSO_*` roles) | One: AdministratorAccess, session 12 hours |
+| IAM users | None |
+| Account access keys | None |
+| Root MFA flag (`AccountMFAEnabled`) | 0. In an organisation member account this can simply mean there is no root sign-in at all; confirm that root access is disabled or MFA is set in the management account (question for Ryan). |
+| CloudTrail trails | None. Only the 90-day event history. |
+| CDK bootstrap (`CDKToolkit`) | Version 33, qualifier `hnb659fds`, `CloudFormationExecutionPolicies` empty, so `cdk-hnb659fds-cfn-exec-role` has the AWS-managed AdministratorAccess policy. The roles `cdk-hnb659fds-{cfn-exec,deploy,file-publishing,image-publishing,lookup}-role` exist. |
+| Pipeline roles | `humorus-github-deploy`, `-github-plan`, `-github-roles-apply`, `-cloudformation`, `-cloudformation-roles` exist; trust uses the repository's immutable OIDC subject (`infra/README.md`). |
 
-Then correct "Today's state" on this page.
+Still to read in the management account (not possible from this account): the permission-set definitions and assignments in IAM Identity Center, and who holds them.
 
 ## Related pages
 

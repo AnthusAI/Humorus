@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: AnthusAI/Papyrus
-          ref: f714eb5fce4f7601c50dfe03082205889bda6656
+          ref: f12f86986dc69eaf5ad91d0608e21d8c25dc3df7
           path: .papyrus-tool
           persist-credentials: false
       - name: Ask the public resolvers

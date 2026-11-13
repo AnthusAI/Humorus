@@ -22,10 +22,17 @@
       "text": "Google sign-in prerequisites: Cognito prefix papyrus-the-hallucinator is set on the app. Ryan creates the Google client (origin https://papyrus-the-hallucinator.auth.us-east-1.amazoncognito.com, redirect URI the same plus /oauth2/idpresponse) and runs papyrus site google-secrets set; then the first Amplify build.",
       "created_at": "2026-11-12T05:30:13.507330Z",
       "comment_type": "default"
+    },
+    {
+      "id": "adaa3e3f-0330-43b6-8aa4-d9362952aba2",
+      "author": "home",
+      "text": "First build done 2026-11-13: both passes succeeded (Amplify jobs 3 and 4), the Cognito domain is active, and the Google provider matches the stored client. Next: Ryan's first sign-in, then adding him to the admin group.",
+      "created_at": "2026-11-13T21:33:26.906141Z",
+      "comment_type": "default"
     }
   ],
   "created_at": "2026-11-11T17:14:44.398209Z",
-  "updated_at": "2026-11-12T05:30:13.507585Z",
+  "updated_at": "2026-11-13T21:33:26.906364Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

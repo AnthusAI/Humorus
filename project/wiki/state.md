@@ -26,12 +26,12 @@ Updated 2026-11-12. Update this page when the state changes; the board has the d
 - CLI sign-in without Prospectus: recommendation on HUM-539f78 (Google through the site's own Cognito; remote login for agents).
 - Domain delegation: as of 2026-11-12 `dig NS thehallucinator.ai` still answers `ns27.domaincontrol.com` and `ns28.domaincontrol.com`. Ryan changes it at the registrar.
 - Mail sending is still in the sandbox; verification of the sending domain is pending delegation. The production-access request is drafted on `HUM-bdd767` and not submitted.
-- Not in the pipeline: the CDK bootstrap stack `CDKToolkit` (CDK's own template, made by `cdk bootstrap`), and the Amplify app (not created yet).
+- Not in the pipeline: the CDK bootstrap stack `CDKToolkit` (CDK's own template, made by `cdk bootstrap`), and the connection of the Amplify app to this repository (a one-time authorization in the console, done).
 - The Cyclotron session has not been told what Humorus needs.
 
 ## Waiting on Ryan
 
-Changing TheHallucinator.ai's name servers at the registrar to the four Route 53 servers. The certificate, mail sending and Google sign-in wait on it. Other open questions are in [Decisions](decisions.md).
+Signing in to the newsroom with Google for the first time, and changing TheHallucinator.ai's name servers at the registrar to the four Route 53 servers (the certificate, the public placeholder page and mail verification wait on that). Other open questions are in [Decisions](decisions.md).
 
 ## What can start now
 
@@ -52,7 +52,6 @@ Run `kbs ready` for the full list of work with nothing in its way.
 ## What only a person does
 
 - Give the registrar the zone's four name servers (`infra/expected-nameservers.json`).
-- Create the Google sign-in client for the newsroom.
 - Put secret values: the two SecureString parameters `/papyrus/the-hallucinator/openai-api-key` and `/papyrus/shared/typesafe-api-key` (CloudFormation cannot create a SecureString, and values never go in Git), and the String parameter `/humorus/budget-alert-email`.
 - Submit the SES production-access request.
 - Every other account change is a merge to `main`. Agents read the account with the AWS CLI and never change it.

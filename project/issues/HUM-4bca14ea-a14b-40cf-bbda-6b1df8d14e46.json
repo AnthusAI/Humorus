@@ -24,10 +24,17 @@
       "text": "Scaffold gap found 2026-11-12: a new site's infra/site.json must set the four PAPYRUS_ENABLE_* flags (console responder, Slack, inbound email, storage backups) explicitly; the console responder defaults to ON and needs a container image, so the first Amplify build failed publishing it (docs/site-hosting.md, Backend features). The scaffold must write them (false by default) and papyrus-infra synth should warn when they are missing.",
       "created_at": "2026-11-12T12:17:04.941032Z",
       "comment_type": "default"
+    },
+    {
+      "id": "a469cbe4-0af0-495a-9a45-5c291c04bed0",
+      "author": "home",
+      "text": "Scaffold note, 2026-11-13: the console's Connect repository wizard wipes the branch's environment variables and turns auto-build ON, and starts a build with no variables (job 1, stopped; job 2 was an auto-build for the next push). CloudFormation cannot see the drift; the variables were re-applied by a stack input change and auto-build set false. Also on PPY-f30ad5 in Papyrus.",
+      "created_at": "2026-11-13T21:33:26.771451Z",
+      "comment_type": "default"
     }
   ],
   "created_at": "2026-11-11T17:14:44.098426Z",
-  "updated_at": "2026-11-12T12:17:04.941653Z",
+  "updated_at": "2026-11-13T21:33:26.771683Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

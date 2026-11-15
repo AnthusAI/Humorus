@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "event_id": "95ffcd8d-ebd2-4c7e-a601-784c28cf7dc0",
+  "issue_id": "HUM-8af98abc-915f-4f69-83aa-ea508491fb53",
+  "event_type": "field_updated",
+  "occurred_at": "2026-11-15T02:08:16.794Z",
+  "actor_id": "home",
+  "payload": {
+    "changes": {
+      "description": {
+        "from": "Reference, idea, draft, image, checks, approval, publish. File every snag as a Papyrus issue instead of working around it.",
+        "to": "Idea (from a Reference, or invented), draft, image, checks, approval, publish. File every snag as a Papyrus issue instead of working around it."
+      }
+    }
+  }
+}

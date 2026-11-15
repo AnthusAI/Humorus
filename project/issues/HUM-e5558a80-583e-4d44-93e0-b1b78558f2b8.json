@@ -1,7 +1,7 @@
 {
   "id": "HUM-e5558a80-583e-4d44-93e0-b1b78558f2b8",
-  "title": "The check confirms the real setup and flags invention that could pass as fact",
-  "description": "For satire the fact check inverts: the real part must be right and the invented part must be plainly absurd.\n\n```gherkin\nFeature: Satire check\n\n  Scenario: A wrong real detail is flagged\n    Given a draft that gives a real official the wrong office\n    When the satire check runs\n    Then that detail is flagged\n\n  Scenario: A believable invented claim is flagged\n    Given a draft with an invented quotation a reader could take as real\n    When the satire check runs\n    Then it is flagged for the editor\n\n  Scenario: A piece outside the limits is flagged\n    Given a draft about a private person\n    When the satire check runs\n    Then it is flagged against the site's policy\n```",
+  "title": "The check flags invention that could pass as fact",
+  "description": "For satire there is no fact check against a recorded Reference (Ryan, 2026-11-15). The check is that invention is plainly invention: claims about real, named people are plainly absurd, and fictional people and agencies are plainly fictional and do not plausibly match a real private person.\n\n```gherkin\nFeature: Satire check\n\n  Scenario: A believable invented claim is flagged\n    Given a draft with an invented quotation a reader could take as real\n    When the satire check runs\n    Then it is flagged for the editor\n\n  Scenario: A wholly invented piece is not asked for a source\n    Given a draft with no real event behind it\n    When the satire check runs\n    Then it is not flagged for lacking a Reference or a real setup\n\n  Scenario: A fictional name that could match a real private person is flagged\n    Given a draft naming a fictional person with a realistic full name, role and town\n    When the satire check runs\n    Then it is flagged so the approver searches the name before approving\n\n  Scenario: A piece outside the limits is flagged\n    Given a draft about a real private person\n    When the satire check runs\n    Then it is flagged against the site's policy\n```",
   "type": "story",
   "status": "open",
   "priority": 2,
@@ -12,7 +12,7 @@
   "dependencies": [],
   "comments": [],
   "created_at": "2026-11-11T17:14:44.547932Z",
-  "updated_at": "2026-11-11T17:14:44.547955Z",
+  "updated_at": "2026-11-15T02:08:16.561680Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

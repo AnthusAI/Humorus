@@ -29,10 +29,22 @@
       "text": "Draft of five sections (government, campaigns, business, technology, world) is in project/wiki/the-hallucinator-newsroom-draft.md (PR #4), for Ryan's review. Section image documents are not storable in Papyrus yet.",
       "created_at": "2026-11-11T18:48:20.795101Z",
       "comment_type": "default"
+    },
+    {
+      "id": "786992ae-734e-4fdf-a162-5d89f1ba2993",
+      "author": "home",
+      "text": "Sections revised 2026-11-15 for Ryan's decision that satire may be wholly invented: the government and technology assignment guidance now says to start from a real announcement or invent one. Still a draft in project/wiki/the-hallucinator-newsroom-draft.md; nothing is saved in the backend yet.",
+      "created_at": "2026-11-15T02:08:05.395184Z",
+      "comment_type": "default",
+      "agent": {
+        "platform": "claude_code",
+        "model": "Claude Sonnet 5.5",
+        "name": "Humorus satire policy"
+      }
     }
   ],
   "created_at": "2026-11-11T17:14:44.452302Z",
-  "updated_at": "2026-11-11T18:48:20.795317Z",
+  "updated_at": "2026-11-15T02:08:05.395634Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

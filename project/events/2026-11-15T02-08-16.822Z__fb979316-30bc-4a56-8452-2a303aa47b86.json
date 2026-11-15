@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "event_id": "fb979316-30bc-4a56-8452-2a303aa47b86",
+  "issue_id": "HUM-e7f0232b-0c5c-48e4-b1ff-ed5667f95daf",
+  "event_type": "field_updated",
+  "occurred_at": "2026-11-15T02:08:16.822Z",
+  "actor_id": "home",
+  "payload": {
+    "changes": {
+      "description": {
+        "from": "The two-citation minimum and the point check's verdicts are code, not text, so a scaffold alone cannot change them.\n\n```gherkin\nFeature: Idea rules are settings\n\n  Scenario: A site allows one-source ideas\n    Given a site whose idea settings need one Reference\n    When ideas are generated\n    Then an idea built on one Reference is kept\n\n  Scenario: Another site keeps the stricter rule\n    Given a site whose idea settings need two References\n    When ideas are generated\n    Then an idea built on one Reference is dropped\n```",
+        "to": "The two-citation minimum and the point check's verdicts are code, not text, so a scaffold alone cannot change them.\n\n```gherkin\nFeature: Idea rules are settings\n\n  Scenario: A site allows one-source ideas\n    Given a site whose idea settings need one Reference\n    When ideas are generated\n    Then an idea built on one Reference is kept\n\n  Scenario: A site allows ideas with no source\n    Given a site whose idea settings need no Reference\n    When ideas are generated\n    Then an idea with an invented premise is kept\n\n  Scenario: Another site keeps the stricter rule\n    Given a site whose idea settings need two References\n    When ideas are generated\n    Then an idea built on one Reference is dropped\n```"
+      }
+    }
+  }
+}

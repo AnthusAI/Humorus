@@ -1,7 +1,7 @@
 {
   "id": "HUM-1472621b-f01b-46b3-81b3-6912b16cde6e",
   "title": "Write the satire editorial policies",
-  "description": "Rule checks and judgment questions for satire, saved with `papyrus editorial policies add`: the satire limits (public figures only, no private people, no victims, no invented crimes), source wording not reused, the real setup stated correctly. Do not import the starter pack written for news without reading it.",
+  "description": "Rule checks and judgment questions for satire, saved with `papyrus editorial policies add`: the satire limits (real public figures only, no private people, no victims, no invented crimes attributed to real people), source wording not reused when a piece starts from a source, invention plainly invention, fictional people plainly fictional. There is no real-setup check and no fact check (Ryan, 2026-11-15). Do not import the starter pack written for news without reading it.",
   "type": "task",
   "status": "open",
   "priority": 2,
@@ -32,7 +32,7 @@
     }
   ],
   "created_at": "2026-11-11T17:45:43.362542Z",
-  "updated_at": "2026-11-11T18:48:20.780477Z",
+  "updated_at": "2026-11-15T02:08:16.667053Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

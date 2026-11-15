@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "event_id": "8706ab72-3eee-4611-bd54-3fd273e1b340",
+  "issue_id": "HUM-1472621b-f01b-46b3-81b3-6912b16cde6e",
+  "event_type": "field_updated",
+  "occurred_at": "2026-11-15T02:08:16.667Z",
+  "actor_id": "home",
+  "payload": {
+    "changes": {
+      "description": {
+        "from": "Rule checks and judgment questions for satire, saved with `papyrus editorial policies add`: the satire limits (public figures only, no private people, no victims, no invented crimes), source wording not reused, the real setup stated correctly. Do not import the starter pack written for news without reading it.",
+        "to": "Rule checks and judgment questions for satire, saved with `papyrus editorial policies add`: the satire limits (real public figures only, no private people, no victims, no invented crimes attributed to real people), source wording not reused when a piece starts from a source, invention plainly invention, fictional people plainly fictional. There is no real-setup check and no fact check (Ryan, 2026-11-15). Do not import the starter pack written for news without reading it."
+      }
+    }
+  }
+}

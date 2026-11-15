@@ -22,10 +22,22 @@
         "model": "Claude Fable 5.2",
         "name": "Humorus Planning"
       }
+    },
+    {
+      "id": "e11b685d-b645-4f07-9f3a-e4a2da1f9de9",
+      "author": "home",
+      "text": "Ryan, 2026-11-15: satire may be wholly invented and no piece is fact-checked against a Reference. HUM-e155f8, HUM-e5558a, HUM-fce3b0, HUM-e7f023, HUM-8672dc revised. Papyrus PPY-10a5e5 (premise-led ideas) should allow an idea with no source; not yet updated on the Papyrus board.",
+      "created_at": "2026-11-15T02:08:05.437500Z",
+      "comment_type": "default",
+      "agent": {
+        "platform": "claude_code",
+        "model": "Claude Sonnet 5.5",
+        "name": "Humorus satire policy"
+      }
     }
   ],
   "created_at": "2026-11-11T17:14:44.506282Z",
-  "updated_at": "2026-11-11T17:16:29.485595Z",
+  "updated_at": "2026-11-15T02:08:05.437739Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

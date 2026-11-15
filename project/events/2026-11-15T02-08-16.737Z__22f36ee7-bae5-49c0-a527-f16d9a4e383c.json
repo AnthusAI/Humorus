@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "event_id": "22f36ee7-bae5-49c0-a527-f16d9a4e383c",
+  "issue_id": "HUM-948077fc-6bf0-4e0c-9bbf-7d8fb2070cb0",
+  "event_type": "field_updated",
+  "occurred_at": "2026-11-15T02:08:16.737Z",
+  "actor_id": "home",
+  "payload": {
+    "changes": {
+      "description": {
+        "from": "One conversation with a lawyer about labelling, public figures, invented quotations, generated images and election-period rules on synthetic political content.",
+        "to": "One conversation with a lawyer about labelling, public figures, invented quotations, generated images, election-period rules on synthetic political content, and wholly fictional people and agencies: whether a quick web search of the name is enough to keep a fictional person from matching a real private person, and false light and defamation exposure for invented claims about real people."
+      }
+    }
+  }
+}

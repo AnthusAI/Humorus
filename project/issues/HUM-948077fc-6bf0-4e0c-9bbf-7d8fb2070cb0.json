@@ -1,7 +1,7 @@
 {
   "id": "HUM-948077fc-6bf0-4e0c-9bbf-7d8fb2070cb0",
   "title": "Get legal advice on satire before launch",
-  "description": "One conversation with a lawyer about labelling, public figures, invented quotations, generated images and election-period rules on synthetic political content.",
+  "description": "One conversation with a lawyer about labelling, public figures, invented quotations, generated images, election-period rules on synthetic political content, and wholly fictional people and agencies: whether a quick web search of the name is enough to keep a fictional person from matching a real private person, and false light and defamation exposure for invented claims about real people.",
   "type": "task",
   "status": "open",
   "priority": 1,
@@ -12,7 +12,7 @@
   "dependencies": [],
   "comments": [],
   "created_at": "2026-11-11T17:14:43.962060Z",
-  "updated_at": "2026-11-11T17:45:53.027267Z",
+  "updated_at": "2026-11-15T02:08:16.737232Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

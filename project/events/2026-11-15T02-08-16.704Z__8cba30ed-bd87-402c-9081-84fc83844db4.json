@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "event_id": "8cba30ed-bd87-402c-9081-84fc83844db4",
+  "issue_id": "HUM-c320b002-631c-4dea-8994-8ece5ef70b2a",
+  "event_type": "field_updated",
+  "occurred_at": "2026-11-15T02:08:16.704Z",
+  "actor_id": "home",
+  "payload": {
+    "changes": {
+      "description": {
+        "from": "What the site satirises and its limits: public figures only, no private people, no victims of tragedies, no invented crimes, never reuse a source's wording or pictures. Saved with `papyrus sections doctrine set`.",
+        "to": "What the site satirises and its limits: real public figures only, no private people, no victims of tragedies, no invented crimes attributed to real people, fictional people allowed when plainly fictional, a source's wording or pictures never reused. A piece may start from a real event or be wholly invented (Ryan, 2026-11-15). Saved with `papyrus sections doctrine set`."
+      }
+    }
+  }
+}

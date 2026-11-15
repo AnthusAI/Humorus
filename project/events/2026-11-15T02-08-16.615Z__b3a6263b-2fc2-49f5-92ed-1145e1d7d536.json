@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "event_id": "b3a6263b-2fc2-49f5-92ed-1145e1d7d536",
+  "issue_id": "HUM-fce3b0ba-f454-4414-8620-46824346736b",
+  "event_type": "field_updated",
+  "occurred_at": "2026-11-15T02:08:16.615Z",
+  "actor_id": "home",
+  "payload": {
+    "changes": {
+      "description": {
+        "from": "The newsroom needs real events to satirise.\n\n```gherkin\nFeature: Political news monitors\n\n  Scenario: New items arrive\n    Given monitors on political news sources\n    When a source publishes a new item\n    Then it appears as a Reference with its kind of source\n```",
+        "to": "The newsroom may draw on real events to satirise; satire may also be wholly invented, so a Reference is an option and not a requirement (Ryan, 2026-11-15).\n\n```gherkin\nFeature: Political news monitors\n\n  Scenario: New items arrive\n    Given monitors on political news sources\n    When a source publishes a new item\n    Then it appears as a Reference with its kind of source\n```"
+      }
+    }
+  }
+}

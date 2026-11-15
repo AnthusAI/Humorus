@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "event_id": "9c255d05-6c25-45d4-92a6-6823436cad53",
+  "issue_id": "HUM-e155f8bd-fe22-4a02-8b79-f0ef79b19f52",
+  "event_type": "field_updated",
+  "occurred_at": "2026-11-15T02:08:08.576Z",
+  "actor_id": "home",
+  "payload": {
+    "changes": {
+      "title": {
+        "from": "An idea starts from one real story and invents the angle",
+        "to": "An idea starts from a real event or is wholly invented"
+      },
+      "description": {
+        "from": "Every idea path today joins at least two sources and refuses invention.\n\n```gherkin\nFeature: Premise-led ideas\n\n  Scenario: One real event, one invented angle\n    Given an accepted Reference about a real event\n    When satire ideas are generated\n    Then each idea names the real event it comes from\n    And states its invented premise separately\n\n  Scenario: The source is not copied\n    Given an idea from a Reference\n    When the piece is drafted\n    Then it reuses none of the source's sentences\n```",
+        "to": "Satire may start from a real event or be made up whole (Ryan, 2026-11-15). Every idea path today joins at least two sources and refuses invention.\n\n```gherkin\nFeature: Premise-led ideas\n\n  Scenario: One real event, one invented angle\n    Given an accepted Reference about a real event\n    When satire ideas are generated\n    Then each idea names the real event it comes from\n    And states its invented premise separately\n\n  Scenario: A wholly invented premise\n    Given no Reference\n    When satire ideas are generated\n    Then an idea may carry an invented premise with no real event behind it\n    And it is not rejected for lacking a source\n\n  Scenario: The source is not copied\n    Given an idea from a Reference\n    When the piece is drafted\n    Then it reuses none of the source's sentences\n```"
+      }
+    }
+  }
+}

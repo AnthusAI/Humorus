@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "event_id": "eb3b918e-4b05-465d-9b67-69351be3ff35",
+  "issue_id": "HUM-f55d9f2a-8eff-4ffa-aed2-d80b33e54b8a",
+  "event_type": "comment_added",
+  "occurred_at": "2026-11-15T02:08:05.395Z",
+  "actor_id": "home",
+  "payload": {
+    "comment_id": "786992ae-734e-4fdf-a162-5d89f1ba2993",
+    "comment_author": "home",
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Sonnet 5.5",
+      "name": "Humorus satire policy"
+    }
+  }
+}

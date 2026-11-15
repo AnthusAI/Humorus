@@ -2,7 +2,7 @@
 # (epic PPY-9bd776). Pull requests synthesize the stack with no AWS access and refuse any assembly that is not exactly the one expected
 # stack; a push to main deploys it as the main-only deploy role through the CDK bootstrap roles. No stored keys.
 # The Amplify app is created with no repository. Connecting it to this repository is a one-time authorization by an organisation
-# administrator (the Amplify GitHub App), exactly as for Machines on Machines; see infra/README.md. Set start-amplify-build to true after that.
+# administrator (the Amplify GitHub App), exactly as for Machines on Machines; see infra/README.md. It is connected, so start-amplify-build is true: a merge to main deploys the stack, then starts the Amplify build (auto-build is off).
 name: App shell
 
 on:

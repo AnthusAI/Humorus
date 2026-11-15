@@ -9,7 +9,7 @@
     "typecheck": "papyrus-app sync && tsc --noEmit"
   },
   "dependencies": {
-    "@anthusai/papyrus": "5.119.0",
+    "@anthusai/papyrus": "5.121.0",
     "@aws-amplify/backend": "1.25.1",
     "@aws-amplify/backend-cli": "1.10.0",
     "@aws-amplify/seed": "1.1.5",

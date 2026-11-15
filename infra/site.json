@@ -7,17 +7,18 @@
   "aws": {
     "region": "us-east-1"
   },
-  "papyrusVersion": "5.119.0",
+  "papyrusVersion": "5.121.0",
   "cms": {
     "staging": false,
     "cognitoDomainPrefix": "papyrus-the-hallucinator",
     "applyCognitoDomainPrefix": true,
     "environment": {
-      "PAPYRUS_OAUTH_REDIRECT_URLS": "http://localhost:3001/,https://thehallucinator.ai/",
+      "PAPYRUS_OAUTH_REDIRECT_URLS": "http://localhost:3001/,https://newsroom.thehallucinator.ai/,https://thehallucinator.ai/",
       "PAPYRUS_TENANT_ID": "the-hallucinator",
-      "PAPYRUS_SITE_REVISION": "6"
+      "PAPYRUS_SITE_REVISION": "7"
     },
-    "domainName": "thehallucinator.ai"
+    "domainName": "thehallucinator.ai",
+    "domainPrefix": "newsroom"
   },
   "email": {
     "mode": "existing",

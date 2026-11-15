@@ -10,9 +10,17 @@
   "parent": "HUM-bb321f56-8611-40f1-853a-92381282c824",
   "labels": [],
   "dependencies": [],
-  "comments": [],
+  "comments": [
+    {
+      "id": "cc249fd1-f5af-4146-952c-4ffed4ad351c",
+      "author": "home",
+      "text": "Added 2026-11-15 (decision 24): the satire label is now ONE line in the page furniture, a slim footer fixed to the bottom of every page, pointing at the name; starting wording 'It's called THE HALLUCINATOR. None of this happened.' Please cover: the wording, whether one line is enough, placement (fixed footer, visible before a piece is read, survives a share preview), and whether the machine-readable markers (Markdown metadata, feed, structured data, llms.txt, share preview) are enough. Pieces carry no disclaimer paragraph.",
+      "created_at": "2026-11-15T21:16:23.658850Z",
+      "comment_type": "default"
+    }
+  ],
   "created_at": "2026-11-11T17:14:43.962060Z",
-  "updated_at": "2026-11-15T02:08:16.737232Z",
+  "updated_at": "2026-11-15T21:16:23.659659Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

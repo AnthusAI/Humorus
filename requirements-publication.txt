@@ -1,1 +1,1 @@
-papyrus-newsroom==5.114.0
+papyrus-newsroom==5.115.4

@@ -30,4 +30,4 @@ jobs:
       aws-account-id: ${{ vars.AWS_ACCOUNT_ID }}
       stack-name: humorus-app-shell
       site-id: the-hallucinator
-      start-amplify-build: false
+      start-amplify-build: true

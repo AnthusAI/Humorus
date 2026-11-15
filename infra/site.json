@@ -7,7 +7,7 @@
   "aws": {
     "region": "us-east-1"
   },
-  "papyrusVersion": "5.104.0",
+  "papyrusVersion": "5.108.0",
   "cms": {
     "staging": false,
     "cognitoDomainPrefix": "papyrus-the-hallucinator",
@@ -15,7 +15,7 @@
     "environment": {
       "PAPYRUS_OAUTH_REDIRECT_URLS": "http://localhost:3001/",
       "PAPYRUS_TENANT_ID": "the-hallucinator",
-      "PAPYRUS_SITE_REVISION": "2",
+      "PAPYRUS_SITE_REVISION": "3",
       "PAPYRUS_ENABLE_CONSOLE_RESPONDER": "false",
       "PAPYRUS_ENABLE_SLACK": "false",
       "PAPYRUS_ENABLE_INBOUND_EMAIL": "false",

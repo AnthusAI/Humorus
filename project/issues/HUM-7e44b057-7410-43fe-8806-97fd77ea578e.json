@@ -3,7 +3,7 @@
   "title": "Deploy the app shell, backend, edge and DNS",
   "description": "In the dedicated account: app shell, the two-stage first backend, the edge stack with its certificate, and the DNS records.",
   "type": "task",
-  "status": "open",
+  "status": "closed",
   "priority": 2,
   "assignee": null,
   "creator": null,
@@ -56,11 +56,18 @@
       "text": "Follow-up, waiting on Papyrus: the Papyrus session is changing the default so optional features are off unless enabled, and synth fails clearly when one is on without its prerequisites. Once that is released and Humorus is pinned to it, delete the four PAPYRUS_ENABLE_* = false entries from infra/site.json (cms.environment). Coordinator will say when it is released. Leave this issue open until then.",
       "created_at": "2026-11-12T12:18:38.770770Z",
       "comment_type": "default"
+    },
+    {
+      "id": "b1315d69-2d76-4270-bd7c-468d55901283",
+      "author": "home",
+      "text": "Done 2026-11-15. The four PAPYRUS_ENABLE_* = false entries are removed from infra/site.json (Humorus PRs 44 and 45); Papyrus 5.115.4 builds none of the optional features by default. Deploy runs green: Infrastructure 43735129745, App shell 43735129807 (synth, deploy and the Amplify build job all succeeded). Read-only check afterwards: the main branch has no PAPYRUS_ENABLE_* variable; no console responder function, no ECR image repository other than the CDK assets one, no DynamoDB stream trigger for it; no SES receipt rule set, no inbound-email stack, no EventBridge rules; no AWS Backup plan or vault; the slackEvents function has no function URL. The four Lambdas still listed (email submission processor, SES inbound receive, Slack delivery, Slack events) are declared in the data API schema itself (amplify/data/resource.ts allow.resource) and are inert: the flags gate their wiring, which is absent.",
+      "created_at": "2026-11-15T21:14:25.655712Z",
+      "comment_type": "default"
     }
   ],
   "created_at": "2026-11-11T17:14:44.320158Z",
-  "updated_at": "2026-11-12T12:18:38.771993Z",
-  "closed_at": null,
+  "updated_at": "2026-11-15T21:14:26.053208Z",
+  "closed_at": "2026-11-15T21:14:26.052012Z",
   "agent": {
     "platform": "claude_code",
     "model": "Claude Fable 5.2",

@@ -1,6 +1,6 @@
 # Current state
 
-Updated 2026-11-12. Update this page when the state changes; the board has the detail.
+Updated 2026-11-15. Update this page when the state changes; the board has the detail.
 
 ## Done
 
@@ -13,8 +13,8 @@ Updated 2026-11-12. Update this page when the state changes; the board has the d
 - **The AWS account is managed by a pipeline.** Every change to the account's stacks is a merge to `main`; the Infrastructure workflow (`infra/README.md`) deploys it with GitHub sign-in and no stored keys. The mechanism is Papyrus's account pipeline (epic `PPY-9bd776`); this repository holds only the settings. First real deploy: 2026-11-11, run 43117405856.
 - Stacks: `humorus-github-deploy` (provider and the roles), `humorus-dns` (the Route 53 zone, imported, name servers unchanged), `humorus-budget` (200 USD a month, alerts at 50% and 80% of spend and when the forecast passes 100%, imported), `humorus-ses` (sending identity with DKIM, MAIL FROM, SPF and DMARC records). Nothing in GitHub needs anyone's approval.
 - **The newsroom app is built.** The app shell (stack `humorus-app-shell`) is deployed, the Amplify app is connected to this repository (done once by Ryan in the console), the Google client is stored, and the first build ran by itself: both passes succeeded (Amplify jobs 3 and 4) and the Cognito domain is active with the Google provider matching the stored client. Deploys after this start from the repository's own workflow (auto-build is off). The console's connect wizard wiped the branch variables and turned auto-build on; they were re-applied through the pipeline (see HUM-4bca14).
-- **The public reader is live on the apex (2026-11-15).** The Pretext reader and the console are one Amplify app, so the app holds `thehallucinator.ai` as its production host: reader at the root, console at `/newsroom` (the `newsroom.` host and `www` are gone; `www` needs a Papyrus change to redirect to the apex). The labelled placeholder was retired first: `humorus-placeholder` now uses `infra/templates/placeholder-retired.yaml` (one inert marker, because the account pipeline has no stack delete), and its distribution, function and DNS records were removed through `allowed-changes.json`. Papyrus 5.115.4 (PPY-0068a4) lists published articles on the home page of a site with editions off.
-- Waiting for the registrar, deployed by the pipeline by itself: `humorus-certificate` and `humorus-placeholder` (a labelled satire page on the apex and www). A `Delegation watch` workflow checks every 15 minutes and, once, opens a GitHub issue and starts the deploy.
+- **The public reader is live on the apex (2026-11-15).** The Pretext reader and the console are one Amplify app, so the app holds `thehallucinator.ai` as its production host: reader at the root, console at `/newsroom` (the `newsroom.` host and `www` are gone; `https://www.thehallucinator.ai/` does not answer, see below). The labelled placeholder was retired first: `humorus-placeholder` now uses `infra/templates/placeholder-retired.yaml` (one inert marker, because the account pipeline has no stack delete), and its distribution, function and DNS records were removed through `allowed-changes.json`. Papyrus 5.115.4 (PPY-0068a4) lists published articles on the home page of a site with editions off.
+- **Delegation is done.** The registrar points at the four Route 53 name servers: public resolvers (including 8.8.8.8) answer only those four, and `infra/expected-nameservers.json` matches. `humorus-certificate` holds an ACM certificate for `thehallucinator.ai` and `www.thehallucinator.ai`, ISSUED, valid until 2027-05-31, not attached to any distribution (the Amplify app manages its own certificate for the apex). The `Delegation watch` and `first-build-watch` workflows turned themselves off (`disabled_manually`); `first-build` and `App shell` are active.
 - A Lambda concurrency increase from 10 to 1,000 is requested; AWS opened a case.
 - First site: TheHallucinator.ai. Route 53 hosted zone created in the account; waiting for Ryan to point the domain's name servers at it.
 - OpenAI and TypeSafe keys stored as SecureString parameters (`/papyrus/the-hallucinator/openai-api-key`, `/papyrus/shared/typesafe-api-key`).
@@ -25,14 +25,14 @@ Updated 2026-11-12. Update this page when the state changes; the board has the d
 - Papyrus's `bootstrap.sh` is not used for this account: the account pipeline replaced it for deployment accounts.
 - Newsroom text for TheHallucinator.ai: first draft in [the-hallucinator-newsroom-draft](the-hallucinator-newsroom-draft.md), waiting for Ryan's review and the legal conversation.
 - CLI sign-in without Prospectus: recommendation on HUM-539f78 (Google through the site's own Cognito; remote login for agents). On 2026-11-14 `/.well-known/papyrus-cli.json` on the Amplify default host answered 503 `site_origin_not_configured` on Papyrus 5.104.0. Nothing in `infra/site.json` is missing for it: with no custom domain the app shell derives `PAPYRUS_SITE_ORIGIN` from the app's default host and adds that host to the sign-in redirect list itself, so `cms.siteOrigin` (it holds a host name with an app id in it, and is for sites behind their own edge) and `cms.cliRemoteLogin` (agents and headless machines only) stay unset. The change that moves the site to 5.113.0 rewrites the branch variables (site revision 3) and the build spec, and the build after it picks them up. Papyrus 5.104.0 to 5.113.0 needs two deploys, not one: Item gains two indexes in that range and DynamoDB allows one per update, so 5.108.0 goes first; if 5.113.0 reaches `main` first, the deploy fails and rolls back.
-- Domain delegation: as of 2026-11-12 `dig NS thehallucinator.ai` still answers `ns27.domaincontrol.com` and `ns28.domaincontrol.com`. Ryan changes it at the registrar.
-- Mail sending is still in the sandbox; verification of the sending domain is pending delegation. The production-access request is drafted on `HUM-bdd767` and not submitted.
+- `www.thehallucinator.ai` does not answer (checked 2026-11-15, no response). A site-config option for a 301 to the apex exists in Papyrus (PR 1560, `cms.wwwRedirect`, card PPY-a4540d) for sites whose apex is on Amplify, but it is not used here: the public pages are moving to the projection path (an edge distribution like Machines on Machines, with the console at `newsroom.thehallucinator.ai`), owned by the Papyrus session's agent, and `www` is done at that cutover. Do not edit `infra/site.json`, `papyrus.config.ts`, `publication/` or the domain until then.
+- Mail: the sending identity `thehallucinator.ai` is verified (verification, DKIM and the custom MAIL FROM domain all SUCCESS, read 2026-11-15) and sending is enabled, but the account is still in the SES sandbox (production access off). The production-access request is drafted on `HUM-bdd767` and not submitted.
 - Not in the pipeline: the CDK bootstrap stack `CDKToolkit` (CDK's own template, made by `cdk bootstrap`), and the connection of the Amplify app to this repository (a one-time authorization in the console, done).
 - The Cyclotron session has not been told what Humorus needs.
 
 ## Waiting on Ryan
 
-Signing in to the newsroom with Google for the first time, and changing TheHallucinator.ai's name servers at the registrar to the four Route 53 servers (the certificate, the public placeholder page and mail verification wait on that). Other open questions are in [Decisions](decisions.md).
+Submitting the SES production-access request (draft on `HUM-bdd767`). The first sign-in is done: the newsroom's user pool has one user, a Google sign-in, and the `admin` group has one member; the `editor` and `curator` groups are empty (counts read 2026-11-15). Other open questions are in [Decisions](decisions.md).
 
 ## What can start now
 
@@ -46,13 +46,12 @@ Run `kbs ready` for the full list of work with nothing in its way.
 
 ## What happens next
 
-1. Ryan signs in to the newsroom with Google for the first time.
-2. He is added to the Cognito admin group; then the editors.
-3. The certificate and placeholder deploy by themselves when the registrar delegates the domain.
+1. The public pages move to the projection path and `www` is fixed at that cutover (the Papyrus session's agent owns it).
+2. Editors are added to the Cognito `editor` group when there are editors.
+3. The SES production-access request is submitted, then mail can leave the sandbox.
 
 ## What only a person does
 
-- Give the registrar the zone's four name servers (`infra/expected-nameservers.json`).
 - Put secret values: the two SecureString parameters `/papyrus/the-hallucinator/openai-api-key` and `/papyrus/shared/typesafe-api-key` (CloudFormation cannot create a SecureString, and values never go in Git), and the String parameter `/humorus/budget-alert-email`.
 - Submit the SES production-access request.
 - Every other account change is a merge to `main`. Agents read the account with the AWS CLI and never change it.

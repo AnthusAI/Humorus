@@ -13,7 +13,7 @@
     "cognitoDomainPrefix": "papyrus-the-hallucinator",
     "applyCognitoDomainPrefix": true,
     "environment": {
-      "PAPYRUS_OAUTH_REDIRECT_URLS": "http://localhost:3001/,https://newsroom.thehallucinator.ai/",
+      "PAPYRUS_OAUTH_REDIRECT_URLS": "http://localhost:3001/,https://thehallucinator.ai/",
       "PAPYRUS_TENANT_ID": "the-hallucinator",
       "PAPYRUS_SITE_REVISION": "5",
       "PAPYRUS_ENABLE_CONSOLE_RESPONDER": "false",
@@ -21,8 +21,7 @@
       "PAPYRUS_ENABLE_INBOUND_EMAIL": "false",
       "PAPYRUS_ENABLE_STORAGE_BACKUPS": "false"
     },
-    "domainName": "thehallucinator.ai",
-    "domainPrefix": "newsroom"
+    "domainName": "thehallucinator.ai"
   },
   "email": {
     "mode": "existing",

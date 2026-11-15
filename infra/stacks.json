@@ -114,32 +114,8 @@
     },
     {
       "name": "humorus-placeholder",
-      "template": "papyrus:infra/account/stacks/placeholder.yaml",
-      "enabled": true,
-      "when": {
-        "delegated": {
-          "zone": "thehallucinator.ai",
-          "expectedFile": "expected-nameservers.json"
-        }
-      },
-      "parameters": {
-        "DomainName": "thehallucinator.ai",
-        "HostedZoneId": {
-          "fromStackOutput": {
-            "stack": "humorus-dns",
-            "output": "HostedZoneId"
-          }
-        },
-        "CertificateArn": {
-          "fromStackOutput": {
-            "stack": "humorus-certificate",
-            "output": "CertificateArn"
-          }
-        },
-        "SiteName": "TheHallucinator.ai",
-        "Label": "Satire: everything on this site is invented, and none of it is news.",
-        "Message": "The first stories are on their way."
-      }
+      "template": "templates/placeholder-retired.yaml",
+      "enabled": true
     },
     {
       "name": "humorus-cloudtrail",

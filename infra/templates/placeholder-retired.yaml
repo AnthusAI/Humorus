@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >-
+  Humorus: the retired placeholder stack. It used to serve a labelled stand-in page on the apex and www
+  (Papyrus infra/account/stacks/placeholder.yaml). The real site, the Papyrus reader on the Amplify app, now takes
+  those hosts, so this update removes the stand-in's distribution, function and DNS records and releases the hosts.
+  CloudFormation needs at least one resource, and the account pipeline has no stack delete, so the stack stays as
+  this one inert marker until the pipeline can delete stacks (then delete it and this file).
+
+Resources:
+  RetiredMarker:
+    Type: AWS::CloudFormation::WaitConditionHandle

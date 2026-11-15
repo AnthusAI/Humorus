@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "event_id": "b8cd14d5-dc41-41f9-b1e2-e2fa569fae72",
+  "issue_id": "HUM-bc3b97be-eb2a-4873-8455-c1c7ed2530f7",
+  "event_type": "issue_created",
+  "occurred_at": "2026-11-15T13:33:46.191Z",
+  "actor_id": "home",
+  "payload": {
+    "title": "A reader opens the site's own domain and reads its published articles",
+    "description": "The apex thehallucinator.ai serves the Papyrus reader from the Amplify app (one app: reader at the root, console at /newsroom). The labelled placeholder stack releases the apex and www first.\n\n```gherkin\nFeature: The site domain serves the real reader\n\n  Scenario: The placeholder releases the hosts before the reader takes them\n    Given the humorus-placeholder stack serves the apex and www from its own distribution\n    When the Infrastructure workflow runs the retired-placeholder template\n    Then its distribution, function and DNS records are removed\n    And the apex and www are held by no CloudFront distribution\n\n  Scenario: A reader opens a published article on the apex\n    Given a published article of the site\n    When a reader opens its address on the apex domain\n    Then the headline, the dek and the satire label are in the HTML\n\n  Scenario: A missing address is a real 404\n    Given the apex serves the reader\n    When a reader opens an address that does not exist\n    Then the answer is HTTP 404\n\n  Scenario: The home page lists the published articles\n    Given a published article and no dated editions\n    When a reader opens the home page\n    Then the article is listed\n```",
+    "issue_type": "story",
+    "status": "open",
+    "priority": 1,
+    "assignee": null,
+    "parent": "HUM-24ef9c5d-3b69-4f0a-a69a-497a8c736833",
+    "labels": [],
+    "agent": {
+      "platform": "claude_code",
+      "model": "Claude Sonnet 5.5",
+      "name": "Humorus public reader"
+    }
+  }
+}

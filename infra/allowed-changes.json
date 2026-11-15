@@ -1,4 +1,41 @@
 {
   "comment": "Removes and Replaces a deploy may make on purpose, each with a reason. Empty it again once they have deployed.",
-  "allowed": []
+  "allowed": [
+    {
+      "stack": "humorus-placeholder",
+      "logicalId": "PageFunction",
+      "change": "Remove",
+      "reason": "The Papyrus reader on the Amplify app takes the apex and www; the labelled stand-in page is retired."
+    },
+    {
+      "stack": "humorus-placeholder",
+      "logicalId": "Distribution",
+      "change": "Remove",
+      "reason": "The Papyrus reader on the Amplify app takes the apex and www; the labelled stand-in page is retired."
+    },
+    {
+      "stack": "humorus-placeholder",
+      "logicalId": "ApexA",
+      "change": "Remove",
+      "reason": "The Papyrus reader on the Amplify app takes the apex and www; the labelled stand-in page is retired."
+    },
+    {
+      "stack": "humorus-placeholder",
+      "logicalId": "ApexAaaa",
+      "change": "Remove",
+      "reason": "The Papyrus reader on the Amplify app takes the apex and www; the labelled stand-in page is retired."
+    },
+    {
+      "stack": "humorus-placeholder",
+      "logicalId": "WwwA",
+      "change": "Remove",
+      "reason": "The Papyrus reader on the Amplify app takes the apex and www; the labelled stand-in page is retired."
+    },
+    {
+      "stack": "humorus-placeholder",
+      "logicalId": "WwwAaaa",
+      "change": "Remove",
+      "reason": "The Papyrus reader on the Amplify app takes the apex and www; the labelled stand-in page is retired."
+    }
+  ]
 }

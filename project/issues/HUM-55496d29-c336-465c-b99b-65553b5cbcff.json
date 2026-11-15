@@ -1,0 +1,25 @@
+{
+  "id": "HUM-55496d29-c336-465c-b99b-65553b5cbcff",
+  "title": "A reader can read TheHallucinator.ai in Spanish, with the satire label in Spanish too",
+  "description": "Ryan, 2026-11-15: TheHallucinator.ai must be bilingual, English plus Spanish (es-419), \"Now it also speaks Spanish\". Uses the Papyrus multilingual system (docs/multilingual-serving.md). Plan and dependencies: docs/spanish-edition/README.md. Interface strings: sites/the-hallucinator/strings/. Language overlays (data, saved with the papyrus CLI): docs/spanish-edition/. Papyrus PR 1585 makes the editions say the notice in their own language.\n\n```gherkin\nFeature: The Hallucinator speaks Spanish\n\n  Scenario: A Spanish reader gets the edition under /es/ with a switcher and hreflang\n    Given es-419 is enabled and public with the prefix es\n    And a Story has a reviewed Spanish translation\n    Then the Spanish page is at /es/articles/SLUG/, declares lang es-419, lists hreflang en, es and x-default, and offers a language switcher\n\n  Scenario: The satire label survives in Spanish everywhere\n    Given a published Spanish translation\n    Then its page footer line, its Markdown twin, its feed entry and its structured data say the label in Spanish\n\n  Scenario: Jokes survive translation\n    Given the es-419 writing and glossary overlays are saved\n    Then a translation keeps the deadpan register, the brand THE HALLUCINATOR and ChatGPT, and a person has read it before it is public\n```",
+  "type": "story",
+  "status": "open",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-952a436f-4ebc-44f5-9f65-64fd05817ad2",
+  "labels": [],
+  "dependencies": [],
+  "comments": [],
+  "created_at": "2026-11-15T21:37:19.481927Z",
+  "updated_at": "2026-11-15T21:37:19.482445Z",
+  "closed_at": null,
+  "agent": {
+    "platform": "claude-code",
+    "model": "claude-sonnet-5-5",
+    "name": "spanish-edition"
+  },
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

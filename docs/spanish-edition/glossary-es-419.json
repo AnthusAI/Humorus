@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "bodyMarkus": "Neutral Latin American Spanish (es-419) for a satire wire service: the forms a Latin American newsroom uses where English and Spanish names differ, plus the invented institutions and brand names of TheHallucinator.ai. Starter entries from Papyrus plus the Humorus entries.",
+  "entries": [
+    {
+      "term": "AI",
+      "translations": [
+        "IA"
+      ],
+      "caseSensitive": true,
+      "note": "inteligencia artificial; IA in running text, also in compounds (IA generativa)."
+    },
+    {
+      "term": "Hugging Face",
+      "doNotTranslate": true,
+      "caseSensitive": true,
+      "note": "A company name: kept as written (the 2026-11-12 spike rendered it 抱抱脸)."
+    },
+    {
+      "term": "artificial intelligence",
+      "translations": [
+        "inteligencia artificial"
+      ]
+    },
+    {
+      "term": "US",
+      "translations": [
+        "EE. UU.",
+        "Estados Unidos"
+      ],
+      "variants": [
+        "estadounidense",
+        "estadounidenses"
+      ],
+      "caseSensitive": true
+    },
+    {
+      "term": "U.S.",
+      "translations": [
+        "EE. UU.",
+        "Estados Unidos"
+      ],
+      "variants": [
+        "estadounidense",
+        "estadounidenses"
+      ],
+      "caseSensitive": true
+    },
+    {
+      "term": "UK",
+      "translations": [
+        "Reino Unido"
+      ],
+      "caseSensitive": true
+    },
+    {
+      "term": "EU",
+      "translations": [
+        "UE",
+        "Unión Europea"
+      ],
+      "caseSensitive": true
+    },
+    {
+      "term": "Paris",
+      "translations": [
+        "París"
+      ],
+      "caseSensitive": true
+    },
+    {
+      "term": "Congress",
+      "translations": [
+        "Congreso"
+      ],
+      "exceptIn": [
+        "Chaos Communication Congress",
+        "Library of Congress"
+      ],
+      "caseSensitive": true,
+      "note": "The United States Congress."
+    },
+    {
+      "term": "Justice Department",
+      "translations": [
+        "Departamento de Justicia"
+      ],
+      "caseSensitive": true
+    },
+    {
+      "term": "Department of Justice",
+      "translations": [
+        "Departamento de Justicia"
+      ],
+      "caseSensitive": true
+    },
+    {
+      "term": "North Carolina",
+      "translations": [
+        "Carolina del Norte"
+      ],
+      "caseSensitive": true
+    },
+    {
+      "term": "White House",
+      "translations": [
+        "Casa Blanca"
+      ],
+      "caseSensitive": true
+    },
+    {
+      "term": "computer",
+      "translations": [
+        "computadora"
+      ],
+      "variants": [
+        "computadoras"
+      ],
+      "note": "Latin American form (not ordenador)."
+    },
+    {
+      "term": "THE HALLUCINATOR",
+      "doNotTranslate": true,
+      "caseSensitive": true,
+      "note": "The publication's name. Stays in Latin letters on every page of the Spanish edition. Only the satire notice (interface string notice.text) plays on its meaning, as EL ALUCINADOR."
+    },
+    {
+      "term": "TheHallucinator.ai",
+      "doNotTranslate": true,
+      "caseSensitive": true,
+      "note": "The publication's domain name."
+    },
+    {
+      "term": "ChatGPT",
+      "doNotTranslate": true,
+      "caseSensitive": true,
+      "note": "A product name: kept as written."
+    },
+    {
+      "term": "OpenAI",
+      "doNotTranslate": true,
+      "caseSensitive": true
+    },
+    {
+      "term": "Federal AI Safety Office",
+      "translations": [
+        "Oficina Federal de Seguridad de la IA"
+      ],
+      "caseSensitive": true,
+      "note": "An invented federal body: given the official-sounding Spanish name a Latin American wire would give it. Use this form every time; 'la oficina' or 'la agencia' for later mentions."
+    },
+    {
+      "term": "Washington, D.C.",
+      "translations": [
+        "Washington, D. C."
+      ],
+      "caseSensitive": true,
+      "note": "Dateline form in Spanish: WASHINGTON, D. C. —"
+    },
+    {
+      "term": "Washington",
+      "doNotTranslate": true,
+      "caseSensitive": true
+    },
+    {
+      "term": "safety",
+      "translations": [
+        "seguridad"
+      ],
+      "note": "AI safety is seguridad de la IA (not 'inocuidad'); 'safe' is seguro."
+    },
+    {
+      "term": "press time",
+      "translations": [
+        "al cierre de esta edición"
+      ],
+      "note": "The wire-service closing: 'At press time' is 'Al cierre de esta edición'."
+    }
+  ]
+}

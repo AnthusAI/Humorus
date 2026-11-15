@@ -1,0 +1,64 @@
+{
+  "brandPack": "brand.json",
+  "site": {
+    "name": "TheHallucinator.ai",
+    "shortName": "The Hallucinator",
+    "tagline": "Satire",
+    "description": "Satire. Everything on this site is invented.",
+    "productionUrl": "https://thehallucinator.ai",
+    "notice": {
+      "label": "Satire",
+      "text": "Everything on this site is invented."
+    }
+  },
+  "storyTypes": {
+    "default": "article",
+    "types": [
+      "article"
+    ]
+  },
+  "urls": {
+    "style": "directory",
+    "types": {
+      "article": {
+        "base": "articles",
+        "label": "Articles",
+        "pageSize": 24
+      }
+    }
+  },
+  "nav": {
+    "links": [
+      {
+        "label": "Articles",
+        "href": "/articles/"
+      }
+    ]
+  },
+  "listings": {
+    "types": [
+      "article"
+    ],
+    "homeCount": 12
+  },
+  "seo": {
+    "jsonLdTypes": {
+      "article": "SatiricalArticle"
+    },
+    "publisherName": "TheHallucinator.ai"
+  },
+  "feeds": {
+    "formats": [
+      "rss",
+      "atom"
+    ],
+    "count": 30
+  },
+  "sitemap": {
+    "style": "single",
+    "lastmod": true
+  },
+  "footer": {
+    "text": "TheHallucinator.ai is satire. Every piece is invented. No real person is quoted."
+  }
+}

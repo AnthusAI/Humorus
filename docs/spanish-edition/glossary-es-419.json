@@ -122,7 +122,7 @@
       "term": "THE HALLUCINATOR",
       "doNotTranslate": true,
       "caseSensitive": true,
-      "note": "The publication's name. Stays in Latin letters on every page of the Spanish edition. Only the satire notice (interface string notice.text) plays on its meaning, as EL ALUCINADOR."
+      "note": "The publication's name. Stays in Latin letters on every page of the Spanish edition. The same in both languages, so the notice that points at the masthead keeps working."
     },
     {
       "term": "TheHallucinator.ai",

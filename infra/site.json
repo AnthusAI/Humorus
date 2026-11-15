@@ -15,12 +15,14 @@
     "environment": {
       "PAPYRUS_OAUTH_REDIRECT_URLS": "http://localhost:3001/",
       "PAPYRUS_TENANT_ID": "the-hallucinator",
-      "PAPYRUS_SITE_REVISION": "4",
+      "PAPYRUS_SITE_REVISION": "5",
       "PAPYRUS_ENABLE_CONSOLE_RESPONDER": "false",
       "PAPYRUS_ENABLE_SLACK": "false",
       "PAPYRUS_ENABLE_INBOUND_EMAIL": "false",
       "PAPYRUS_ENABLE_STORAGE_BACKUPS": "false"
-    }
+    },
+    "domainName": "thehallucinator.ai",
+    "domainPrefix": "newsroom"
   },
   "email": {
     "mode": "existing",
@@ -36,5 +38,6 @@
     ],
     "ownerId": 152415604,
     "repoId": 1454269356
-  }
+  },
+  "hostedZoneId": "Z0800237UHBR8HFBQZ35"
 }

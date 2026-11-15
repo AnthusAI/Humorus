@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "name": "TheHallucinator.ai",
+  "wordmark": {
+    "text": "TheHallucinator.ai"
+  },
+  "colors": {
+    "light": {
+      "bg": "#F5EFE0",
+      "ink": "#1C1A17",
+      "bandBg": "#EAE1CB",
+      "bandCardBg": "#FFFBF0",
+      "bandMutedBg": "#DDD2B6",
+      "buttonBg": "#8E1B16",
+      "buttonInk": "#FFF8EC",
+      "rule": "#6B6150",
+      "focus": "#0B5C8A"
+    },
+    "dark": {
+      "bg": "#17140F",
+      "ink": "#F1E9D6",
+      "bandBg": "#221E16",
+      "bandCardBg": "#2B261C",
+      "bandMutedBg": "#352F23",
+      "buttonBg": "#F0A59C",
+      "buttonInk": "#2A0907",
+      "rule": "#9A8F78",
+      "focus": "#8CC8EE"
+    }
+  },
+  "fonts": {
+    "heading": "Source Serif 4",
+    "body": "Source Serif 4"
+  },
+  "shape": {
+    "corners": "square"
+  },
+  "ornaments": "quiet"
+}

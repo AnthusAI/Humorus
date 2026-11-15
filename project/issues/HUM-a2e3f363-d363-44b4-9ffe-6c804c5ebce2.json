@@ -3,7 +3,7 @@
   "title": "Remove the disclaimer paragraph from the published article 'Federal AI Safety Office confirms AI is safe after asking AI'",
   "description": "Edit the published article so it no longer opens with (or carries) the disclaimer paragraph ('Satire: this article is fiction. The people, agency and quotations in it are invented.'). BLOCKED until the furniture label (HUM-0bd4aa) is live on the page: the piece must never be published without a label. Do not edit the article before then.\n\nHow: a new Story version saved with the papyrus CLI signed in to this site, then a person approves and publishes it (decision 13). Access today (2026-11-15): 'papyrus whoami' shows a signed-in session for https://newsroom.thehallucinator.ai (the CLI is pinned at 5.105.0 and the backend is newer, which is the allowed direction). I have not tried an edit. Follow the papyrus CLI guide (papyrus guide) for the exact commands; never use the AWS CLI for Papyrus operations.",
   "type": "task",
-  "status": "blocked",
+  "status": "closed",
   "priority": 2,
   "assignee": null,
   "creator": null,
@@ -15,10 +15,25 @@
       "type": "blocked-by"
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "id": "1da78859-fe02-4954-b07e-f128612750ce",
+      "author": "home",
+      "text": "Published v4 (Ryan approved 2026-11-15). Disclaimer paragraph and Satire: prefix gone on the live page; footer notice, SatiricalArticle JSON-LD and twin label remain. v3 had no language (CLI 5.105.0); v4 saved with CLI 5.121.0 via uvx.",
+      "created_at": "2026-11-15T23:56:21.445382Z",
+      "comment_type": "default"
+    },
+    {
+      "id": "44566ec9-eb30-46d0-85bd-726ffdb2a435",
+      "author": "home",
+      "text": "Published v4 (Ryan approved 2026-11-15). Disclaimer paragraph and Satire: prefix gone on the live page; footer notice, SatiricalArticle JSON-LD and twin label remain. v3 had no language (CLI 5.105.0); v4 saved with CLI 5.121.0 via uvx.",
+      "created_at": "2026-11-15T23:56:25.916051Z",
+      "comment_type": "default"
+    }
+  ],
   "created_at": "2026-11-15T21:16:23.316555Z",
-  "updated_at": "2026-11-15T21:16:23.561621Z",
-  "closed_at": null,
+  "updated_at": "2026-11-15T23:56:25.916292Z",
+  "closed_at": "2026-11-15T23:56:21.664295Z",
   "right_now_summary": null,
   "right_now_updated_at": null,
   "custom": {}

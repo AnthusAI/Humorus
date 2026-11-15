@@ -27,6 +27,14 @@ Decisions Ryan has made for Humorus. Add new ones at the bottom with the date. D
 | 19 | Working model: Claude (Opus) is product owner and project manager; one Sonnet engineering lead runs Sonnet and Haiku workers, reviews their work, and reports only working code. |
 | 20 | Papyrus order: the guidelines epic PPY-2a2a8a lands first, then PPY-1a6aa6, then the Anthus-defaults items, then the neutral theme and scaffold. |
 
+## 2026-11-15
+
+| # | Decision |
+| --- | --- |
+| 21 | Satire on TheHallucinator.ai may be wholly invented. It does not need to start from a real news event, and no piece is fact-checked against a recorded Reference. Ryan: "This is a satire site and so obviously that fact-checking rule isn't going to work here." The old rule that the real setup be stated correctly (policy 9 and the `real-setup-correct` check in the newsroom draft) is withdrawn. |
+| 22 | Reason and what stays. A real setup cannot be required of a piece that is made up, so a fact-check has nothing to check. The protective work that rule did for real people is kept in satire form (policy 9): a claim about a real, named person stays plainly absurd; a wholly fictional person or agency is allowed when plainly fictional and must not plausibly match a real private person, which the approver checks with a quick web search of the name, role and place. **[LEGAL REVIEW]** (false light and defamation; sufficiency of the search), folded into HUM-948077. Unchanged: satire labelled everywhere, a person approves every piece, no real likenesses, no private people, no victims of tragedies, no invented crimes attributed to real people, invented quotations plainly invented, no hate, no election misinformation, corrections. Where a piece does start from a real source, its wording and pictures are still never reused. |
+| 23 | Nothing from the newsroom draft is saved in the backend yet; the draft is revised and still awaits Ryan's review. |
+
 ## Open questions for Ryan
 
 - Whether the second user who received administrator access on the new account should keep it.

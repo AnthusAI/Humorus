@@ -1,6 +1,8 @@
 # TheHallucinator.ai newsroom: draft for review
 
-**Status: DRAFT for Ryan's review. Nothing here is saved anywhere.**
+**Status: DRAFT for Ryan's review. Nothing here is saved anywhere, and nothing from this draft is saved in the backend yet.**
+
+Revised 2026-11-15 for Ryan's decision that satire here needs no real setup and no fact-checking (see [Decisions](decisions.md)). A piece may start from a real event or be wholly invented. The draft's old "real setup is right" rule and check are gone, and the part of it that protected real people is rewritten as policy 9.
 
 This page is a drafting aid. The newsroom's editorial identity is **backend data, never a file the build reads** (rule 3 in `AGENTS.md`). Once Ryan approves the text, each part is saved into the site's own backend with the `papyrus` CLI (or Administration), and this page is then deleted or reduced to a pointer. Do not treat it as the source of truth after that, and do not import it from the repository at build time.
 
@@ -28,7 +30,7 @@ Each part below is written so the quoted text can be copied into its file unchan
 
 Record: `editorial-doctrine-mission`. Save as `mission.md`. One short paragraph is kept per line so agents read each as its own instruction.
 
-> TheHallucinator.ai is a satire publication. Every piece is invented. We take a real news event and rewrite it, in the deadpan voice of a wire-service report, so that the absurdity already present in the event becomes visible.
+> TheHallucinator.ai is a satire publication. Every piece is invented. A piece may start from a real news event or be made up whole. Either way we write it in the deadpan voice of a wire-service report, so that the absurdity already present in public life becomes visible.
 >
 > We aim at institutions, public conduct, and the language people in public life use to avoid saying things. We do not aim at private people, at the powerless, or at people who have suffered.
 >
@@ -44,13 +46,13 @@ Record: `editorial-doctrine-policy`. Save as `policy.md`. This is the prose agen
 
 > 1. **Satire, labelled.** Every piece is satire and says so. The label appears on the page, in the Markdown version, in the feed entry, in the structured data, in `llms.txt` and in the share preview. A piece without the label is not finished. **[LEGAL REVIEW]** (wording and placement of the label)
 > 2. **A person approves every piece.** No piece publishes on an agent's say-so. A named person reads the finished piece and its picture and approves it before it goes live. The publish gate stays on.
-> 3. **Public figures only, in their public roles.** We write about people who hold or seek public office, lead large public institutions, or have chosen a public career, and only about their public conduct and public statements. **[LEGAL REVIEW]** (who counts as a public figure; second-tier officials; people briefly famous)
-> 4. **No private people.** A private person is never named, described closely enough to identify, or used as a type. If the real event involves a private person, the piece is about the institution and not about them.
+> 3. **Real people: public figures only, in their public roles.** When a piece names a real person, it is someone who holds or seeks public office, leads a large public institution, or has chosen a public career, and only about their public conduct and public statements. Wholly fictional people and agencies are allowed under policy 9. **[LEGAL REVIEW]** (who counts as a public figure; second-tier officials; people briefly famous)
+> 4. **No private people.** A real private person is never named, described closely enough to identify, or used as a type. If the real event involves a private person, the piece is about the institution and not about them. A fictional person must not plausibly match a real private person (policy 9).
 > 5. **No victims of tragedies.** We do not write jokes about people killed, injured, displaced or bereaved by a disaster, attack, accident or crime, or about their families. The satire may target the response of institutions to the event, never the people it happened to.
-> 6. **No invented crimes.** A public figure is never shown committing a crime, or being investigated, charged or convicted of one, unless that is already a matter of public record. The invented part is plainly absurd, not a plausible accusation. **[LEGAL REVIEW]** (false-light and defamation exposure when an absurd claim is attached to a named person)
+> 6. **No invented crimes attributed to real people.** A real public figure is never shown committing a crime, or being investigated, charged or convicted of one, unless that is already a matter of public record. The invented part is plainly absurd, not a plausible accusation. A crime may be invented only for a fictional person or agency, and never in a way that reads as a report of a real case. **[LEGAL REVIEW]** (false-light and defamation exposure when an absurd claim is attached to a named person)
 > 7. **Invented quotations are plainly invented.** A quotation attributed to a real public figure must be impossible to mistake for something they said: absurd in content, or in a register no one would use. We never present an invented quotation as a transcript. **[LEGAL REVIEW]**
-> 8. **Satirise the event; do not reuse the source.** We never copy a source's wording, headline, structure beyond the news form, or pictures. We rewrite from the facts of the event. **[LEGAL REVIEW]** (how close a parody headline may stay to its source)
-> 9. **The real setup is right.** Where the piece relies on a real fact (who, what, when), that fact is stated correctly and can be checked against a source the reporter recorded. The invented part is where the joke is, and it is plainly absurd.
+> 8. **Satirise the event; do not reuse the source.** When a piece starts from a real source, we never copy its wording, headline, structure beyond the news form, or pictures. We rewrite from the facts of the event. **[LEGAL REVIEW]** (how close a parody headline may stay to its source)
+> 9. **Invention is plainly invention.** A piece may start from a real event or be wholly invented. It does not need a real setup, and no piece is fact-checked against a recorded Reference. What matters is that no reader could take it as news. A claim about a real, named person stays plainly absurd. A wholly fictional person, agency or company is allowed when it is plainly fictional (a generic or absurd name, role and place), and a fictional person must not plausibly match a real private person. The approving person checks this before approving with a quick web search of the name together with the role and place, and renames the person if a real private person plausibly matches. **[LEGAL REVIEW]** (false light and defamation exposure for an invented claim about a real person; whether a quick search is a sufficient check for fictional names)
 > 10. **No real likenesses.** Generated images never show a real person. See the image guidelines.
 > 11. **Elections and voting.** A piece never states or implies a false fact about when, where or how to vote, or about a result. During an election period it is held for extra review by the approving person. **[LEGAL REVIEW]** (election-period rules on synthetic political content)
 > 12. **Byline.** Pieces carry a stated house byline that makes clear the writer is a satire desk, not a reporter. If pen names are used they are listed in the site's byline policy and never resemble a real person. **[LEGAL REVIEW]** (pen names)
@@ -64,12 +66,12 @@ Record: `EditorialPolicy` rows, scope `publication`, source `custom`. Save in on
 | Key | Kind | Severity | What it checks |
 | --- | --- | --- | --- |
 | `satire-label-present` | Rule | error | The body or its metadata carries the satire marker the site defines. |
-| `no-source-wording` | Judgment | error | No sentence of three or more words in a row matches the Reference text the piece was written from. |
-| `real-setup-correct` | Judgment | warn | The real facts the piece relies on are stated correctly against the recorded Reference. |
+| `no-source-wording` | Judgment | error | When the piece was written from a source, no sentence of three or more words in a row matches the source text. A wholly invented piece passes. |
 | `invented-part-obvious` | Judgment | warn | The invented part is plainly absurd and could not be read as a news claim. |
-| `no-private-person` | Judgment | error | Nobody is named or identifiable who is not a public figure acting in a public role. |
+| `no-private-person` | Judgment | error | No real private person is named or identifiable. Anyone named is either a real public figure acting in a public role or plainly fictional. |
+| `fictional-people-clear` | Judgment | warn | A named person who is not a real public figure has a plainly fictional name, role and place, and could not be read as a report about a real private individual. The approver's name search (policy 9) is the final step. |
 | `no-victim-jokes` | Judgment | error | No joke is aimed at a person harmed in a tragedy or at their family. |
-| `no-invented-crime` | Judgment | error | No public figure is accused of a crime or investigation that is not already on the public record. |
+| `no-invented-crime` | Judgment | error | No real public figure is accused of a crime or investigation that is not already on the public record. |
 | `no-identity-mockery` | Judgment | error | No joke targets a person for a protected characteristic. |
 | `quotation-plainly-invented` | Judgment | warn | A quotation from a real public figure is absurd or in a register no one would use. |
 | `election-claims` | Judgment | error | No claim about voting procedure, dates, results or eligibility. |
@@ -94,16 +96,16 @@ Record: guideline document, kind `writing`, publication scope (schema version 1)
 | `headline` | Order: title, then subtitle. Title is a plain news headline of at most 14 words. The subtitle is a dek in the same deadpan voice. |
 | `exemplars` | Chosen by an editor from published pieces once they exist; empty at launch. |
 | `bodyMarkus` | The prose below. |
-| `constraints` | The binding rules in section 2a: items 2 to 8, 10 and 11. **Only an admin who is a person can change these.** |
+| `constraints` | The binding rules in section 2a: items 2 to 11. **Only an admin who is a person can change these.** |
 | `locked` | `audience`, `headline`, `voice`. A section may add to the prose but may not replace these. |
 
 ### How to write a piece (the `bodyMarkus` prose)
 
-1. **Start from a real event.** Name the real event and the real setup in a note for yourself first. The setup must be accurate.
+1. **Start from a real event or invent one.** Either work from a real event, or make the whole premise up. Name the premise in a note for yourself first. If it is a real event, do not reuse its source's wording. Nothing is fact-checked against a source.
 2. **Pick one absurd move.** Choose the single thing that, taken literally and followed through, shows what the event is really about. One is enough.
 3. **Write it straight.** Report the invented part in the same flat voice you would use for the real part. Do not signal that it is a joke.
-4. **Check the three tests.** (a) Could a reader take the invented part as fact? If so, make it more absurd. (b) Does anyone named appear in a role they do not hold, or doing something criminal that is not on the record? If so, change it. (c) Is any sentence close to the source? If so, rewrite from the facts.
-5. **Never reuse the source.** Wording, headline shape beyond the news form, and pictures are all the source's.
+4. **Check the three tests.** (a) Could a reader take the invented part as fact? If so, make it more absurd. (b) Does a real person appear in a role they do not hold, or doing something criminal that is not on the record? If so, change it. Could a fictional name belong to a real private person? If so, rename. (c) If you worked from a source, is any sentence close to it? If so, rewrite from the facts.
+5. **Never reuse the source.** When you worked from one, its wording, headline shape beyond the news form, and pictures are all the source's.
 6. **Add the marker.** The satire marker is not optional and not part of the joke.
 
 ### The satire marker
@@ -134,7 +136,7 @@ Satire:
 >
 > "We believe in evidence," said a council spokesperson, standing near the avenue as a vehicle passed. "Until the study is complete, the council has no position on the vehicle."
 
-What this shows: the real setup (a council studies traffic safety) is stated first and correctly; the invented part (the council cannot tell whether cars are dangerous) is plainly absurd; the spokesperson is generic; no source wording is reused.
+What this shows: the setup (a council studies traffic safety) is stated plainly; the invented part (the council cannot tell whether cars are dangerous) is plainly absurd; the spokesperson is generic; no source wording is reused.
 
 **Example 2: a corporate statement**
 
@@ -152,9 +154,23 @@ Satire:
 
 What this shows: the target is the language of the statement; no person is named; the closing line is flat, not a punchline.
 
-**Example 3: what not to write**
+**Example 3: a wholly invented piece**
 
-A piece that names a real private citizen who appeared in a news report, or attaches an invented arrest to a named public figure, fails policy items 4 and 6 and is not saved as a draft. The fix is to move the target to the institution and to make the invented part plainly absurd.
+No real event behind it. The agency, the town and the people are plainly fictional.
+
+> **Bureau Of Unfinished Business Announces It Has Finished**
+>
+> *Agency says no further business remains, then opens a file on the announcement*
+>
+> Satire. This is a work of fiction published by TheHallucinator.ai. It is not a news report.
+>
+> The Bureau of Unfinished Business confirmed Thursday that all of its business was complete, effective immediately, and that a new inquiry into the completion had begun.
+
+What this shows: nothing is checked against a news story; the target is institutional language; the agency and the speaker are generic, so no real private person could be mistaken for them.
+
+**Example 4: what not to write**
+
+A piece that names a real private citizen who appeared in a news report, attaches an invented arrest to a named public figure, or gives a fictional character the full name and town of a real private person, fails policy items 4, 6 and 9 and is not saved as a draft. The fix is to move the target to the institution and to make the invented part plainly absurd.
 
 ## 4. Image guidelines
 
@@ -194,7 +210,7 @@ Record: `NewsroomSection`. Each has a key, a title, a short title, a mission, a 
 
 - Mission: Satire of the day-to-day work of governments: announcements, statements, hearings, agencies.
 - Policy: Target the language and machinery of government, not individuals. Public figures only, in their public roles.
-- Assignment guidance: Start from one real announcement. Find the one move that takes its own logic seriously and report that.
+- Assignment guidance: Start from one real announcement, or invent one. Find the one move that takes its own logic seriously and report that.
 - Kill criteria: Reject a piece that depends on a private person, on an invented crime, or on a false claim about voting.
 
 ### `campaigns`: Campaigns and Elections
@@ -215,7 +231,7 @@ Record: `NewsroomSection`. Each has a key, a title, a short title, a mission, a 
 
 - Mission: Satire of technology companies, their products and their promises.
 - Policy: Public companies and public figures only, in their public roles. Explain nothing; report the absurd consequence as if it were routine.
-- Assignment guidance: Start from a real launch or claim. Report what it would be like to take it at its word.
+- Assignment guidance: Start from a real launch or claim, or invent one. Report what it would be like to take it at its word.
 - Kill criteria: Reject a piece that reveals a real security flaw or exposes private data.
 
 ### `world`: World
@@ -234,8 +250,8 @@ The table lists the parts above that do not yet have a Papyrus home, or that dep
 | The satire marker on every page, Markdown twin, feed, structured data, `llms.txt` and share preview | The label is a site setting that the build and every output reads. Papyrus has no per-site satire flag. | Papyrus work for the satire marker; Humorus issue HUM-6050a9 |
 | A person approves every piece | The publish gate exists. A rule that no agent can publish on its own is not yet a stored, checkable site setting beyond the existing gate. | Confirm the gate settings in the newsroom; no new storage if the existing gate suffices |
 | House byline and allowed pen names | Papyrus attributes to AI by default and has no site byline policy. | Byline policy story; Humorus issue HUM-e7acbb |
-| Idea mode that starts from one real story and invents the angle | The idea pipeline needs two citations; this is logic, not text. | Papyrus engine story |
-| The point check's verdicts and the "real setup is right" check as a built-in | Judgment checks in Humanus cover the text. The verdict logic is code. | Papyrus engine story |
+| Idea mode that may start from one real story, or from no source and invent the whole premise | The idea pipeline needs two citations; this is logic, not text. | Papyrus engine story |
+| The point check's verdicts | Judgment checks in Humanus cover the text. The verdict logic is code. There is no "real setup is right" check any more. | Papyrus engine story |
 | The list of feed sources | Part is in code, not site data. | Papyrus engine story |
 | Section image guidelines | Section image documents are not stored yet. | Guidelines epic phase 3; until then use `NewsroomSection.visualGuidance` |
 | `exemplars` | Chosen from published pieces; none exist at launch. | An editor, after the first pieces publish |
@@ -250,7 +266,7 @@ This is the complete list of items marked **[LEGAL REVIEW]** above. They belong 
 
 1. Wording, size and placement of the satire marker, and whether a structured-data field is enough (section 3).
 2. Who counts as a public figure, including second-tier officials and people briefly famous (policy 3).
-3. Exposure when an absurd claim is attached to a named person: false light and defamation (policy 6).
+3. Exposure when an absurd claim is attached to a named person: false light and defamation (policy 6), and whether a quick web search is enough to keep a fictional person from matching a real private one (policy 9).
 4. Invented quotations attributed to real public figures (policy 7).
 5. How close a parody headline may stay to its source (policy 8).
 6. Election-period rules for synthetic political content (policy 11).

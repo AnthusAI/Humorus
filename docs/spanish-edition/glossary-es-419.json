@@ -120,15 +120,17 @@
     },
     {
       "term": "THE HALLUCINATOR",
-      "doNotTranslate": true,
       "caseSensitive": true,
-      "note": "The publication's name. Stays in Latin letters on every page of the Spanish edition. The same in both languages, so the notice that points at the masthead keeps working."
+      "note": "The Spanish edition's name for the publication (Ryan, decision 26): EL ALUCINADOR in full, on masthead, notice, titles and metadata; THE HALLUCINATOR stays as alternateName in structured data so search connects them.",
+      "translations": [
+        "EL ALUCINADOR"
+      ]
     },
     {
       "term": "TheHallucinator.ai",
       "doNotTranslate": true,
       "caseSensitive": true,
-      "note": "The publication's domain name."
+      "note": "The domain name: never translated."
     },
     {
       "term": "ChatGPT",

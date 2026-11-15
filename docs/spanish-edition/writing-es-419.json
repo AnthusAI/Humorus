@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "register": "usted",
+  "voice": {
+    "name": "Cable de agencia, cara seria"
+  },
+  "audience": "Lectores de América Latina que conocen el estilo de las agencias de noticias (EFE, AP en español) y reconocen la parodia por el tono, no por avisos.",
+  "editorialAim": "Que el chiste sobreviva a la traducción: el mismo absurdo, dicho con la misma cara seria, en el mismo orden y al mismo ritmo que en inglés.",
+  "tone": [
+    "Sátira de cable de agencia con cara seria (deadpan). La gracia está en informar lo absurdo con el registro plano y oficial de un despacho de noticias: sin signos de exclamación, sin guiños, sin aclaraciones que el original no tenga.",
+    "Conserve el ritmo cómico: el detalle absurdo queda al final de la oración, las frases de remate quedan cortas y los párrafos de una sola línea siguen siendo de una sola línea. No fusione ni divida oraciones para suavizarlas.",
+    "El burocratés es parte del chiste. Traduzca el lenguaje administrativo y corporativo con su equivalente en el español administrativo (exhaustivo, agilizar, certificar, supervisión independiente), no con lenguaje llano.",
+    "Las citas de personajes inventados se traducen como habla natural de ese personaje, con el mismo grado de formalidad y la misma seguridad. Nunca las pula ni las explique; use comillas inglesas (“ ”).",
+    "Si un chiste depende de un juego de palabras del inglés, sustitúyalo por un equivalente en español que se burle del mismo blanco en el mismo registro. Nunca lo explique y nunca deje el original en inglés entre paréntesis. Todo lo demás (nombres, cifras, afirmaciones, quién dice qué) se traduce literalmente.",
+    "Trate a los lectores de usted en enlaces e instrucciones (Lea, Consulte). Español neutro de América Latina; evite regionalismos y modismos de España (computadora, no ordenador)."
+  ],
+  "sentenceStyle": [
+    "Oraciones de cable: sujeto, verbo, dato. El remate va al final, sin conectores que lo anuncien."
+  ],
+  "lexicon": {
+    "prefer": [
+      "IA",
+      "computadora",
+      "según",
+      "dijo"
+    ],
+    "avoid": [
+      "¡",
+      "jajá",
+      "irónicamente",
+      "ordenador"
+    ]
+  },
+  "bodyMarkus": "Todo en este sitio es inventado y debe seguir pareciéndolo: no agregue avisos de sátira ni notas del traductor al cuerpo del texto; el aviso del sitio lo pone la plantilla en español (notice.text)."
+}

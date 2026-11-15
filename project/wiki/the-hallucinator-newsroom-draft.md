@@ -2,7 +2,7 @@
 
 **Status: DRAFT for Ryan's review. Nothing here is saved anywhere, and nothing from this draft is saved in the backend yet.**
 
-Revised 2026-11-15 for Ryan's decision that satire here needs no real setup and no fact-checking (see [Decisions](decisions.md)). A piece may start from a real event or be wholly invented. The draft's old "real setup is right" rule and check are gone, and the part of it that protected real people is rewritten as policy 9.
+Revised again 2026-11-15 for Ryan's decision that the satire label is the minimum viable warning: one short line in the page furniture that points at the name, never a disclaimer paragraph in the body of a piece (decisions 24 and 25). Earlier the same day: Ryan's decision that satire here needs no real setup and no fact-checking (see [Decisions](decisions.md)). A piece may start from a real event or be wholly invented. The draft's old "real setup is right" rule and check are gone, and the part of it that protected real people is rewritten as policy 9.
 
 This page is a drafting aid. The newsroom's editorial identity is **backend data, never a file the build reads** (rule 3 in `AGENTS.md`). Once Ryan approves the text, each part is saved into the site's own backend with the `papyrus` CLI (or Administration), and this page is then deleted or reduced to a pointer. Do not treat it as the source of truth after that, and do not import it from the repository at build time.
 
@@ -44,7 +44,7 @@ Record: `editorial-doctrine-mission`. Save as `mission.md`. One short paragraph 
 
 Record: `editorial-doctrine-policy`. Save as `policy.md`. This is the prose agents and editors read through `papyrus editorial context`. It is one document; the list is numbered so a check or a review comment can cite a number.
 
-> 1. **Satire, labelled.** Every piece is satire and says so. The label appears on the page, in the Markdown version, in the feed entry, in the structured data, in `llms.txt` and in the share preview. A piece without the label is not finished. **[LEGAL REVIEW]** (wording and placement of the label)
+> 1. **Satire, labelled, once, in the furniture.** Every page says it is satire in one short line of the page furniture (a slim footer fixed to the bottom of every page) that points at the name of the site (starting proposal: "It's called THE HALLUCINATOR. None of this happened."). A piece never opens with, or carries, a disclaimer paragraph in its body. Every machine-readable output says it too: a satire field in the Markdown twin's metadata, the feed entry, the structured data, `llms.txt` and the share preview. A piece whose metadata lacks the marker is not finished. **[LEGAL REVIEW]** (the exact wording, size and placement of the furniture line; whether a one-line label is enough; whether the machine-readable markers are enough for platforms and for agents)
 > 2. **A person approves every piece.** No piece publishes on an agent's say-so. A named person reads the finished piece and its picture and approves it before it goes live. The publish gate stays on.
 > 3. **Real people: public figures only, in their public roles.** When a piece names a real person, it is someone who holds or seeks public office, leads a large public institution, or has chosen a public career, and only about their public conduct and public statements. Wholly fictional people and agencies are allowed under policy 9. **[LEGAL REVIEW]** (who counts as a public figure; second-tier officials; people briefly famous)
 > 4. **No private people.** A real private person is never named, described closely enough to identify, or used as a type. If the real event involves a private person, the piece is about the institution and not about them. A fictional person must not plausibly match a real private person (policy 9).
@@ -65,7 +65,8 @@ Record: `EditorialPolicy` rows, scope `publication`, source `custom`. Save in on
 
 | Key | Kind | Severity | What it checks |
 | --- | --- | --- | --- |
-| `satire-label-present` | Rule | error | The body or its metadata carries the satire marker the site defines. |
+| `satire-label-present` | Rule | error | The piece's metadata carries the satire marker the site defines (the page furniture then shows the label). |
+| `no-disclaimer-paragraph` | Rule | warn | The body has no paragraph whose job is to say that the piece is fiction or satire. |
 | `no-source-wording` | Judgment | error | When the piece was written from a source, no sentence of three or more words in a row matches the source text. A wholly invented piece passes. |
 | `invented-part-obvious` | Judgment | warn | The invented part is plainly absurd and could not be read as a news claim. |
 | `no-private-person` | Judgment | error | No real private person is named or identifiable. Anyone named is either a real public figure acting in a public role or plainly fictional. |
@@ -89,7 +90,7 @@ Record: guideline document, kind `writing`, publication scope (schema version 1)
 | `tone` | Flat, authoritative wire-service reportage that never winks. The seriousness is the joke. The piece never explains the joke and never comments on itself. |
 | `sentenceStyle` | Short declarative paragraphs. A lead that answers who, what, where, when in one sentence. Quotations from invented, generic sources ("a spokesperson", "a resident") carry the absurdity. No exclamation marks. |
 | `voicePatterns` | Third person, past tense. One absurd premise per piece, followed through with total logic. Institutional language used to describe something it should not describe. Ends on a flat closing fact, not a punchline. |
-| `structure` | Headline, one-line dek, lead paragraph, three to six body paragraphs, a closing paragraph. The satire marker follows the headline block. Length is whatever the premise needs. |
+| `structure` | Headline, one-line dek, lead paragraph, three to six body paragraphs, a closing paragraph. There is no disclaimer paragraph: the label is in the page furniture, not in the piece. Length is whatever the premise needs. |
 | `lexicon.prefer` | Plain wire words: announced, confirmed, officials said, according to, sources. Specific numbers, dates and places used deadpan. |
 | `lexicon.avoid` | "satirical", "hilarious", "in a shocking twist", "reportedly" used as filler, exclamation marks, all-caps, emoji, "literally", and any phrase copied from the source. |
 | `glossary` | Site name is written "TheHallucinator.ai" in running text. |
@@ -106,15 +107,19 @@ Record: guideline document, kind `writing`, publication scope (schema version 1)
 3. **Write it straight.** Report the invented part in the same flat voice you would use for the real part. Do not signal that it is a joke.
 4. **Check the three tests.** (a) Could a reader take the invented part as fact? If so, make it more absurd. (b) Does a real person appear in a role they do not hold, or doing something criminal that is not on the record? If so, change it. Could a fictional name belong to a real private person? If so, rename. (c) If you worked from a source, is any sentence close to it? If so, rewrite from the facts.
 5. **Never reuse the source.** When you worked from one, its wording, headline shape beyond the news form, and pictures are all the source's.
-6. **Add the marker.** The satire marker is not optional and not part of the joke.
+6. **Do not write a disclaimer.** The satire label lives in the page furniture and in the machine-readable markers; it is not part of the piece. A paragraph explaining that the piece is fiction breaks the joke and is not needed.
 
-### The satire marker
+### The satire label
 
-The marker is a short, fixed statement that appears wherever the piece appears:
+The label is the minimum viable warning that the site is a hallucination (Ryan, 2026-11-15). It is one short line in the page furniture, and it points at the name of the site, sarcastically. Starting proposal for the wording, to be settled in the legal conversation:
 
-> Satire. This is a work of fiction published by TheHallucinator.ai. It is not a news report.
+> It's called THE HALLUCINATOR. None of this happened.
 
-It must be present in: the page (beside the headline, visible without scrolling), the Markdown twin (as the first line after the title), the feed entry (title prefix and summary), the structured data (a field stating the content is satire), `llms.txt`, and the share preview text and image. **[LEGAL REVIEW]** (exact wording, size and position; whether the structured-data field is enough for platforms and for machine readers)
+Rules:
+
+- Placement: a slim footer line fixed to the bottom of every page (Ryan's suggestion, not a hard requirement: "that satire disclaimer could go in a fixed footer or something"), one line, readable on a phone. It is part of the page furniture, not of any piece. Pieces carry no disclaimer paragraph, and the label is never repeated inside the body.
+- The machine-readable markers stay (decision 14): a satire field in the Markdown twin's metadata, the feed entry, the structured data, `llms.txt` and the share preview. They are fields, not sentences in the body or the title.
+- **[LEGAL REVIEW]** the exact wording; whether one line is enough; where it must sit so that it is seen before a piece is read and survives a share preview; whether the machine-readable markers are enough for platforms and for machine readers.
 
 ### Before and after
 
@@ -129,8 +134,6 @@ Satire:
 > **City Council Commissions Study To Determine Whether Cars Are Bad**
 >
 > *Panel will report back in four years on whether fast-moving metal objects pose a risk to the slow-moving humans nearby*
->
-> Satire. This is a work of fiction published by TheHallucinator.ai. It is not a news report.
 >
 > The Example City Council voted 7 to 2 on Tuesday to commission a study of whether the vehicles on Example Avenue contribute to the collisions occurring there, a question council members said they had been unable to resolve through observation.
 >
@@ -148,8 +151,6 @@ Satire:
 >
 > *Executives confirm the quarter's main product was the statement itself*
 >
-> Satire. This is a work of fiction published by TheHallucinator.ai. It is not a news report.
->
 > Example Corp announced Wednesday that it would concentrate its resources on what it described as its core strengths, which an executive identified, after a pause, as "the announcement."
 
 What this shows: the target is the language of the statement; no person is named; the closing line is flat, not a punchline.
@@ -161,8 +162,6 @@ No real event behind it. The agency, the town and the people are plainly fiction
 > **Bureau Of Unfinished Business Announces It Has Finished**
 >
 > *Agency says no further business remains, then opens a file on the announcement*
->
-> Satire. This is a work of fiction published by TheHallucinator.ai. It is not a news report.
 >
 > The Bureau of Unfinished Business confirmed Thursday that all of its business was complete, effective immediately, and that a new inquiry into the completion had begun.
 
@@ -247,7 +246,7 @@ The table lists the parts above that do not yet have a Papyrus home, or that dep
 
 | Part | Why it cannot be stored today | Needs |
 | --- | --- | --- |
-| The satire marker on every page, Markdown twin, feed, structured data, `llms.txt` and share preview | The label is a site setting that the build and every output reads. Papyrus has no per-site satire flag. | Papyrus work for the satire marker; Humorus issue HUM-6050a9 |
+| The satire label in the page furniture, and the machine-readable markers (Markdown twin metadata, feed, structured data, `llms.txt`, share preview) | The label is a site setting that the front end and every output read. Papyrus has no per-site satire flag. | Papyrus work for the satire label; Humorus issue HUM-6050a9 and the furniture-label story under it |
 | A person approves every piece | The publish gate exists. A rule that no agent can publish on its own is not yet a stored, checkable site setting beyond the existing gate. | Confirm the gate settings in the newsroom; no new storage if the existing gate suffices |
 | House byline and allowed pen names | Papyrus attributes to AI by default and has no site byline policy. | Byline policy story; Humorus issue HUM-e7acbb |
 | Idea mode that may start from one real story, or from no source and invent the whole premise | The idea pipeline needs two citations; this is logic, not text. | Papyrus engine story |
@@ -264,7 +263,7 @@ The table lists the parts above that do not yet have a Papyrus home, or that dep
 
 This is the complete list of items marked **[LEGAL REVIEW]** above. They belong in the one lawyer conversation (HUM-948077). Nothing here is decided by this draft.
 
-1. Wording, size and placement of the satire marker, and whether a structured-data field is enough (section 3).
+1. Wording, size and placement of the satire label (the one line in the furniture, starting proposal "It's called THE HALLUCINATOR. None of this happened."), and whether the machine-readable markers are enough (section 3).
 2. Who counts as a public figure, including second-tier officials and people briefly famous (policy 3).
 3. Exposure when an absurd claim is attached to a named person: false light and defamation (policy 6), and whether a quick web search is enough to keep a fictional person from matching a real private one (policy 9).
 4. Invented quotations attributed to real public figures (policy 7).

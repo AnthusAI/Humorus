@@ -10,9 +10,17 @@
   "parent": "HUM-24ef9c5d-3b69-4f0a-a69a-497a8c736833",
   "labels": [],
   "dependencies": [],
-  "comments": [],
+  "comments": [
+    {
+      "id": "2405521f-0938-488e-a3c5-950d14e212e4",
+      "author": "home",
+      "text": "Decision 25 (2026-11-15): the public layout is one column, phone-first, simpler (Ryan: the two-column layout does not work on smaller viewports). The front-end work is with the Papyrus session's front-end agents; recorded in decisions.md.",
+      "created_at": "2026-11-15T21:16:28.464142Z",
+      "comment_type": "default"
+    }
+  ],
   "created_at": "2026-11-15T13:33:46.191002Z",
-  "updated_at": "2026-11-15T13:33:46.191283Z",
+  "updated_at": "2026-11-15T21:16:28.465022Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",

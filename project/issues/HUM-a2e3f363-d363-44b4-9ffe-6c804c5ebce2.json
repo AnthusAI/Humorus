@@ -1,0 +1,25 @@
+{
+  "id": "HUM-a2e3f363-d363-44b4-9ffe-6c804c5ebce2",
+  "title": "Remove the disclaimer paragraph from the published article 'Federal AI Safety Office confirms AI is safe after asking AI'",
+  "description": "Edit the published article so it no longer opens with (or carries) the disclaimer paragraph ('Satire: this article is fiction. The people, agency and quotations in it are invented.'). BLOCKED until the furniture label (HUM-0bd4aa) is live on the page: the piece must never be published without a label. Do not edit the article before then.\n\nHow: a new Story version saved with the papyrus CLI signed in to this site, then a person approves and publishes it (decision 13). Access today (2026-11-15): 'papyrus whoami' shows a signed-in session for https://newsroom.thehallucinator.ai (the CLI is pinned at 5.105.0 and the backend is newer, which is the allowed direction). I have not tried an edit. Follow the papyrus CLI guide (papyrus guide) for the exact commands; never use the AWS CLI for Papyrus operations.",
+  "type": "task",
+  "status": "blocked",
+  "priority": 2,
+  "assignee": null,
+  "creator": null,
+  "parent": "HUM-952a436f-4ebc-44f5-9f65-64fd05817ad2",
+  "labels": [],
+  "dependencies": [
+    {
+      "target": "HUM-0bd4aa33-f37f-4e8b-b836-558c52c46712",
+      "type": "blocked-by"
+    }
+  ],
+  "comments": [],
+  "created_at": "2026-11-15T21:16:23.316555Z",
+  "updated_at": "2026-11-15T21:16:23.561621Z",
+  "closed_at": null,
+  "right_now_summary": null,
+  "right_now_updated_at": null,
+  "custom": {}
+}

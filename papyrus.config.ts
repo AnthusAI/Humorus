@@ -10,5 +10,13 @@ export default defineSite({
   defaultBrand: "the-hallucinator",
   backend: {
     brandId: "the-hallucinator",
+    // The public site is static pages in a site bucket behind a CloudFront distribution that this backend creates
+    // (no hostname yet: the aliases arrive with the apex cutover). Look and wording come from the site folder.
+    publication: {
+      kind: "s3-projection",
+      staticDir: "sites/the-hallucinator",
+      reprojectOnDeploy: true,
+      distribution: { create: true },
+    },
   },
 });

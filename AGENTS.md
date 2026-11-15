@@ -33,7 +33,7 @@ It is also the rehearsal for the managed offer: Papyrus in a client's own AWS ac
 5. **A person approves every piece before it publishes.** The publish gate stays on.
 6. **No real likenesses.** Generated images never show a real person.
 7. **Satire is labelled.** Every page, Markdown twin, feed entry and structured-data block says it is satire, for people and for agents.
-8. **Satire has limits.** Public figures only. No private people, no victims of tragedies, no invented crimes. Satirise the event; never reuse a source's wording or pictures.
+8. **Satire has limits.** A piece may start from a real event or be wholly invented; nothing is fact-checked against a recorded Reference (Ryan, 2026-11-15). Real people named are public figures only, in their public roles, and any claim about them stays plainly absurd. Wholly fictional people and agencies are allowed when plainly fictional, and a fictional person must not plausibly match a real private person: the approver does a quick web search of the name, role and place before approving. **[LEGAL REVIEW]** No private people, no victims of tragedies, no invented crimes attributed to real people, invented quotations plainly invented, no hate, no election misinformation, and corrections when a piece could be mistaken for fact. When a piece starts from a real source, satirise the event; never reuse the source's wording or pictures.
 9. **Google sign-in only.** Never create password users.
 10. **Use the `papyrus` CLI for Papyrus operations**, not the AWS CLI.
 

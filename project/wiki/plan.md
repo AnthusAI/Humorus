@@ -4,7 +4,7 @@ Approved by Ryan on 2026-11-11. The board is the live version; this page explain
 
 ## What Humorus is for
 
-Humorus publishes political satire: a real news event, rewritten as deadpan satire in the manner of The Onion. It runs on Papyrus beside publications with a very different focus, and that is the point. It forces three things to become true of Papyrus:
+Humorus publishes political satire in the manner of The Onion: deadpan, and either rewritten from a real news event or wholly invented. It runs on Papyrus beside publications with a very different focus, and that is the point. It forces three things to become true of Papyrus:
 
 1. **A neutral front end.** A plain default theme and example themes, so a site changes its look with tokens and not code.
 2. **One deployment, several sites.** The second Humorus site is added to the first site's deployment as data.
@@ -28,7 +28,7 @@ Work that belongs in Papyrus is on the Papyrus board under epic `PPY-059573`. Wo
 
 A scaffold solves every conflict that is **text**: role instructions, drafting and idea instructions, the Story procedure, image rules, starter policies, example mission and sections, byline policy. The condition is that the engine reads the site's records instead of built-in text.
 
-It does not solve what is **logic**: the two-citation minimum for ideas, the point check's verdicts, the list of feed sources in code, the satire label, and an idea mode that starts from one real story and invents the angle. Those need engine work and are separate Papyrus stories.
+It does not solve what is **logic**: the two-citation minimum for ideas, the point check's verdicts, the list of feed sources in code, the satire label, and an idea mode that may start from one real story or from no source at all. Those need engine work and are separate Papyrus stories.
 
 A scaffolded site stops inheriting improved defaults, so the scaffold needs a diff command.
 
@@ -39,10 +39,10 @@ Both Humorus sites have the same editors. So the two-site deployment needs scopi
 ## Risks specific to satire
 
 - **Agents read satire as fact.** Papyrus makes every page easy for agents to read, so every page, Markdown version, feed entry, structured-data block and share preview must say it is satire.
-- **Legal footing.** Clear labelling, public figures only, no private people, no victims of tragedies, no invented crimes. One conversation with a lawyer before launch.
-- **The check inverts.** The real setup must be right; the invented part must be plainly absurd.
+- **Legal footing.** Clear labelling, public figures only, no private people, no victims of tragedies, no invented crimes attributed to real people, and fictional people who must not match a real private person. One conversation with a lawyer before launch.
+- **No fact-check.** Satire may be wholly invented, so no piece is checked against a real setup or a recorded Reference (Ryan, 2026-11-15). The check is that invention is plainly invention: claims about real people are plainly absurd, and fictional people are plainly fictional.
 - **Providers refuse political content.** Plan a fallback order for text and images.
-- **Copyright.** Satirise the event; never reuse a source's wording or pictures.
+- **Copyright.** When a piece starts from a real event, satirise the event; never reuse a source's wording or pictures.
 - **Pen names** conflict with Papyrus's current authorship rule; it becomes a site policy.
 
 ## Risks in operations

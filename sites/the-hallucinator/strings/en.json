@@ -1,13 +1,11 @@
 {
   "language.name": "English",
   "home.label": "Home",
-  "site.tagline": "Satire",
   "site.description": "Satire. Everything on this site is invented.",
   "notice.label": "Satire",
   "notice.text": "It's called THE HALLUCINATOR. None of this happened.",
   "nav./articles/.label": "Articles",
   "section.type:article.label": "Articles",
-  "footer.text": "TheHallucinator.ai is satire. Every piece is invented. No real person is quoted.",
   "listing.pageSuffix": " — page {page}",
   "listing.untranslated": "Nothing here has been translated yet. Read the {original}.",
   "listing.untranslatedOriginal": "English index",

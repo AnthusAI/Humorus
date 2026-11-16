@@ -1,14 +1,15 @@
 {
   "brandPack": "brand.json",
   "site": {
-    "name": "TheHallucinator.ai",
+    "name": "THE HALLUCINATOR",
     "shortName": "The Hallucinator",
-    "tagline": "Satire",
     "description": "Satire. Everything on this site is invented.",
     "productionUrl": "https://thehallucinator.ai",
     "notice": {
       "label": "Satire",
-      "text": "Everything on this site is invented."
+      "text": "It's called THE HALLUCINATOR. None of this happened.",
+      "placement": "fixed-footer",
+      "prominence": "quiet"
     }
   },
   "storyTypes": {
@@ -58,7 +59,13 @@
     "style": "single",
     "lastmod": true
   },
-  "footer": {
-    "text": "TheHallucinator.ai is satire. Every piece is invented. No real person is quoted."
+  "layout": {
+    "column": "single"
+  },
+  "components": {
+    "breadcrumbs": false
+  },
+  "pageActions": {
+    "placement": "aside"
   }
 }

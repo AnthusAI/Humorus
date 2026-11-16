@@ -1,13 +1,11 @@
 {
   "language.name": "Español",
   "home.label": "Inicio",
-  "site.tagline": "Sátira",
   "site.description": "Sátira. Todo lo que hay en este sitio es inventado.",
   "notice.label": "Sátira",
   "notice.text": "Se llama EL ALUCINADOR. Nada de esto pasó.",
   "nav./articles/.label": "Artículos",
   "section.type:article.label": "Artículos",
-  "footer.text": "TheHallucinator.ai es sátira. Cada pieza es inventada. No se cita a ninguna persona real.",
   "listing.pageSuffix": " — página {page}",
   "listing.untranslated": "Todavía no hay traducciones aquí. Lea el {original}.",
   "listing.untranslatedOriginal": "índice en inglés",
@@ -49,5 +47,6 @@
   "month.10": "octubre",
   "month.11": "noviembre",
   "month.12": "diciembre",
-  "site.name": "EL ALUCINADOR"
+  "site.name": "EL ALUCINADOR",
+  "site.shortName": "EL ALUCINADOR"
 }

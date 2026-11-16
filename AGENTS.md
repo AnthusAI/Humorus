@@ -61,7 +61,7 @@ Work for Papyrus or Machines on Machines is filed on those boards and linked fro
 
 ```
 AGENTS.md, CONTRIBUTING_AGENT.md, .kanbus.yml, project/     coordination and the board
-package.json, requirements-publication.txt                  the one Papyrus pin (to come)
+package.json, package-lock.json, infra/site.json            the one Papyrus pin (scripts/ci/check-papyrus-pin.py)
 papyrus.config.ts, amplify/, amplify.yml, infra/            the one deployment (to come)
 sites/<site-id>/                                            per-site settings (to come)
 .github/workflows/                                          CI and deploy (to come)

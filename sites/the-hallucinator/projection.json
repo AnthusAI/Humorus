@@ -14,7 +14,8 @@
     "languageSwitcher": {
       "placement": "masthead",
       "prominence": "quiet"
-    }
+    },
+    "dateFormat": "%B %-d, %Y"
   },
   "storyTypes": {
     "default": "article",

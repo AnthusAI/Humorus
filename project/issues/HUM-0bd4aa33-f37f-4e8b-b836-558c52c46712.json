@@ -3,17 +3,25 @@
   "title": "A reader sees a one-line satire label that points at the name, on every page",
   "description": "Ryan, 2026-11-15 (decision 24): the per-article disclaimer (\"Satire: this article is fiction. The people, agency and quotations in it are invented.\") is out of the jokes. The satire label is the minimum viable warning that the site is a hallucination: one short line in the page furniture, a slim footer fixed to the bottom of every page (his suggestion, not a hard requirement), pointing at the name. Starting wording, open for the legal conversation (HUM-948077): \"It's called THE HALLUCINATOR. None of this happened.\" The full machine-readable labelling stays (decision 14, HUM-6050a9).\n\nThe Papyrus work belongs to the Papyrus session's front-end agents; this card is the Humorus requirement and link, not a build here. Do not touch `infra/site.json`, `papyrus.config.ts`, `publication/` or the domain from this card.\n\n```gherkin\nFeature: The satire label is one line in the page furniture\n\n  Scenario: Every page carries the label in a fixed footer line\n    Given any public page of the site, on a phone-width viewport and on a desktop\n    When a reader opens it\n    Then a slim footer line fixed to the bottom of the page says \"It's called THE HALLUCINATOR. None of this happened.\"\n    And it is readable without scrolling and does not cover the content\n\n  Scenario: Pieces carry no disclaimer paragraph\n    Given a published piece\n    Then its body has no paragraph whose job is to say the piece is fiction or satire\n\n  Scenario: The machine-readable markers stay\n    Given a published piece\n    Then its Markdown twin metadata, its feed entry, its structured data, llms.txt and its share preview all carry the satire marker\n```",
   "type": "story",
-  "status": "open",
+  "status": "closed",
   "priority": 1,
   "assignee": null,
   "creator": null,
   "parent": "HUM-952a436f-4ebc-44f5-9f65-64fd05817ad2",
   "labels": [],
   "dependencies": [],
-  "comments": [],
+  "comments": [
+    {
+      "id": "ce2b98c6-d463-442b-8d15-c14bc4853761",
+      "author": "home",
+      "text": "Live and verified 2026-11-16 (Papyrus 5.123.0, build 15): one slim fixed-footer line, the name once, one column, no home sub-heading; PO showed Ryan.",
+      "created_at": "2026-11-16T12:00:44.604076Z",
+      "comment_type": "default"
+    }
+  ],
   "created_at": "2026-11-15T21:16:23.159196Z",
-  "updated_at": "2026-11-15T21:16:23.159423Z",
-  "closed_at": null,
+  "updated_at": "2026-11-16T12:00:44.815309Z",
+  "closed_at": "2026-11-16T12:00:44.813338Z",
   "right_now_summary": null,
   "right_now_updated_at": null,
   "custom": {}

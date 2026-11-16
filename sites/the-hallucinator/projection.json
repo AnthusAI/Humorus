@@ -10,6 +10,10 @@
       "text": "It's called THE HALLUCINATOR. None of this happened.",
       "placement": "fixed-footer",
       "prominence": "quiet"
+    },
+    "languageSwitcher": {
+      "placement": "masthead",
+      "prominence": "quiet"
     }
   },
   "storyTypes": {

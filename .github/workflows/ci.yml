@@ -85,13 +85,27 @@ jobs:
           PR_TITLE: ${{ github.event.pull_request.title }}
         run: scripts/ci/check-pr-title.sh "$PR_TITLE"
 
+  papyrus-pin:
+    name: One Papyrus pin
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - name: Every place that names the Papyrus version names the same one
+        run: python3 scripts/ci/check-papyrus-pin.py
+
   # Add app tests here as one job (for example `tests`) and list it under
   # `needs` of `ci` below.
 
   ci:
     name: ci
     if: always()
-    needs: [secret-scan, board, pr-title]
+    needs: [secret-scan, board, pr-title, papyrus-pin]
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:

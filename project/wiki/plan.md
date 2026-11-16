@@ -56,7 +56,7 @@ Both Humorus sites have the same editors. So the two-site deployment needs scopi
 
 ```
 AGENTS.md, CONTRIBUTING_AGENT.md, .kanbus.yml, project/     coordination and the board
-package.json, requirements-publication.txt                  one Papyrus pin
+package.json, package-lock.json, infra/site.json            one Papyrus pin, checked in CI
 papyrus.config.ts, amplify/, amplify.yml, infra/            the one deployment
 sites.json                                                  the site list
 sites/<site-id>/                                            per-site settings; shrinks as site settings become data

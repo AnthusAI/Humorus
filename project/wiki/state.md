@@ -64,3 +64,4 @@ Run `kbs ready` for the full list of work with nothing in its way.
 - A new issue goes `open`, then `in_progress`, then `blocked`; it cannot go straight to `blocked`.
 - Board changes go to `develop` with `kbs commit`, then `git push`.
 - The disk on the development Mac was 99% full on 2026-11-11. Remove worktrees you create.
+- **Footer label live (2026-11-16 01:23 UTC).** Papyrus 5.123.0 (5.122.0 lacked #1583; its build failed at render and rolled back, site never broke). The satire notice is one slim fixed-footer line, one column, the name shown once. Spanish edition is still data work by the Papyrus session (enable es-419, overlays, translation).

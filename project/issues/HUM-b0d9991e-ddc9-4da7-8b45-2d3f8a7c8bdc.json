@@ -10,9 +10,17 @@
   "parent": "HUM-8f9b2045-2838-496e-8c98-ed21dd20f354",
   "labels": [],
   "dependencies": [],
-  "comments": [],
+  "comments": [
+    {
+      "id": "8a8471bd-c163-4707-b663-f730ae72fbe7",
+      "author": "home",
+      "text": "Ryan 2026-11-18: next goal is a daily joke cycle run by always-on agents. One agent files a batch of invented premises each day; another picks the funniest and it is drafted, ending at a review request (a person still approves, decision 13). Papyrus work filed: PPY-97e2db (scheduled ideation agent, invented premises, N per run as data), PPY-8ffd58 (selection by the site's own criteria, a humour rubric, batch mode with ranked reasons), PPY-69fbaa (selection as a scheduled agent; blocked by 97e2db and PPY-8fe7e6, the site's own Story procedure). Site side here: save the newsroom data (mission, policy, sections, guidelines), write the humour rubric, adopt both agents, rung draft.",
+      "created_at": "2026-11-18T13:08:40.595047Z",
+      "comment_type": "default"
+    }
+  ],
   "created_at": "2026-11-11T17:14:44.576130Z",
-  "updated_at": "2026-11-11T17:14:44.576155Z",
+  "updated_at": "2026-11-18T13:08:40.595936Z",
   "closed_at": null,
   "agent": {
     "platform": "claude_code",
